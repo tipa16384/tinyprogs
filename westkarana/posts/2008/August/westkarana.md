@@ -1,0 +1,47 @@
+Back to: [West Karana](/posts/westkarana.md) > [2008](/posts/2008/westkarana.md)
+# West Karana Archive for August, 2008
+
+* [EQ2: GU47 Dorah stories](1764.md) <span style="color:red;">comment</span>
+* [Building an MMO around leveling? A new (to me) approach.](1770.md) <span style="color:red;">comment</span>
+* [EQ: The Last Dragons](1771.md) <span style="color:red;">comment</span>
+* [Submitted without comment...](1774.md) <span style="color:red;">comment</span>
+* [Guild Wars: Nightfall, Day 1](1776.md) <span style="color:red;">comment</span>
+* [HeroEngine licensed again, but where is Hero's Journey?](1780.md) <span style="color:red;">comment</span>
+* [Training skills in EverQuest](1781.md) <span style="color:red;">comment</span>
+* [Where is SPELLBORN already?](1783.md) <span style="color:red;">comment</span>
+* [Rock Band Live! On Tour! With real instruments!](1784.md) <span style="color:red;"></span>
+* [EQ2: Night of the Living Goblin](1785.md) <span style="color:red;">comment</span>
+* [EverQuest expansion beta registration is now open](1789.md) <span style="color:red;"></span>
+* [To my music-starved guild.](1790.md) <span style="color:red;">comment</span>
+* [EQ: Veksar Rising](1791.md) <span style="color:red;">comment</span>
+* [Runes of Magic coming soon to a Leipzig near you!](1796.md) <span style="color:red;">comment</span>
+* [American Idol Tour -- Hartford, CT](1798.md) <span style="color:red;">comment</span>
+* [Cronous enters closed beta](1802.md) <span style="color:red;">comment</span>
+* [Guild Wars -- Day 2](1804.md) <span style="color:red;">comment</span>
+* [STO: To go boldy...](1808.md) <span style="color:red;">comment</span>
+* [Metaplace Transitions](1811.md) <span style="color:red;">comment</span>
+* [EQ2: At long last, Dorah becomes Adora-ble](1814.md) <span style="color:red;">comment</span>
+* [A first look at Cronous](1816.md) <span style="color:red;">comment</span>
+* [EverQuest's 10th Anniversary Book](1821.md) <span style="color:red;">comment</span>
+* [EQ: Hearts full of Hate](1823.md) <span style="color:red;">comment</span>
+* [Lost in the Shadow of Destruction... or something.](1826.md) <span style="color:red;"></span>
+* [First expansion reactions](1828.md) <span style="color:red;">comment</span>
+* [More on the Fan Faire](1831.md) <span style="color:red;">comment</span>
+* [EQ2: New clothes for old tailors](1833.md) <span style="color:red;">comment</span>
+* [Would you play an MMO where nobody held your hand?](1835.md) <span style="color:red;">comment</span>
+* [New hot zones for EverQuest](1836.md) <span style="color:red;">comment</span>
+* [Stout Henry](1837.md) <span style="color:red;">comment</span>
+* [EQ2: The things I do for pie...](1839.md) <span style="color:red;">comment</span>
+* [Wizard 101 update](1843.md) <span style="color:red;">comment</span>
+* [EQ: Hot zone hoedown](1845.md) <span style="color:red;">comment</span>
+* [Guild Wars -- Day 3](1848.md) <span style="color:red;">comment</span>
+* [Weekend Gaming](1857.md) <span style="color:red;">comment</span>
+* [Twitter](1862.md) <span style="color:red;"></span>
+* [Stout Henry at the Market](1863.md) <span style="color:red;">comment</span>
+* [Bringing a character to life -- three character creators](1867.md) <span style="color:red;">comment</span>
+* [Wizard 101 beta is nearly over](1873.md) <span style="color:red;">comment</span>
+* [How popular is your MMO?](1875.md) <span style="color:red;">comment</span>
+* [Wizard101's subscription plan and item shop](1876.md) <span style="color:red;">comment</span>
+* [CoX Issue 13 takes a page out of EVE's book](1880.md) <span style="color:red;">comment</span>
+* [EQ: I love the smell of Harpies in the morning](1883.md) <span style="color:red;">comment</span>
+* [EQ2: Welcome to the Tanglewood Community Theater](1887.md) <span style="color:red;">comment</span>

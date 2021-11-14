@@ -1,0 +1,42 @@
+Back to: [West Karana](/posts/westkarana.md) > [2020](/posts/2020/westkarana.md)
+# West Karana Archive for August, 2020
+
+* [Blaugust Prompt #1: Core Fandoms](599.md) <span style="color:red;">comment</span>
+* [Blaugust #2: Everything You Like is Bad (and you should feel bad)](605.md) <span style="color:red;">comment</span>
+* [Blaugust Day #3: Nothing is Real. But, That's Okay.](611.md) <span style="color:red;">comment</span>
+* [Townscaper](618.md) <span style="color:red;"></span>
+* [Blaugust #4: I Don't Care What You're Drinking.](622.md) <span style="color:red;">comment</span>
+* [Blaugust #9: Writing Posts the West Karana Way.](627.md) <span style="color:red;">comment</span>
+* [Blaugust #6: Quoth the Blogger, \"Nevermore\".](631.md) <span style="color:red;">comment</span>
+* [newsberg](640.md) <span style="color:red;"></span>
+* [Sleeving Jaws of the Lion](642.md) <span style="color:red;"></span>
+* [DCUO: Lost in Wonderverse](654.md) <span style="color:red;">comment</span>
+* [Blaugust #10: A Cluttered Mind](664.md) <span style="color:red;"></span>
+* [A Look Back to Champions Online -- in Comic Form!](668.md) <span style="color:red;"></span>
+* [Blaugust #11: What We've Lost Along the Way](681.md) <span style="color:red;">comment</span>
+* [Blaugust #7: Be The Best that Ever Was](687.md) <span style="color:red;">comment</span>
+* [Game Night: Gloomhaven, Jaws of the Lion](694.md) <span style="color:red;"></span>
+* [Blaugust Catch-Up: A Blast of Blaugust!](701.md) <span style="color:red;">comment</span>
+* [Adventures in Monopoly: The Beginning](710.md) <span style="color:red;">comment</span>
+* [Blaugust #18: The Island of Unfinished Games](715.md) <span style="color:red;"></span>
+* [Does Crafting have any place in modern MMOs?](719.md) <span style="color:red;">comment</span>
+* [Blaugust #19: Defend Your Life](727.md) <span style="color:red;">comment</span>
+* [Banner of the Maid doesn't want me to sleep.](732.md) <span style="color:red;">comment</span>
+* [Blaugust #20: It's Good to be Bad](738.md) <span style="color:red;">comment</span>
+* [Blaugust #21: There Are No New Ideas](748.md) <span style="color:red;"></span>
+* [The Polymega and Viewpoint(PSX)](777.md) <span style="color:red;">comment</span>
+* [I Jump on Bandwagons](763.md) <span style="color:red;"></span>
+* [Blaugust #22 and #23: Fear and Envy](784.md) <span style="color:red;">comment</span>
+* [Tanglewood: the Game.](795.md) <span style="color:red;"></span>
+* [Adventures in Monopoly -- Cash Shop](801.md) <span style="color:red;">comment</span>
+* [Blaugust #24: It's All About the Eyeballs](807.md) <span style="color:red;">comment</span>
+* [Blaugust #25: Blogging in a Time of Corona](813.md) <span style="color:red;">comment</span>
+* [Blaugust #26: When the Levee Breaks](818.md) <span style="color:red;">comment</span>
+* [Game Night: Mahjong](824.md) <span style="color:red;"></span>
+* [Blaugust #27: Be the Content You Want to See](828.md) <span style="color:red;">comment</span>
+* [Blaugust #28: Let's forget 2020 ever happened.](838.md) <span style="color:red;"></span>
+* [DCUO: This is my Elite Weapon. There are many like it, but this is mine.](843.md) <span style="color:red;"></span>
+* [FFXIV: A Match of Mahjong](849.md) <span style="color:red;"></span>
+* [Blaugust #29: Communities](872.md) <span style="color:red;">comment</span>
+* [Microsoft Flight Simulator: Taxiing up my driveway](877.md) <span style="color:red;">comment</span>
+* [Blaugust #30: Don't Worry, Be Happy](885.md) <span style="color:red;"></span>
