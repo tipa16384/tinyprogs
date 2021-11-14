@@ -9,14 +9,25 @@ source_ext = ".png"
 dest_ext = ".jpg"
 
 def convert_file(dirname, filename):
+    converted = False
     source = os.path.join(dirname, filename)
     dest = os.path.join(dirname, filename.replace(source_ext, dest_ext))
-    os.system("magick convert \"" + source + "\" -resize 1024x1024 \"" + dest + "\"")
+    # if dest does not exist, convert source to dest
+    if not os.path.exists(dest):
+        print ("converting", source, "to", dest)
+        os.system("magick convert \"" + source + "\" -resize 1024x1024 \"" + dest + "\"")
+        converted = True
+    return converted
 
 def convert_folder(dirname):
+    converted = False
     for filename in os.listdir(dirname):
         if filename.endswith(source_ext):
-            convert_file(dirname, filename)
+            converted = convert_file(dirname, filename) or converted
+    if converted:
+        print ("converted files in", dirname)
+    else:
+        print ("no files to convert in", dirname)
 
 if __name__ == "__main__":
     convert_folder(dirname)

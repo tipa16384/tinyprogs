@@ -83,7 +83,7 @@ for c in colors:
 		colorCount[b] += 0.5
 		maxArea = max(colorCount[b],maxArea)
 
-print "Number of closed areas:",len(colorCount)
-print "Largest area",maxArea
+print ("Number of closed areas:",len(colorCount))
+print ("Largest area",maxArea)
 
 
