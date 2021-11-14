@@ -1,0 +1,2321 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Arjuna 1.7.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-08-12 14:51-0500\n"
+"PO-Revision-Date: 2011-08-12 14:51-0500\n"
+"Last-Translator: SRS Solutions <info@srssolutions.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: arjuna-x\n"
+
+#: /arjuna-x/404.php:7
+msgid "Error 404 - Not Found"
+msgstr ""
+
+#: /arjuna-x/404.php:8
+msgid "Sorry, but you are looking for something that isn't here. "
+msgstr ""
+
+#: /arjuna-x/archive.php:11
+#, php-format
+msgid "Browsing Posts in <em>%s</em>"
+msgstr ""
+
+#: /arjuna-x/archive.php:13
+#, php-format
+msgid "Browsing Posts tagged <em>%s</em>"
+msgstr ""
+
+#: /arjuna-x/archive.php:15
+#, php-format
+msgid "Browsing Posts published on %s"
+msgstr ""
+
+#: /arjuna-x/archive.php:17
+#: /arjuna-x/archive.php:19
+#, php-format
+msgid "Browsing Posts published in %s"
+msgstr ""
+
+#: /arjuna-x/archive.php:17
+msgid "F, Y"
+msgstr ""
+
+#: /arjuna-x/archive.php:19
+msgid "Y"
+msgstr ""
+
+#: /arjuna-x/archive.php:22
+#, php-format
+msgid "Browsing Posts published by <em>%s</em>"
+msgstr ""
+
+#: /arjuna-x/archive.php:24
+msgid "Blog Archives"
+msgstr ""
+
+#: /arjuna-x/archive.php:41
+#: /arjuna-x/index.php:16
+#: /arjuna-x/page.php:21
+#: /arjuna-x/page_fullwidth.php:22
+#: /arjuna-x/search.php:23
+#: /arjuna-x/single.php:18
+msgid "continue reading..."
+msgstr ""
+
+#: /arjuna-x/archive.php:52
+#: /arjuna-x/index.php:28
+msgid "There is nothing here (yet)."
+msgstr ""
+
+#: /arjuna-x/comments.php:12
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: /arjuna-x/comments.php:25
+msgid "Comments"
+msgstr ""
+
+#: /arjuna-x/comments.php:32
+msgid "Trackbacks"
+msgstr ""
+
+#: /arjuna-x/comments.php:39
+msgid "Leave a comment"
+msgstr ""
+
+#: /arjuna-x/comments.php:42
+msgid "Trackback"
+msgstr ""
+
+#: /arjuna-x/comments.php:58
+msgid "No one has commented yet."
+msgstr ""
+
+#: /arjuna-x/comments.php:60
+msgid "Comments are closed."
+msgstr ""
+
+#: /arjuna-x/comments.php:76
+msgid "No trackbacks yet."
+msgstr ""
+
+#: /arjuna-x/comments.php:78
+msgid "Trackbacks are disabled."
+msgstr ""
+
+#: /arjuna-x/functions.php:140
+msgid "Light Blue"
+msgstr ""
+
+#: /arjuna-x/functions.php:141
+msgid "Bristol Blue"
+msgstr ""
+
+#: /arjuna-x/functions.php:142
+msgid "Dark Blue"
+msgstr ""
+
+#: /arjuna-x/functions.php:143
+msgid "Regimental Blue"
+msgstr ""
+
+#: /arjuna-x/functions.php:144
+msgid "Khaki"
+msgstr ""
+
+#: /arjuna-x/functions.php:145
+msgid "Sea Green"
+msgstr ""
+
+#: /arjuna-x/functions.php:146
+msgid "Light Red"
+msgstr ""
+
+#: /arjuna-x/functions.php:147
+msgid "Purple"
+msgstr ""
+
+#: /arjuna-x/functions.php:148
+msgid "Light Gray"
+msgstr ""
+
+#: /arjuna-x/functions.php:149
+msgid "Dark Gray"
+msgstr ""
+
+#: /arjuna-x/functions.php:629
+#: /arjuna-x/functions.php:636
+msgid "The uploaded file is not a valid image. Only JPEG, PNG and GIF is supported."
+msgstr ""
+
+#: /arjuna-x/functions.php:728
+msgid "Arjuna Options"
+msgstr ""
+
+#: /arjuna-x/functions.php:747
+msgid "The Arjuna options have been saved."
+msgstr ""
+
+#: /arjuna-x/functions.php:752
+msgid "Arjuna Theme Options"
+msgstr ""
+
+#: /arjuna-x/functions.php:755
+msgid "This browser is outdated. Please <a href=\"http://www.microsoft.com/windows/internet-explorer/default.aspx\">upgrade</a> your browser to enjoy this website to its fullest extent."
+msgstr ""
+
+#: /arjuna-x/functions.php:760
+#, php-format
+msgid "Thank you for using Arjuna, the free WordPress theme designed by %s."
+msgstr ""
+
+#: /arjuna-x/functions.php:763
+msgid "Follow Us"
+msgstr ""
+
+#: /arjuna-x/functions.php:781
+msgid "Report Bugs"
+msgstr ""
+
+#: /arjuna-x/functions.php:782
+msgid "Report a Bug"
+msgstr ""
+
+#: /arjuna-x/functions.php:782
+msgid "Please include your Wordpress version, browser details and a screenshot, if necessary."
+msgstr ""
+
+#: /arjuna-x/functions.php:785
+msgid "Useful Links"
+msgstr ""
+
+#: /arjuna-x/functions.php:786
+msgid "Changelog"
+msgstr ""
+
+#: /arjuna-x/functions.php:787
+msgid "FAQ"
+msgstr ""
+
+#: /arjuna-x/functions.php:788
+msgid "Roadmap"
+msgstr ""
+
+#: /arjuna-x/functions.php:789
+msgid "Leave Feedback"
+msgstr ""
+
+#: /arjuna-x/functions.php:792
+msgid "Support &amp; Sales"
+msgstr ""
+
+#: /arjuna-x/functions.php:793
+msgid "Contact Sales"
+msgstr ""
+
+#: /arjuna-x/functions.php:793
+msgid "Need installation or integration support? Need something customized or extended?"
+msgstr ""
+
+#: /arjuna-x/functions.php:798
+msgid "Arjuna is completely free. Therefore, please understand that we do NOT offer free support. If you require support of any kind other than fixing a bug that is related to Arjuna, please request a quote from us."
+msgstr ""
+
+#: /arjuna-x/functions.php:810
+msgid "General Blog Appearance"
+msgstr ""
+
+#: /arjuna-x/functions.php:813
+msgid "Logo"
+msgstr ""
+
+#: /arjuna-x/functions.php:818
+msgid "Header Logo"
+msgstr ""
+
+#: /arjuna-x/functions.php:826
+msgid "The custom logo will be included in the header, aligned to the left and vertically centered. Note: It will NOT replace the background image of the header. Instead it will be placed on top of the background image, replacing only the WordPress blog name and description."
+msgstr ""
+
+#: /arjuna-x/functions.php:828
+#, php-format
+msgid "You do not have write permissions for the upload directory %s. Please check with your webmaster or host to set write permissions for this directory."
+msgstr ""
+
+#: /arjuna-x/functions.php:839
+#: /arjuna-x/functions.php:2478
+msgid "First Header Menu"
+msgstr ""
+
+#: /arjuna-x/functions.php:844
+#: /arjuna-x/functions.php:998
+#: /arjuna-x/functions.php:1370
+#: /arjuna-x/functions.php:1643
+msgid "Enabled"
+msgstr ""
+
+#: /arjuna-x/functions.php:846
+#: /arjuna-x/functions.php:1000
+msgid "Enable this menu"
+msgstr ""
+
+#: /arjuna-x/functions.php:848
+#: /arjuna-x/functions.php:1002
+msgid "If disabled, the menu will be hidden."
+msgstr ""
+
+#: /arjuna-x/functions.php:852
+#: /arjuna-x/functions.php:1012
+msgid "Dropdown"
+msgstr ""
+
+#: /arjuna-x/functions.php:856
+#: /arjuna-x/functions.php:1016
+msgid "No dropdown menu"
+msgstr ""
+
+#: /arjuna-x/functions.php:860
+#: /arjuna-x/functions.php:1020
+msgid "One-level dropdown menu"
+msgstr ""
+
+#: /arjuna-x/functions.php:864
+#: /arjuna-x/functions.php:1024
+msgid "Two-level dropdown menu"
+msgstr ""
+
+#: /arjuna-x/functions.php:868
+msgid "Alignment"
+msgstr ""
+
+#: /arjuna-x/functions.php:872
+msgid "Left"
+msgstr ""
+
+#: /arjuna-x/functions.php:876
+msgid "Right"
+msgstr ""
+
+#: /arjuna-x/functions.php:881
+#: /arjuna-x/functions.php:1035
+#: /arjuna-x/functions.php:1602
+msgid "Use"
+msgstr ""
+
+#: /arjuna-x/functions.php:885
+#: /arjuna-x/functions.php:1040
+msgid "WordPress Custom Menus"
+msgstr ""
+
+#: /arjuna-x/functions.php:889
+#: /arjuna-x/functions.php:1044
+msgid "Legacy Menus"
+msgstr ""
+
+#: /arjuna-x/functions.php:896
+#: /arjuna-x/functions.php:1053
+msgid "Menu lists only"
+msgstr ""
+
+#: /arjuna-x/functions.php:900
+#: /arjuna-x/functions.php:1057
+msgid "Pages"
+msgstr ""
+
+#: /arjuna-x/functions.php:904
+#: /arjuna-x/functions.php:1061
+#: /arjuna-x/sidebar-left.php:36
+#: /arjuna-x/sidebar-right.php:36
+msgid "Categories"
+msgstr ""
+
+#: /arjuna-x/functions.php:909
+#: /arjuna-x/functions.php:1066
+msgid "Sorting Order"
+msgstr ""
+
+#: /arjuna-x/functions.php:912
+#: /arjuna-x/functions.php:926
+#: /arjuna-x/functions.php:1069
+#: /arjuna-x/functions.php:1083
+msgid "Sort menu items in"
+msgstr ""
+
+#: /arjuna-x/functions.php:914
+#: /arjuna-x/functions.php:928
+#: /arjuna-x/functions.php:1071
+#: /arjuna-x/functions.php:1085
+msgid "ascending"
+msgstr ""
+
+#: /arjuna-x/functions.php:915
+#: /arjuna-x/functions.php:929
+#: /arjuna-x/functions.php:1072
+#: /arjuna-x/functions.php:1086
+msgid "descending"
+msgstr ""
+
+#: /arjuna-x/functions.php:917
+#: /arjuna-x/functions.php:931
+#: /arjuna-x/functions.php:1074
+#: /arjuna-x/functions.php:1088
+msgid "order by"
+msgstr ""
+
+#: /arjuna-x/functions.php:919
+#: /arjuna-x/functions.php:1076
+msgid "Category Name"
+msgstr ""
+
+#: /arjuna-x/functions.php:920
+#: /arjuna-x/functions.php:1077
+msgid "Category ID"
+msgstr ""
+
+#: /arjuna-x/functions.php:921
+#: /arjuna-x/functions.php:1078
+msgid "Post Count"
+msgstr ""
+
+#: /arjuna-x/functions.php:922
+#: /arjuna-x/functions.php:1079
+msgid "Category Slug"
+msgstr ""
+
+#: /arjuna-x/functions.php:933
+#: /arjuna-x/functions.php:1090
+msgid "Page Title"
+msgstr ""
+
+#: /arjuna-x/functions.php:934
+#: /arjuna-x/functions.php:1091
+msgid "Page ID"
+msgstr ""
+
+#: /arjuna-x/functions.php:935
+#: /arjuna-x/functions.php:1092
+msgid "Page Slug"
+msgstr ""
+
+#: /arjuna-x/functions.php:936
+#: /arjuna-x/functions.php:1093
+msgid "Page Order"
+msgstr ""
+
+#: /arjuna-x/functions.php:942
+#: /arjuna-x/functions.php:1099
+msgid "Menu Items"
+msgstr ""
+
+#: /arjuna-x/functions.php:945
+#: /arjuna-x/functions.php:1102
+msgid "Include categories"
+msgstr ""
+
+#: /arjuna-x/functions.php:955
+#: /arjuna-x/functions.php:1112
+msgid "Exclude categories"
+msgstr ""
+
+#: /arjuna-x/functions.php:962
+msgid "Note: While the above fields show empty categories, the theme will only display categories that have at least one published post in them."
+msgstr ""
+
+#: /arjuna-x/functions.php:965
+#: /arjuna-x/functions.php:1122
+msgid "Include pages"
+msgstr ""
+
+#: /arjuna-x/functions.php:975
+#: /arjuna-x/functions.php:1132
+msgid "Exclude pages"
+msgstr ""
+
+#: /arjuna-x/functions.php:993
+#: /arjuna-x/functions.php:2479
+msgid "Second Header Menu"
+msgstr ""
+
+#: /arjuna-x/functions.php:1006
+msgid "Separators"
+msgstr ""
+
+#: /arjuna-x/functions.php:1008
+msgid "Visually separate the menu buttons"
+msgstr ""
+
+#: /arjuna-x/functions.php:1029
+msgid "Home Button"
+msgstr ""
+
+#: /arjuna-x/functions.php:1031
+msgid "Display Home button"
+msgstr ""
+
+#: /arjuna-x/functions.php:1047
+msgid "If you use WP Custom Menus, please assign a custom menu in [[LINK_START]]Appearance > Menus[[LINK_END]]. Otherwise, the menu will fall back to displaying all pages."
+msgstr ""
+
+#: /arjuna-x/functions.php:1119
+msgid "Note: While the above fields show empty categories, the theme will only display categories that have at least one published post in them.</span>"
+msgstr ""
+
+#: /arjuna-x/functions.php:1149
+msgid "Background &amp; Color Schemes"
+msgstr ""
+
+#: /arjuna-x/functions.php:1154
+msgid "Background Style"
+msgstr ""
+
+#: /arjuna-x/functions.php:1158
+msgid "Blueish gradient"
+msgstr ""
+
+#: /arjuna-x/functions.php:1159
+msgid "Gray gradient"
+msgstr ""
+
+#: /arjuna-x/functions.php:1160
+msgid "Gray gradient (reverse)"
+msgstr ""
+
+#: /arjuna-x/functions.php:1161
+msgid "Khaki gradient"
+msgstr ""
+
+#: /arjuna-x/functions.php:1173
+msgid "Solid Color"
+msgstr ""
+
+#: /arjuna-x/functions.php:1176
+msgid "Button Style"
+msgstr ""
+
+#: /arjuna-x/functions.php:1182
+msgid "If the background is a solid color, you can choose the style of the buttons yourself."
+msgstr ""
+
+#: /arjuna-x/functions.php:1186
+msgid "Header Image"
+msgstr ""
+
+#: /arjuna-x/functions.php:1210
+msgid "Footer Style"
+msgstr ""
+
+#: /arjuna-x/functions.php:1219
+msgid "Match Header Image"
+msgstr ""
+
+#: /arjuna-x/functions.php:1230
+msgid "Sidebar"
+msgstr ""
+
+#: /arjuna-x/functions.php:1232
+#, php-format
+msgid "Note: To see how the sidebar and its widget bars work in Arjuna, please read our %sFAQ%s."
+msgstr ""
+
+#: /arjuna-x/functions.php:1236
+msgid "Sidebar Position"
+msgstr ""
+
+#: /arjuna-x/functions.php:1241
+#: /arjuna-x/functions.php:1316
+msgid "Right sidebar"
+msgstr ""
+
+#: /arjuna-x/functions.php:1246
+#: /arjuna-x/functions.php:1312
+msgid "Left sidebar"
+msgstr ""
+
+#: /arjuna-x/functions.php:1251
+msgid "No sidebar"
+msgstr ""
+
+#: /arjuna-x/functions.php:1256
+msgid "Two sidebars"
+msgstr ""
+
+#: /arjuna-x/functions.php:1261
+msgid "Sidebar Width"
+msgstr ""
+
+#: /arjuna-x/functions.php:1295
+msgid "Use the slider(s) to adjust the width of the sidebar(s)."
+msgstr ""
+
+#: /arjuna-x/functions.php:1299
+msgid "Default Widgets"
+msgstr ""
+
+#: /arjuna-x/functions.php:1301
+msgid "Display default sidebar widgets if the widget bars are empty."
+msgstr ""
+
+#: /arjuna-x/functions.php:1302
+msgid "If enabled, the following widgets will be displayed if the widget bar is empty: <b>Sidebar Top:</b> Recent Posts and Browse by Tags, <b>Sidebar Left:</b> Categories, <b>Siderbar Right:</b> Meta"
+msgstr ""
+
+#: /arjuna-x/functions.php:1306
+msgid "Sidebar Buttons"
+msgstr ""
+
+#: /arjuna-x/functions.php:1309
+msgid "Show in:"
+msgstr ""
+
+#: /arjuna-x/functions.php:1325
+msgid "Use extended button."
+msgstr ""
+
+#: /arjuna-x/functions.php:1326
+#: /arjuna-x/functions.php:1334
+#: /arjuna-x/functions.php:1342
+#: /arjuna-x/functions.php:1350
+msgid "Label"
+msgstr ""
+
+#: /arjuna-x/functions.php:1332
+msgid "Your Twitter URL"
+msgstr ""
+
+#: /arjuna-x/functions.php:1340
+msgid "Your Facebook URL"
+msgstr ""
+
+#: /arjuna-x/functions.php:1348
+msgid "Your LinkedIn URL"
+msgstr ""
+
+#: /arjuna-x/functions.php:1354
+msgid "Choose which buttons will be included on the very top of the sidebar."
+msgstr ""
+
+#: /arjuna-x/functions.php:1355
+msgid "The extended RSS button will allow visitors to choose between all available RSS feeds, depending on the page they are currently browsing."
+msgstr ""
+
+#: /arjuna-x/functions.php:1365
+msgid "Search"
+msgstr ""
+
+#: /arjuna-x/functions.php:1372
+msgid "Enable WordPress search"
+msgstr ""
+
+#: /arjuna-x/functions.php:1374
+msgid "If disabled, the search field will not be included in the header."
+msgstr ""
+
+#: /arjuna-x/functions.php:1380
+msgid "Position Search"
+msgstr ""
+
+#: /arjuna-x/functions.php:1384
+msgid "Top right (in header)"
+msgstr ""
+
+#: /arjuna-x/functions.php:1388
+msgid "Bottom right (in header)"
+msgstr ""
+
+#: /arjuna-x/functions.php:1398
+msgid "General Options"
+msgstr ""
+
+#: /arjuna-x/functions.php:1401
+msgid "Index Pages"
+msgstr ""
+
+#: /arjuna-x/functions.php:1403
+msgid "Index pages include the homepage (unless it is static), archives, category and tag listing pages as well as search results pages. Basically any page that displays a listing of posts."
+msgstr ""
+
+#: /arjuna-x/functions.php:1407
+msgid "Display Tags"
+msgstr ""
+
+#: /arjuna-x/functions.php:1409
+msgid "Display the tags of a post right below each post."
+msgstr ""
+
+#: /arjuna-x/functions.php:1413
+msgid "Display Categories"
+msgstr ""
+
+#: /arjuna-x/functions.php:1415
+msgid "Display the categories of a post right below each post."
+msgstr ""
+
+#: /arjuna-x/functions.php:1425
+msgid "Posts and Pages"
+msgstr ""
+
+#: /arjuna-x/functions.php:1430
+msgid "Display Author"
+msgstr ""
+
+#: /arjuna-x/functions.php:1432
+msgid "Include the author of a post/page."
+msgstr ""
+
+#: /arjuna-x/functions.php:1436
+msgid "Display Time"
+msgstr ""
+
+#: /arjuna-x/functions.php:1438
+msgid "Include the time and date of when the post/page has been published, instead of only the date."
+msgstr ""
+
+#: /arjuna-x/functions.php:1442
+msgid "Display Info Bar for Pages"
+msgstr ""
+
+#: /arjuna-x/functions.php:1444
+msgid "Display the info bar right below the title of pages."
+msgstr ""
+
+#: /arjuna-x/functions.php:1445
+msgid "The info bar usually includes the author of the page, the publish date, and the comments button. If turned off, this option entirely hides the bar so that only the title of the page is shown."
+msgstr ""
+
+#: /arjuna-x/functions.php:1449
+msgid "Navigation Links"
+msgstr ""
+
+#: /arjuna-x/functions.php:1451
+msgid "Display links to the previous and next posts above each post."
+msgstr ""
+
+#: /arjuna-x/functions.php:1452
+msgid "Display links to the previous and next posts below each post."
+msgstr ""
+
+#: /arjuna-x/functions.php:1453
+msgid "Note: The links will only be shown on permalink pages, i.e. the URL where one single post is displayed."
+msgstr ""
+
+#: /arjuna-x/functions.php:1463
+msgid "Comments &amp; Trackbacks"
+msgstr ""
+
+#: /arjuna-x/functions.php:1468
+msgid "Display comments as follows"
+msgstr ""
+
+#: /arjuna-x/functions.php:1473
+msgid "Aligned to the left"
+msgstr ""
+
+#: /arjuna-x/functions.php:1478
+msgid "Aligned to the right"
+msgstr ""
+
+#: /arjuna-x/functions.php:1483
+msgid "Alternate between left and right alignment"
+msgstr ""
+
+#: /arjuna-x/functions.php:1488
+msgid "Date Format"
+msgstr ""
+
+#: /arjuna-x/functions.php:1490
+msgid "Passed Time (Example: <em>&quot;Written by admin about 3 days ago.&quot;</em>)"
+msgstr ""
+
+#: /arjuna-x/functions.php:1491
+#, php-format
+msgid "Default Date Format (Example: <em>&quot;Written by admin on %s&quot;</em>)"
+msgstr ""
+
+#: /arjuna-x/functions.php:1492
+msgid "The default date format can be customized in Settings &gt; General."
+msgstr ""
+
+#: /arjuna-x/functions.php:1496
+msgid "Comment Display"
+msgstr ""
+
+#: /arjuna-x/functions.php:1498
+msgid "Hide any traces of comments when they are disabled for <strong>Pages</strong>."
+msgstr ""
+
+#: /arjuna-x/functions.php:1499
+msgid "Hide any traces of comments when they are disabled for <strong>Posts</strong>."
+msgstr ""
+
+#: /arjuna-x/functions.php:1500
+msgid "Note: If enabled, the comments tab section as well as the comment form on pages/posts will be removed."
+msgstr ""
+
+#: /arjuna-x/functions.php:1504
+msgid "Trackback Display"
+msgstr ""
+
+#: /arjuna-x/functions.php:1506
+msgid "Hide any traces of trackbacks and pingbacks when they are disabled for <strong>Pages</strong>."
+msgstr ""
+
+#: /arjuna-x/functions.php:1507
+msgid "Hide any traces of trackbacks and pingbacks when they are disabled for <strong>Posts</strong>."
+msgstr ""
+
+#: /arjuna-x/functions.php:1508
+msgid "Note: If enabled, the trackbacks tab section on pages/posts will be removed."
+msgstr ""
+
+#: /arjuna-x/functions.php:1518
+msgid "Excerpts"
+msgstr ""
+
+#: /arjuna-x/functions.php:1523
+msgid "Show excerpts on"
+msgstr ""
+
+#: /arjuna-x/functions.php:1525
+msgid "Homepage/Index page"
+msgstr ""
+
+#: /arjuna-x/functions.php:1526
+msgid "Category &amp; tag pages"
+msgstr ""
+
+#: /arjuna-x/functions.php:1527
+msgid "Archive pages"
+msgstr ""
+
+#: /arjuna-x/functions.php:1528
+msgid "Search pages"
+msgstr ""
+
+#: /arjuna-x/functions.php:1529
+msgid "Author pages"
+msgstr ""
+
+#: /arjuna-x/functions.php:1530
+msgid "Note: If enabled, an excerpt will be shown instead of the full post on selected pages. If a post does not have a custom excerpt, an automatic excerpt of the first 55 words will be displayed."
+msgstr ""
+
+#: /arjuna-x/functions.php:1540
+#: /arjuna-x/functions.php:1545
+msgid "Pagination"
+msgstr ""
+
+#: /arjuna-x/functions.php:1547
+msgid "Use Arjuna pagination"
+msgstr ""
+
+#: /arjuna-x/functions.php:1548
+msgid "If enabled, Arjuna will use its own native pagination to allow your users to navigate the blog using pages."
+msgstr ""
+
+#: /arjuna-x/functions.php:1552
+msgid "Page Range"
+msgstr ""
+
+#: /arjuna-x/functions.php:1559
+msgid "The number of page buttons that will appear before and after the current page button."
+msgstr ""
+
+#: /arjuna-x/functions.php:1563
+msgid "Page Anchors"
+msgstr ""
+
+#: /arjuna-x/functions.php:1570
+msgid "The number of page buttons that will always appear at the beginning and the end of the pagination."
+msgstr ""
+
+#: /arjuna-x/functions.php:1574
+msgid "Page Gap"
+msgstr ""
+
+#: /arjuna-x/functions.php:1581
+msgid "The number of page buttons in a gap before an ellipsis (...) is displayed."
+msgstr ""
+
+#: /arjuna-x/functions.php:1586
+msgid "Use WordPress default"
+msgstr ""
+
+#: /arjuna-x/functions.php:1587
+msgid "The default depends on your WordPress version and whether you have any pagination plugins activated. If the wp-paginate or wp-pagenavi plugin is activated, then Arjuna will use these plugins to create the pagination."
+msgstr ""
+
+#: /arjuna-x/functions.php:1597
+msgid "RSS Feeds"
+msgstr ""
+
+#: /arjuna-x/functions.php:1606
+msgid "Default RSS Feeds"
+msgstr ""
+
+#: /arjuna-x/functions.php:1610
+msgid "Google Feedburner"
+msgstr ""
+
+#: /arjuna-x/functions.php:1617
+msgid "Redirect Feeds to"
+msgstr ""
+
+#: /arjuna-x/functions.php:1620
+msgid "Arjuna will redirect all of your existing feeds, including category and tag feeds, to Google Feedburner."
+msgstr ""
+
+#: /arjuna-x/functions.php:1624
+msgid "Redirect Comment Feeds to"
+msgstr ""
+
+#: /arjuna-x/functions.php:1627
+msgid "Arjuna will redirect your comment feeds to Google Feedburner to this URL."
+msgstr ""
+
+#: /arjuna-x/functions.php:1637
+msgid "Twitter Widget"
+msgstr ""
+
+#: /arjuna-x/functions.php:1639
+msgid "Note: The minimum sidebar width for the twitter widget to not overflow the sidebar is 280px. Please adjust your sidebar accordingly."
+msgstr ""
+
+#: /arjuna-x/functions.php:1647
+#: /arjuna-x/functions.php:1692
+#: /arjuna-x/functions.php:1705
+msgid "Yes"
+msgstr ""
+
+#: /arjuna-x/functions.php:1651
+#: /arjuna-x/functions.php:1696
+#: /arjuna-x/functions.php:1709
+msgid "No"
+msgstr ""
+
+#: /arjuna-x/functions.php:1658
+msgid "Widget Title"
+msgstr ""
+
+#: /arjuna-x/functions.php:1661
+msgid "The title of the sidebar widget."
+msgstr ""
+
+#: /arjuna-x/functions.php:1665
+msgid "Twitter Username"
+msgstr ""
+
+#: /arjuna-x/functions.php:1671
+msgid "Height"
+msgstr ""
+
+#: /arjuna-x/functions.php:1677
+msgid "Number of Tweets"
+msgstr ""
+
+#: /arjuna-x/functions.php:1688
+msgid "Scrollbar"
+msgstr ""
+
+#: /arjuna-x/functions.php:1701
+msgid "Show Timestamp"
+msgstr ""
+
+#: /arjuna-x/functions.php:1720
+msgid "Miscellaneous"
+msgstr ""
+
+#: /arjuna-x/functions.php:1725
+msgid "Append to page title"
+msgstr ""
+
+#: /arjuna-x/functions.php:1727
+#, php-format
+msgid "Blog Name (&quot; - %s&quot;)"
+msgstr ""
+
+#: /arjuna-x/functions.php:1728
+#: /arjuna-x/functions.php:1736
+msgid "Custom:"
+msgstr ""
+
+#: /arjuna-x/functions.php:1729
+msgid "This will be appended to the page title of every web page (posts, pages, categories, etc.)"
+msgstr ""
+
+#: /arjuna-x/functions.php:1733
+msgid "Footer Copyright Notice"
+msgstr ""
+
+#: /arjuna-x/functions.php:1735
+#, php-format
+msgid "Blog Name (&quot;%s&quot;)"
+msgstr ""
+
+#: /arjuna-x/functions.php:1737
+msgid "The copyright notice will be displayed in the footer."
+msgstr ""
+
+#: /arjuna-x/functions.php:1741
+msgid "Enable JavaScript menus"
+msgstr ""
+
+#: /arjuna-x/functions.php:1743
+msgid "Enable JavaScript dropdown menus. This will improve usability of the menus. If JavaScript is disabled, CSS-based dropdown menus will be used instead."
+msgstr ""
+
+#: /arjuna-x/functions.php:1747
+msgid "Show IE6 Notice"
+msgstr ""
+
+#: /arjuna-x/functions.php:1749
+msgid "Display a notice to Internet Explorer 6 users to update their browsers."
+msgstr ""
+
+#: /arjuna-x/functions.php:1753
+msgid "Custom CSS"
+msgstr ""
+
+#: /arjuna-x/functions.php:1760
+#, php-format
+msgid "Arjuna needs write permissions to create a new file %s, which will contain the custom CSS."
+msgstr ""
+
+#: /arjuna-x/functions.php:1762
+msgid "Enable custom CSS rules"
+msgstr ""
+
+#: /arjuna-x/functions.php:1763
+msgid "If enabled, Arjuna will include your custom CSS rules with every page call. If you intend to make some minor changes to the theme, enabling this option ensures that you can safely upgrade Arjuna without losing your custom CSS. We recommend to use child themes for more serious customizations."
+msgstr ""
+
+#: /arjuna-x/functions.php:1779
+msgid "Save Changes"
+msgstr ""
+
+#: /arjuna-x/functions.php:1795
+msgid "Right Sidebar - Top"
+msgstr ""
+
+#: /arjuna-x/functions.php:1797
+msgid "This is the top widget bar in the right sidebar, extending to full width of the sidebar."
+msgstr ""
+
+#: /arjuna-x/functions.php:1804
+msgid "Right Sidebar - Left"
+msgstr ""
+
+#: /arjuna-x/functions.php:1806
+msgid "This is the widget bar on the left hand side in the right sidebar. It appears right below the top widget bar."
+msgstr ""
+
+#: /arjuna-x/functions.php:1813
+msgid "Right Sidebar - Right"
+msgstr ""
+
+#: /arjuna-x/functions.php:1815
+msgid "This is the widget bar on the right hand side in the right sidebar. It appears right below the top widget bar, next to the left widget bar."
+msgstr ""
+
+#: /arjuna-x/functions.php:1822
+msgid "Right Sidebar - Bottom"
+msgstr ""
+
+#: /arjuna-x/functions.php:1824
+msgid "This is the bottom widget bar in the right sidebar, extending to full width of the sidebar. It will appear below the left and right widget bars."
+msgstr ""
+
+#: /arjuna-x/functions.php:1832
+msgid "Left Sidebar - Top"
+msgstr ""
+
+#: /arjuna-x/functions.php:1834
+msgid "This is the top widget bar in the left sidebar, extending to full width of the sidebar."
+msgstr ""
+
+#: /arjuna-x/functions.php:1841
+msgid "Left Sidebar - Left"
+msgstr ""
+
+#: /arjuna-x/functions.php:1843
+msgid "This is the widget bar on the left hand side in the left sidebar. It appears right below the top widget bar."
+msgstr ""
+
+#: /arjuna-x/functions.php:1850
+msgid "Left Sidebar - Right"
+msgstr ""
+
+#: /arjuna-x/functions.php:1852
+msgid "This is the widget bar on the right hand side in the left sidebar. It appears right below the top widget bar, next to the left widget bar."
+msgstr ""
+
+#: /arjuna-x/functions.php:1859
+msgid "Left Sidebar - Bottom"
+msgstr ""
+
+#: /arjuna-x/functions.php:1861
+msgid "This is the bottom widget bar in the left sidebar, extending to full width of the sidebar. It will appear below the left and right widget bars."
+msgstr ""
+
+#: /arjuna-x/functions.php:1930
+msgid "Written by"
+msgstr ""
+
+#: /arjuna-x/functions.php:1932
+#: /arjuna-x/functions.php:1972
+#, php-format
+msgid "about %s ago"
+msgstr ""
+
+#: /arjuna-x/functions.php:1934
+#: /arjuna-x/functions.php:1974
+msgid "on"
+msgstr ""
+
+#: /arjuna-x/functions.php:1939
+#: /arjuna-x/functions.php:1978
+msgid "Edit"
+msgstr ""
+
+#: /arjuna-x/functions.php:1942
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: /arjuna-x/functions.php:1970
+msgid "Pinged by"
+msgstr ""
+
+#: /arjuna-x/functions.php:1981
+msgid "Your trackback is awaiting moderation."
+msgstr ""
+
+#: /arjuna-x/functions.php:2012
+msgid "1 year"
+msgstr ""
+
+#: /arjuna-x/functions.php:2012
+#, php-format
+msgid "%d years"
+msgstr ""
+
+#: /arjuna-x/functions.php:2016
+msgid "1 month"
+msgstr ""
+
+#: /arjuna-x/functions.php:2016
+#, php-format
+msgid "%d months"
+msgstr ""
+
+#: /arjuna-x/functions.php:2020
+msgid "1 week"
+msgstr ""
+
+#: /arjuna-x/functions.php:2020
+#, php-format
+msgid "%d weeks"
+msgstr ""
+
+#: /arjuna-x/functions.php:2024
+msgid "1 day"
+msgstr ""
+
+#: /arjuna-x/functions.php:2024
+#, php-format
+msgid "%d days"
+msgstr ""
+
+#: /arjuna-x/functions.php:2028
+msgid "1 hour"
+msgstr ""
+
+#: /arjuna-x/functions.php:2028
+#, php-format
+msgid "%d hours"
+msgstr ""
+
+#: /arjuna-x/functions.php:2032
+msgid "1 minute"
+msgstr ""
+
+#: /arjuna-x/functions.php:2032
+#, php-format
+msgid "%d minutes"
+msgstr ""
+
+#: /arjuna-x/functions.php:2035
+msgid "1 second"
+msgstr ""
+
+#: /arjuna-x/functions.php:2035
+#, php-format
+msgid "%d seconds"
+msgstr ""
+
+#: /arjuna-x/functions.php:2117
+#: /arjuna-x/functions.php:2191
+#, php-format
+msgid "Page %s of %s"
+msgstr ""
+
+#: /arjuna-x/functions.php:2159
+#: /arjuna-x/functions.php:2162
+#: /arjuna-x/functions.php:2204
+#: /arjuna-x/functions.php:2207
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: /arjuna-x/functions.php:2243
+msgid "Comment Pages:"
+msgstr ""
+
+#: /arjuna-x/functions.php:2244
+msgid "Previous"
+msgstr ""
+
+#: /arjuna-x/functions.php:2244
+msgid "Next"
+msgstr ""
+
+#: /arjuna-x/functions.php:2588
+msgid "Please go to Appearance > Arjuna Options to configure your Arjuna twitter widget."
+msgstr ""
+
+#: /arjuna-x/functions.php:2595
+#: /arjuna-x/functions.php:2604
+msgid "Arjuna Twitter Profile Widget"
+msgstr ""
+
+#: /arjuna-x/functions.php:2599
+msgid "Display Twitter Goodies Profile Widget"
+msgstr ""
+
+#: /arjuna-x/functions.php:2618
+msgid "Home"
+msgstr ""
+
+#: /arjuna-x/header.php:19
+msgid "Skip to posts"
+msgstr ""
+
+#: /arjuna-x/page.php:14
+#: /arjuna-x/page_fullwidth.php:15
+msgid "Permalink to"
+msgstr ""
+
+#: /arjuna-x/page.php:23
+#: /arjuna-x/page_fullwidth.php:24
+msgid "Pages:"
+msgstr ""
+
+#: /arjuna-x/page.php:23
+#: /arjuna-x/page_fullwidth.php:24
+msgid "Page %"
+msgstr ""
+
+#: /arjuna-x/page.php:35
+#: /arjuna-x/page_fullwidth.php:37
+#: /arjuna-x/single.php:39
+msgid "There is nothing here."
+msgstr ""
+
+#: /arjuna-x/search.php:11
+#, php-format
+msgid "Search Results on <em>%s</em>"
+msgstr ""
+
+#: /arjuna-x/search.php:35
+msgid "Your search returned no results."
+msgstr ""
+
+#: /arjuna-x/sidebar-left.php:18
+#: /arjuna-x/sidebar-right.php:18
+msgid "Recent Posts"
+msgstr ""
+
+#: /arjuna-x/sidebar-left.php:25
+#: /arjuna-x/sidebar-right.php:25
+msgid "Browse by Tags"
+msgstr ""
+
+#: /arjuna-x/sidebar-left.php:50
+#: /arjuna-x/sidebar-right.php:50
+msgid "Meta"
+msgstr ""
+
+#: /arjuna-x/single.php:21
+msgid "Previous Page"
+msgstr ""
+
+#: /arjuna-x/single.php:21
+msgid "Next Page"
+msgstr ""
+
+#: /arjuna-x/templates/comments/reply-form-advanced.php:9
+#: /arjuna-x/templates/comments/reply-form-basic.php:14
+msgid "Leave a Comment"
+msgstr ""
+
+#: /arjuna-x/templates/comments/reply-form-advanced.php:9
+#: /arjuna-x/templates/comments/reply-form-basic.php:15
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: /arjuna-x/templates/comments/reply-form-advanced.php:11
+#: /arjuna-x/templates/comments/reply-form-basic.php:16
+msgid "Cancel Reply"
+msgstr ""
+
+#: /arjuna-x/templates/comments/reply-form-advanced.php:15
+#: /arjuna-x/templates/comments/reply-form-basic.php:18
+#, php-format
+msgid "You must be %slogged in%s to post a comment."
+msgstr ""
+
+#: /arjuna-x/templates/comments/reply-form-advanced.php:20
+#: /arjuna-x/templates/comments/reply-form-advanced.php:31
+#: /arjuna-x/templates/comments/reply-form-basic.php:3
+#: /arjuna-x/templates/comments/reply-form-basic.php:10
+msgid "Your name"
+msgstr ""
+
+#: /arjuna-x/templates/comments/reply-form-advanced.php:21
+#: /arjuna-x/templates/comments/reply-form-advanced.php:32
+#: /arjuna-x/templates/comments/reply-form-basic.php:4
+#: /arjuna-x/templates/comments/reply-form-basic.php:11
+msgid "Your email"
+msgstr ""
+
+#: /arjuna-x/templates/comments/reply-form-advanced.php:22
+#: /arjuna-x/templates/comments/reply-form-advanced.php:33
+#: /arjuna-x/templates/comments/reply-form-basic.php:5
+#: /arjuna-x/templates/comments/reply-form-basic.php:12
+msgid "Your website"
+msgstr ""
+
+#: /arjuna-x/templates/comments/reply-form-advanced.php:23
+#: /arjuna-x/templates/comments/reply-form-advanced.php:43
+#: /arjuna-x/templates/comments/reply-form-basic.php:6
+#: /arjuna-x/templates/comments/reply-form-basic.php:17
+msgid "Your comment"
+msgstr ""
+
+#: /arjuna-x/templates/comments/reply-form-advanced.php:26
+#: /arjuna-x/templates/comments/reply-form-basic.php:19
+#, php-format
+msgid "Logged in as %s."
+msgstr ""
+
+#: /arjuna-x/templates/comments/reply-form-advanced.php:26
+#: /arjuna-x/templates/comments/reply-form-basic.php:19
+msgid "Log out of this account"
+msgstr ""
+
+#: /arjuna-x/templates/comments/reply-form-advanced.php:26
+#: /arjuna-x/templates/comments/reply-form-basic.php:19
+msgid "Logout"
+msgstr ""
+
+#: /arjuna-x/templates/comments/reply-form-advanced.php:45
+msgid "Subscribe to comments"
+msgstr ""
+
+#: /arjuna-x/templates/comments/reply-form-advanced.php:46
+msgid "Leave comment"
+msgstr ""
+
+#: /arjuna-x/templates/core/head-title-tag.php:5
+msgid "Search Results:"
+msgstr ""
+
+#: /arjuna-x/templates/core/pagination.php:4
+msgid "Prev"
+msgstr ""
+
+#: /arjuna-x/templates/core/pagination.php:15
+msgid "Newer Entries"
+msgstr ""
+
+#: /arjuna-x/templates/core/pagination.php:16
+msgid "Older Entries"
+msgstr ""
+
+#: /arjuna-x/templates/header/search.php:9
+msgid "Search here..."
+msgstr ""
+
+#: /arjuna-x/templates/header/search.php:10
+msgid "Find"
+msgstr ""
+
+#: /arjuna-x/templates/post/post-footer.php:10
+#: /arjuna-x/templates/post/single-post-footer.php:7
+msgid "<i>none</i>"
+msgstr ""
+
+#: /arjuna-x/templates/post/post-footer.php:15
+msgid "Read more"
+msgstr ""
+
+#: /arjuna-x/templates/post/post-header.php:8
+msgid " at "
+msgstr ""
+
+#: /arjuna-x/templates/post/post-header.php:17
+msgid "Pass required"
+msgstr ""
+
+#: /arjuna-x/templates/post/post-header.php:19
+msgid "Comments off"
+msgstr ""
+
+#: /arjuna-x/templates/post/post-header.php:21
+msgid "No comments"
+msgstr ""
+
+#: /arjuna-x/templates/post/post-header.php:21
+msgid "1 comment"
+msgstr ""
+
+#: /arjuna-x/templates/post/post-header.php:21
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: /arjuna-x/templates/post/single-page-footer.php:2
+#: /arjuna-x/templates/post/single-post-footer.php:11
+msgid "Edit in Admin"
+msgstr ""
+
+#: /arjuna-x/templates/post/single-post-bottom-links.php:2
+msgid "Previous Post"
+msgstr ""
+
+#: /arjuna-x/templates/post/single-post-bottom-links.php:3
+msgid "Next Post"
+msgstr ""
+
+#: /arjuna-x/templates/sidebar/icons.php:11
+#, php-format
+msgid "Posts in %s"
+msgstr ""
+
+#: /arjuna-x/templates/sidebar/icons.php:15
+#: /arjuna-x/templates/sidebar/icons.php:21
+#, php-format
+msgid "Posts by %s"
+msgstr ""
+
+#: /arjuna-x/templates/sidebar/icons.php:20
+msgid "Post Comments"
+msgstr ""
+
+#: /arjuna-x/templates/sidebar/icons.php:25
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/archive.php:15
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/index.php:15
+msgid "Search Results"
+msgstr ""
+
+#: /arjuna-x/templates/sidebar/icons.php:29
+msgid "Latest Posts"
+msgstr ""
+
+#: /arjuna-x/templates/sidebar/icons.php:30
+msgid "Latest Comments"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/archive.php:16
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/index.php:16
+msgid "Keyword:"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/archive.php:20
+msgid "Archive"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/archive.php:23
+msgid "Category:"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/archive.php:25
+msgid "Tag:"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/archive.php:27
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/archive.php:29
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/archive.php:31
+#, php-format
+msgid "Archive for %s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/archive.php:27
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:356
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/legacy.comments.php:60
+msgid "F jS, Y"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/archive.php:33
+msgid "Author Archive"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/archive.php:52
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/index.php:30
+msgid "Pass Required"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/archive.php:52
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/index.php:30
+msgid "1 Comment"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/archive.php:52
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/index.php:30
+msgid "% Comments"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/archive.php:52
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/index.php:30
+msgid "Comments Off"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/archive.php:53
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/index.php:31
+msgid "none"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/archive.php:76
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/index.php:54
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/page.php:42
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/page_fullwidth.php:48
+msgid "Sorry, but you are looking for something that isn't here. You can search again by using the form on upper right of the page..."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/comments.php:45
+msgid "Older Comments"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/comments.php:46
+msgid "Newer Comments"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/comments.php:62
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/legacy.comments.php:96
+msgid "Leave a Reply"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/comments.php:77
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/legacy.comments.php:106
+msgid "Name"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/comments.php:77
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/comments.php:79
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/legacy.comments.php:106
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/legacy.comments.php:108
+msgid "(required)"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/comments.php:79
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/legacy.comments.php:108
+msgid "Mail (will not be published)"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/comments.php:81
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/legacy.comments.php:110
+msgid "Website"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/footer.php:5
+msgid "top"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:112
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:124
+msgid "Eos Theme Options"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:120
+msgid "Options saved."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:126
+msgid "General"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:139
+msgid "Primary Dropdown Menu"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:143
+msgid "Enable simple dropdown menu for primary menu"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:148
+msgid "Sort Categories in Top Menu:"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:152
+msgid "Alphabetically by name"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:156
+msgid "By category ID"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:160
+msgid "By the count of posts in the categories"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:164
+msgid "By category slug"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:169
+msgid "Sorting Order:"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:173
+msgid "Ascending"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:177
+msgid "Descending"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:182
+msgid "Secondary Dropdown Menu"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:186
+msgid "Enable simple dropdown menu for the secondary menu"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:197
+msgid "RSS"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:201
+msgid "Enable RSS icon in sidebar"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:206
+msgid "Twitter"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:210
+msgid "Enable Twitter icon in sidebar"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:215
+msgid "Twitter URL"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:219
+msgid "Please type in the URL of your Twitter account."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:226
+msgid "Widget Bars"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:234
+msgid "Enable <em>header_bar</em> on pages and posts."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:247
+msgid "Enable <em>footer_bar</em> on pages and posts."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:356
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/legacy.comments.php:60
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/functions.php:356
+msgid "g:i A"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/header-fullpage.php:19
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/header.php:19
+#, php-format
+msgid "%s RSS Feed"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/header-fullpage.php:29
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/header.php:29
+msgid "Skip to content"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/legacy.comments.php:60
+msgid "H:i"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/eos/single.php:35
+msgid "<abbr title=\"Really Simple Syndication\">RSS</abbr> feed for this post (comments)"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/404.php:17
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/404.php:21
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/404.php:28
+msgid "Most Used Categories"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/404.php:36
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/archive.php:25
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/archive.php:27
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/archive.php:29
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/archive.php:57
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/author.php:74
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/category.php:50
+msgid "Nothing Found"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/archive.php:61
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/author.php:78
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/category.php:54
+msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/author.php:28
+#, php-format
+msgid "Author Archives: %s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/author.php:49
+#, php-format
+msgid "About %s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/category.php:19
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/comments.php:17
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/comments.php:40
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/comments.php:60
+msgid "Comment navigation"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/comments.php:41
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/comments.php:61
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/comments.php:42
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/comments.php:62
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-aside.php:17
+msgid "Aside"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-aside.php:22
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-image.php:21
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-image.php:64
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-link.php:22
+msgid "Reply"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-aside.php:33
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-gallery.php:32
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-image.php:27
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-link.php:33
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-aside.php:42
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-link.php:42
+msgid "Leave a reply"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-aside.php:42
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-gallery.php:87
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-link.php:42
+msgid "<b>1</b> Reply"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-aside.php:42
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-gallery.php:87
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-link.php:42
+msgid "<b>%</b> Replies"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-featured.php:29
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-featured.php:38
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-gallery.php:62
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-gallery.php:72
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-image.php:47
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-image.php:56
+msgid ", "
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-featured.php:31
+#, php-format
+msgid "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-featured.php:33
+#, php-format
+msgid "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-gallery.php:17
+msgid "Gallery"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-gallery.php:66
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-image.php:51
+#, php-format
+msgid "<span class=\"%1$s\">Posted in</span> %2$s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-gallery.php:78
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-image.php:59
+#, php-format
+msgid "<span class=\"%1$s\">Tagged</span> %2$s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-image.php:16
+msgid "Image"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-image.php:34
+#, php-format
+msgid "<a href=\"%1$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%2$s\" pubdate>%3$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%4$s\" title=\"%5$s\" rel=\"author\">%6$s</a></span></span>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-image.php:64
+msgid "<strong>1</strong> Reply"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-image.php:64
+msgid "<strong>%</strong> Replies"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-link.php:17
+msgid "Link"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-quote.php:15
+msgid "Quote"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-single.php:35
+#, php-format
+msgid "This entry was posted in %1$s and tagged %2$s by <a href=\"%6$s\">%5$s</a>. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-single.php:37
+#, php-format
+msgid "This entry was posted in %1$s by <a href=\"%6$s\">%5$s</a>. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-single.php:39
+#, php-format
+msgid "This entry was posted by <a href=\"%6$s\">%5$s</a>. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-single.php:64
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content-status.php:16
+msgid "Status"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/content.php:16
+msgid "Featured"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/footer.php:26
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/footer.php:26
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:101
+msgid "Primary Menu"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:149
+msgid "Wheel"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:155
+msgid "Shore"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:161
+msgid "Trolley"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:167
+msgid "Pine Cone"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:173
+msgid "Chessboard"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:179
+msgid "Lanterns"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:185
+msgid "Willow"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:191
+msgid "Hanoi Plant"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:374
+msgid "Main Sidebar"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:383
+msgid "Showcase Sidebar"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:385
+msgid "The sidebar for the optional Showcase Template"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:393
+msgid "Footer Area One"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:395
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:405
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:415
+msgid "An optional widget area for your site footer"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:403
+msgid "Footer Area Two"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:413
+msgid "Footer Area Three"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:432
+msgid "Post navigation"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:433
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:434
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:503
+msgid "Pingback:"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:520
+#, php-format
+msgid "%1$s on %2$s <span class=\"says\">said:</span>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:544
+msgid "Reply <span>&darr;</span>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/functions.php:562
+#, php-format
+msgid "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/header.php:113
+msgid "Main menu"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/header.php:115
+msgid "Skip to primary content"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/header.php:116
+msgid "Skip to secondary content"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/image.php:18
+msgid "Image navigation"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/image.php:19
+msgid "&larr; Previous"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/image.php:20
+msgid "Next &rarr;"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/image.php:30
+#, php-format
+msgid "<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%7$s</a>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/search.php:46
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/showcase.php:70
+msgid "Featured Post"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/sidebar.php:19
+msgid "Archives"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/single.php:19
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/single.php:20
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/tag.php:19
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:80
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:81
+msgid "Theme Options"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:90
+msgid "Some themes provide customization options that are grouped together on a Theme Options screen. If you change themes, options may change or disappear, as they are theme-specific. Your current theme, Twenty Eleven, provides the following Theme Options:"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:92
+msgid "<strong>Color Scheme</strong>: You can choose a color palette of \"Light\" (light background with dark text) or \"Dark\" (dark background with light text) for your site."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:93
+msgid "<strong>Link Color</strong>: You can choose the color used for text links on your site. You can enter the HTML color or hex code, or you can choose visually by clicking the \"Select a Color\" button to pick from a color wheel."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:94
+msgid "<strong>Default Layout</strong>: You can choose if you want your site&#8217;s default layout to have a sidebar on the left, the right, or not at all."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:96
+msgid "Remember to click \"Save Changes\" to save any changes you have made to the theme options."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:97
+msgid "For more information:"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:98
+msgid "<a href=\"http://codex.wordpress.org/Appearance_Theme_Options_Screen\" target=\"_blank\">Documentation on Theme Options</a>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:99
+msgid "<a href=\"http://wordpress.org/support/\" target=\"_blank\">Support Forums</a>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:114
+msgid "Light"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:120
+msgid "Dark"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:138
+msgid "Content on left"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:143
+msgid "Content on right"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:148
+msgid "One-column, no sidebar"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:213
+#, php-format
+msgid "%s Theme Options"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:225
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:227
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:263
+msgid "Color Scheme"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:248
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:250
+msgid "Link Color"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:256
+#, php-format
+msgid "Default color: %s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/theme-options.php:261
+msgid "Default Layout"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/widgets.php:19
+msgid "Use this widget to list your recent Aside, Status, Quote, and Link posts"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/widgets.php:20
+msgid "Twenty Eleven Ephemera"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/widgets.php:52
+msgid "Ephemera"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/widgets.php:93
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/widgets.php:109
+msgid "0 <span class=\"reply\">comments &rarr;</span>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/widgets.php:93
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/widgets.php:109
+msgid "1 <span class=\"reply\">comment &rarr;</span>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/widgets.php:93
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/widgets.php:109
+msgid "% <span class=\"reply\">comments &rarr;</span>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/widgets.php:159
+msgid "Title:"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyeleven/inc/widgets.php:162
+msgid "Number of posts to show:"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/404.php:16
+msgid "Not Found"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/404.php:18
+msgid "Apologies, but the page you requested could not be found. Perhaps searching will help."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/archive.php:33
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/archive.php:35
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/archive.php:37
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/comments.php:41
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/comments.php:60
+msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/comments.php:42
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/comments.php:61
+msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/footer.php:33
+#, php-format
+msgid "Proudly powered by %s."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:100
+msgid "Primary Navigation"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:140
+msgid "Berries"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:146
+msgid "Cherry Blossoms"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:152
+msgid "Concave"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:158
+msgid "Fern"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:164
+msgid "Forest Floor"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:170
+msgid "Inkwell"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:176
+msgid "Path"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:182
+msgid "Sunset"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:330
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:340
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:357
+msgid "(Edit)"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:376
+msgid "Primary Widget Area"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:378
+msgid "The primary widget area"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:387
+msgid "Secondary Widget Area"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:389
+msgid "The secondary widget area"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:398
+msgid "First Footer Widget Area"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:400
+msgid "The first footer widget area"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:409
+msgid "Second Footer Widget Area"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:411
+msgid "The second footer widget area"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:420
+msgid "Third Footer Widget Area"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:422
+msgid "The third footer widget area"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:431
+msgid "Fourth Footer Widget Area"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:433
+msgid "The fourth footer widget area"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:467
+#, php-format
+msgid "<span class=\"%1$s\">Posted on</span> %2$s <span class=\"meta-sep\">by</span> %3$s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/functions.php:497
+#, php-format
+msgid "Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/loop-attachment.php:21
+#, php-format
+msgid "Return to %s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/loop-attachment.php:23
+#, php-format
+msgid "<span class=\"meta-nav\">&larr;</span> %s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/loop-attachment.php:32
+#, php-format
+msgid "<span class=\"%1$s\">By</span> %2$s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/loop-attachment.php:43
+#, php-format
+msgid "<span class=\"%1$s\">Published</span> %2$s"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/loop-attachment.php:53
+#, php-format
+msgid "Full size is %s pixels"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/loop-attachment.php:56
+msgid "Link to full-size image"
+msgstr ""
+
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/loop.php:93
+#: Z:/localhost/srs/dev/wp32/wp-content/themes/twentyten/loop.php:96
+msgid "More Galleries"
+msgstr ""
+

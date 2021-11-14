@@ -1,0 +1,377 @@
+/*
+Theme Name: Pool
+Theme URI: http://www.dewdropwebs.com/WPthemes/?p=32
+Description: "Pool" is a three-column blue-green theme featuring Home Page recent articles arranged in blocks. Coded to accept Multi-level Navigation Plugin (http://pixopoint.com/multi-level-navigation/) but it is not required.
+Version: 1.1
+Author: DewDrop
+Author URI: http://www.dewdropwebs.com/WPthemes/
+Tags: gravatars, widgets, fixed, right sidebar, three column, blue, green, water, pool
+*/
+
+/* Basics */
+.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	}
+.alignleft {float: left;}
+.alignright {float: right;}
+
+*{margin:0; padding:0;}
+
+body {
+	background:#E6E6E4 url('images/bodyback.jpg');
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:small; color:#000;
+	line-height:140%;
+	}
+
+img {border: none; padding: 6px; float: left; margin: 0 15px 10px 0;}
+img a {border:none;}
+img.left {float: left; border: none; padding: 8px; margin: 0;}
+img.right {float: right; border: none; padding: 8px; margin: 0;}
+
+ul{margin:5px 0 5px 20px;}
+ol{margin:5px 0 5px 20px;}
+
+blockquote{
+	border-left: 1px solid #F29D41; border-right: 1px solid #F29D41;
+	margin:10px 12px 10px 12px; padding:10px;
+	}
+
+code{
+	margin:10px;
+	font-family:"Courier New", Courier, monospace;
+	}
+
+td {border: 1px solid #dddddd;}
+
+/* deal with clearing floating divs */
+.clearfix:after {
+	content: "."; 
+	display: block; 
+	height: 0; clear: both; visibility: hidden;
+	}
+	.clearfix {display: inline-table;}
+
+/* Links */
+a, a:link {
+	color:#0C3EA5;
+	text-decoration:none;
+	}
+a:visited {}
+a:hover {color:#027B16;}
+
+/*  Container  */
+#container {
+	width:900px; 
+	margin:0 auto; padding:0;
+	background:url('images/repeatback.jpg') repeat-y;
+	
+	}
+	
+/*  Header  */
+#header {
+	width:900px; height:133px; position:relative;
+	background:url('images/headback.jpg') no-repeat;
+	margin:0; padding:0;
+	}
+#header img {margin:0; padding:0;}
+	
+/* Site Titles (part of header) */
+#titles {
+	width:700px; 
+	position:absolute; top:10px; left:10px; 
+	}
+#titles h1 {
+	color: #E0DFDF; 
+	float:left;margin-left:30px;
+	font-size:x-large;
+	font-weight:bold;
+	letter-spacing:2px;
+	}
+#titles h1 a {
+	color:#E0DFDF;
+	text-decoration:none;
+	}
+#titles h1 a:hover {
+	color: #fff;
+	text-decoration: underline;
+	}
+#titles h2 {
+	font-size: small; font-weight: normal; font-style: italic;
+	color: #F8EDE1; clear:both; float:left; margin:1em 0 0 80px;
+	}
+
+/*  Top Menu  (part of header) */
+#menu {width:860px; height:24px; position:absolute; left:20px; top:80px;}
+#menu ul {
+	float:left; clear:both; 
+	list-style:none;
+	margin:0 40px 0 0; padding:0;
+	}
+#menu li {
+	display:block; float:left; height:24px;
+	padding:3px 0 0 10px;
+	}
+#menu a {
+	background-position:100% 100%;
+	text-decoration:none;
+	padding-right:10px;
+	}
+#menu ul li.current_page_item a {color:#027B16;}
+
+/*  Main Content */
+#content { 
+	width:464px; 
+	padding:8px; margin:-8px 4px 0 20px; 
+	text-align:justify;
+	float:left;
+	}
+#content h1 {
+	font-size:large; color: #F29D41;
+	font-weight:300; clear:both;
+	margin:8px 0 6px 0; padding: 4px 0 4px 0;
+	border-bottom:1px solid #000000;
+	}
+#content h2 {font-size:medium; margin:1em 0 .7em 0; color:#1670AE;}
+#content h3 {font-size:small; margin:.5em 0;}
+#content h4 {font-size:small; margin:.4em 0;}
+#content ol {margin:.5em 4em;}		
+#content ul {margin:.5em 4em;}	
+#content ul li {list-style-type: square;}
+
+.entry {margin: 6px 0 8px 0 ;}	
+.entry p {margin: 6px 0 0 0;}	
+
+.postmetadata{
+	clear:both;
+	background:#C1D4DE;
+	padding:6px; margin:16px 0;
+	border-left:solid 1px #999999; border-top:solid 1px #999999;
+	border-right:solid 1px #ffffff; border-bottom:solid 1px #ffffff;
+	}
+
+.post-date {
+	width:44px; height:49px; 
+	float:left; margin:4px;
+	background:transparent url('images/blog_date.gif') no-repeat;
+	}
+.post-month {
+	font-size:11px;
+	text-transform:uppercase;
+	color:#FFFFFF;
+	text-align:center;
+	display:block;
+	line-height:11px;
+	padding-top:2px;
+	margin-left:-3px;
+	}
+.post-day {
+	font-size:18px;
+	text-transform:uppercase;
+	color:#016193;
+	text-align:center;
+	display:block;
+	line-height:18px;
+	padding-top:5px;
+	margin-left:-3px;
+	}
+.post-year {
+	font-size:10px;
+	text-transform:uppercase;
+	color:#545C65;
+	text-align:center;
+	display:block;
+	line-height:6px;
+	margin-top:1px;
+	margin-left:-3px;
+	}
+div>.post-year {font-size:6px; color:#727982;}
+
+/* Home page posts */
+.homeTop {
+	border:1px solid #C0BFBE;
+	width:460px; 
+	padding:2px; margin:0 0 2px 0;
+	}
+.homeOther {
+	border:1px solid #C0BFBE;
+	width:222px; 
+	padding:2px; margin:4px 4px 0 0;
+	float:left; 
+	}
+.readmore {float:right;}
+
+/* Left Sidebar */
+#left {
+	width:180px; float:left; 
+	margin:0 10px 0 0; padding:0;
+	}
+div>#left {margin:0 6px;}
+#left h2 {
+	font-size:10pt;
+	padding:3px 6px;
+	margin:0;
+	}
+#left p {margin:0 6px 0 12px; padding: 0;}
+#left a {text-decoration:none; margin:0; padding:0; line-height: 14pt;}
+#left a:hover {color: #027B16; text-decoration: underline;}
+#left ul{
+	list-style:none; 
+	margin: 0 0 12px 8px; padding:0; 
+	}
+#left ul li{
+	list-style:none; 
+	margin:0 0 0 12px; padding:0;
+	text-indent:-12px;
+	line-height:120%;
+	}
+#left ul ul{
+	margin:0;
+	padding:0;
+	}
+#left ul ul li{
+	list-style:square;
+	list-style-position: inside;
+	margin:0 0 0 12px; padding:0;
+	text-indent:-12px;
+	line-height:120%;
+	}
+
+/* Right Sidebar */
+#right {
+	width: 182px; float:left; 
+	margin:0 0 0 0px; padding: 0; 
+	}
+#right h2 {
+	font-size:10pt;
+	padding:3px 6px;
+	margin:8px 0 0 0;
+	}
+#right p {margin:0 6px 0 12px; padding:0;}
+#right a {text-decoration:none; margin:0; padding:0; line-height:14pt;}
+#right a:hover {color: #027B16; text-decoration:underline;}
+#right ul{
+	list-style:none; 
+	margin: 0 0 12px 8px; padding:0; 
+	}
+#right ul li{
+	list-style:none;
+	margin:0 0 0 12px; padding:0;
+	text-indent:-12px;
+	line-height:120%;
+	}
+#right ul ul{
+	margin:0;
+	padding:0;
+	}
+#right ul ul li{
+	list-style:square;
+	list-style-position: inside;
+	margin:0 0 0 12px; padding:0;
+	text-indent:-12px;
+	line-height:120%;
+	}
+
+/* RSS Widget */
+.rsswidget img {
+	display: none;
+	}
+#sidebar h2 a.rsswidget{
+	color: #fff;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+	}
+#sidebar h2 a.rsswidget a:hover{
+	color: #fff;
+	text-decoration: none;	
+	}
+#right h2 a.rsswidget{
+	color: #fff;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+	}
+#right h2 a.rsswidget a:hover{
+	color: #fff;
+	text-decoration: none;	
+	}
+
+/* Calendar Widget */
+#wp-calendar {
+	margin: 0 auto;
+	text-align: left;
+	}
+#wp-calendar a{ 
+	margin: 0;
+	padding: 0;
+	}
+	
+/* text Widget */
+.textwidget {margin:0 12px 0 12px; padding: 0;}
+
+/* Comment Form */
+#commentform{
+	margin:10px;
+	padding:10px;}
+#commentbox{
+	width:75%;
+	min-width:400px;
+	margin:5px 5px 0 0;}
+#author, #email, #url{margin:5px 5px 0 0;}
+#submit{margin:5px 5px 0 0;}
+
+/* Comments */
+#comments{ 
+	margin:10px;
+	padding:10px;
+	}	
+#comments p  margin:1em 0;}
+ol.commentlist {margin:0; padding:0;}
+ol.commentlist li {
+	background: #ececec;
+	margin:10px -30px 10px -30px;
+	padding:6px;
+	border-left:solid 1px #eeeeee; border-top:solid 1px #eeeeee;
+	border-right:solid 1px #aaaaaa; border-bottom:solid 1px #aaaaaa;
+	}
+ol.commentlist li.alt {background:#C1D4DE;}
+ol.commentlist a {}
+ul.comment li {
+	border:0;
+	margin:0.5em 0; padding:0; text-align:left;
+	}
+cite {}
+small.commentmetadata {}
+img.avatar {
+	float:right; 
+	margin:6px -30px 0 4px; padding:2px;
+	_margin:16px 0 0 4px;		/* IE6 hack */
+	width:50px; height:50px;
+	border-left:solid 1px #aaaaaa; border-top:solid 1px #aaaaaa;
+	border-right:solid 1px #E8F3F9; border-bottom:solid 1px #ffffff;
+	}
+*:first-child+html img.avatar {margin:20px 0 0 0;} /* IE7 hack */
+
+/* Search */
+#searchform {margin:8px 0 8px 12px; padding: 0;}	
+#searchform input {
+	background-color:#fff;
+	font-family: arial, verdana, sans-serif;
+	font-size: 8pt;	
+	border:1px solid #BCBCBC;
+	color: #6A6A6A;
+	margin: 4px 0 0 0;
+	padding: 2px 2px 2px 4px;
+	}	
+
+/* Footer */
+#footer {
+	background:url('images/footback.jpg') no-repeat;
+	clear:both; text-align:center; 
+	width:900px; height:21px; 
+	margin:0; padding:0; 
+	}
+#footer p {margin:0; padding:0;}

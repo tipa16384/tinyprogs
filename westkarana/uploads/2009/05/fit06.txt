@@ -1,0 +1,6 @@
+solves 0 * 2
+solves 1 * 0
+solves 0 * 0
+solves 0 * 1
+solves 2 * 0
+"$0","No Houses","do nothing (this should never happen)"

@@ -1,0 +1,4 @@
+#!/usr/bin/python
+
+# number random moves
+numMoves = 10

@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>Ship</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<style>
+#canvas {
+	width: 256px;
+	height: 256px;
+	border: 1px solid green;
+	background: #eee;
+	position: relative;
+}
+
+#ship {
+	background: url('ship.svg');
+	position: absolute;
+	top: calc(128px - 16px);
+	left: calc(128px - 16px);
+}
+
+#mark {
+	display: none;
+	position: absolute;
+}
+</style>
+</head>
+<body>
+
+<div id="canvas">
+<img id="ship" src="ship.svg" />
+<div id="mark">X</div>
+
+
+</div>
+
+<script>
+var ang = 0;
+var targetAng = 0;
+var targetRad = 0;
+
+var maxV = 90;	// degrees per second
+var a = 75;
+var v = 0;
+
+var dt = 1.0/60.0;
+
+var csize = 512;
+var ssize = 32;
+var cx = csize/2;
+var cy = csize/2;
+var targetX = csize/2;
+var targetY = csize/2;
+
+var drawship = function() {
+	if (targetX == cx) {
+		if (targetY <= cy) {
+			targetRad = 0;
+		} else {
+			targetRad = Math.PI;
+		}
+	} else if (targetY == cy) {
+		if (targetX <= cx) {
+			targetRad = Math.PI/2;
+		} else {
+			targetRad = 3*Math.PI/2;
+		}
+	} else {
+		targetRad = -Math.atan2(cx-targetX, cy-targetY);
+		targetAng = targetRad * (180/Math.PI);
+	}
+	
+	if (ang != targetAng) {
+		var da;
+		var tmv = maxV;
+		
+		ang += v * dt;
+		
+		da = targetAng - ang;
+		
+		if (da > 180) {
+			da = da - 360;
+		} else if (da < -180) {
+			da = da + 360;
+		}
+		
+		if (da > 0) {
+			v += a * dt;
+			tmv = maxV;
+
+			if (da < tmv) {
+				tmv = da;
+			}
+			
+			if (v > tmv) {
+				v = tmv;
+			}
+		} else {
+			v -= a * dt;
+			tmv = -maxV;
+			
+			if (da > tmv) {
+				tmv = da;
+			}
+			
+			if (v < tmv) {
+				v = tmv;
+			}
+		}
+	}
+
+	$('#ship').css('transform', 'rotate('+ang+'deg)');
+};
+
+var setTargetAngle = function(e) {
+	targetX = e.offsetX;
+	targetY = e.offsetY;
+	
+	$('#mark').css({top: (targetY-5)+'px', left: (targetX-5)+'px'}).show();
+	
+	console.log('x='+targetX+' y='+targetY);
+	
+};
+
+var noClickMe = function(e) {
+	e.stopPropagation();
+};
+
+$(function() {
+    $('#canvas').css({width: csize+'px', height: csize+'px'});
+    $('#ship').css({width: ssize+'px', height: ssize+'px', top: (csize-ssize)/2+'px', left: (csize-ssize)/2+'px' });
+	$('#canvas').on('click', setTargetAngle);
+	$('#ship').on('click', noClickMe);
+	
+	setInterval(drawship, dt * 1000.0);
+});
+
+
+</script>
+
+</body>
+</html>

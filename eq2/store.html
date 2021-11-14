@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>EQ2 Broker Helper</title>
+<meta charset="UTF-8" />
+<style type="text/css" media="screen">@import "../jq/themes/css/apple.css";</style>
+<script src="../jq/src/lib/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../jq/src/jqtouch.min.js" type="text/javascript" charset="utf-8"></script>
+
+<style>
+#calc {
+  width: 100%;
+  height: 100%;
+}
+
+#calc td  {
+  text-align: center;
+}
+
+#calc td button {
+  width: 100%;
+ font-size: 150%; 
+}
+
+#calc table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.readout {
+  width: 100%;
+ font-size: 175%; 
+  text-align: center;
+}
+
+.bigger {
+ font-size: 175%; 
+  text-align: center;
+}
+
+</style>
+
+<script type="text/javascript" charset="utf-8">
+            $.jQTouch({
+                icon: 'storeico.png',
+                startupScreen: 'store.png'
+            });
+
+var cash = new Array();
+var clearOnClick = false;
+
+$(function(){
+  function clearCash() {
+    cash['P'] = '';
+    cash['G'] = '';
+    cash['S'] = '';
+    cash['C'] = '';
+  }
+  
+  function clearAll() {
+      $('#echo').val('');
+      $('#result').val('');
+      clearCash();
+      clearOnClick = false;
+  }
+  
+  function pretty(f) {
+    var p = Math.floor(f/100.0);
+    var g = Math.floor(f)%100;
+    var s = Math.floor(f*100.0)%100;
+    var c = Math.floor(f*10000.0)%100;
+    var a = new Array();
+    if (p) {
+      a.push(p+'p');
+    }
+    if (g) {
+      a.push(g+'g');
+    }
+    if (s) {
+      a.push(s+'s');
+    }
+    if (c) {
+      a.push(c+'c');
+    }
+    return a.reduce(function(a,b){return a+' '+b;});
+  }
+  
+  function doCalc() {
+    var val = 0.0;
+    var tax;
+    
+    if ($('#vetdisplay').attr('checked')) {
+      tax = 1.1;
+    } else {
+      tax = 1.2;
+    }
+    
+    if (parseFloat(cash['P'])) {
+      val += 100.0 * parseFloat(cash['P']);
+    }
+    if (parseFloat(cash['G'])) {
+      val += parseFloat(cash['G']);
+    }
+    if (parseFloat(cash['S'])) {
+      val += parseFloat(cash['S'])/100.0;
+    }
+    if (parseFloat(cash['C'])) {
+      val += parseFloat(cash['C'])/10000.0;
+    }
+    $('#result').val(pretty(val));
+    $('#echo').val(pretty((val*0.99)/tax));
+    clearOnClick = true;
+  }
+  
+  function showCash() {
+    var show = '';
+    var first = true;
+    var a = new Array();
+    var p = parseInt(cash['P']);
+    var g = parseInt(cash['G']);
+    var s = parseInt(cash['S']);
+    var c = parseInt(cash['C']);
+    
+    if (p) {
+      a.push(p+'p');
+    }
+    if (g) {
+      a.push(g+'g');
+    }
+    if (s) {
+      a.push(s+'s');
+    }
+    if (c) {
+      a.push(c+'c');
+    }
+    
+    $('#result').val(a.reduce(function(a,b){return a+' '+b;}));
+  }
+  
+  function clicked() {
+    var el = $(this);
+    var key = el.text();
+    var echo = $('#echo');
+    var res = $('#result');
+    
+    if (clearOnClick) {
+      clearAll();
+    }
+    
+    if (key >= '0' && key <= '9') {
+      echo.val(echo.val()+key);
+    } else if (key == 'Clear') {
+      clearAll();
+    } else if (key == 'P' || key == 'G' || key == 'S' || key == 'C') {
+      cash[key] = echo.val();
+      echo.val('');
+      showCash();
+    } else if (key == 'Convert') {
+      doCalc();
+    }
+  }
+
+  $('#calc button').click(clicked);
+  clearCash();
+});
+
+</script>
+
+</head>
+
+<body>
+
+        <div id="jqt">
+            <div id="home">
+                <div class="toolbar">
+                    <h1>Broker Helper</h1>
+                    <a href="#info" class="button leftButton flip">Options</a>
+                </div>
+                <div id="calc">
+                
+                <table>
+                
+                <tr>
+                <td colspan="4">
+                <input class="readout" id="result" type="text" length="20" value="" disabled="disabled" />
+                </td>
+                </tr>
+                
+                <tr>
+                <td colspan="4">
+                <input class="readout" id="echo" type="text" length="20" value="" disabled="disabled" />
+                </td>
+                </tr>
+                
+                <tr>
+                <td><button class="dig">1</button></td>
+                <td><button class="dig">2</button></td>
+                <td><button class="dig">3</button></td>
+                <td><button>P</button></td>
+                </tr>
+                
+                <tr>
+                <td><button class="dig">4</button></td>
+                <td><button class="dig">5</button></td>
+                <td><button class="dig">6</button></td>
+                <td><button>G</button></td>
+                </tr>
+                
+                <tr>
+                <td><button class="dig">7</button></td>
+                <td><button class="dig">8</button></td>
+                <td><button class="dig">9</button></td>
+                <td><button>S</button></td>
+                </tr>
+                
+                <tr>
+                <td colspan="3"><button class="dig">0</button></td>
+                <td><button>C</button></td>
+                </tr>
+                
+                <tr>
+                <td colspan="4"><button>Clear</button></td>
+                </tr>
+                 <tr>
+                <td colspan="4"><button>Convert</button></td>
+                </tr>
+                
+                </table>
+                
+                </div>
+            </div>
+            
+            <div id="info">
+               <div class="toolbar">
+                    <h1>Options</h1>
+                    <a href="#home" class="button flip leftButton">Back</a>
+                </div>
+                <div class="bigger">
+              <label>
+              <input type="checkbox" id="vetdisplay" name="vetdisplay" value="Y"/>
+              Use Veteran's Sales Display?
+              </label>
+               </div>
+             </div>
+
+</body>
+
+</html>

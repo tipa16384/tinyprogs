@@ -1,0 +1,25 @@
+/*  
+Theme Name: Mandigo
+Theme URI: http://www.onehertz.com/portfolio/wordpress/mandigo/
+Description: Mandigo is an elegant widget-ready one/two/three-column Wordpress theme, available in two widths, SEVEN color schemes and 39 languages!
+Version: 1.40.1
+Author: t0mmmmmmm
+Author URI: http://www.onehertz.com/portfolio/wordpress/
+Tags: fixed width, widgets, custom header, options page, SEO friendly, header rotation, valid XHTML, valid CSS, one column, two columns, three columns, easy customization, custom colors, color schemes, blue, red, green, orange, pink, purple, teal, internationalized, arabic, bahasa indonesia, basque, bulgarian, catalan, chinese, croatian, czech, danish, dutch, finnish, french, german, greek, hebrew, hindi, hungarian, icelandic, italian, japanese, lithuanian, malay, maltese, norwegian, polish, portuguese, romanian, russian, serbian, slovak, slovenian, spanish, swedish, turkish, ukrainian
+*/
+/*
+The rules below are not used, they are here for wordpress.org to accept the theme upload. The actual stylesheet is style.css.php
+*/
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}

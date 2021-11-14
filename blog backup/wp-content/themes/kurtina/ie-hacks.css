@@ -1,0 +1,40 @@
+/*  
+	NOTES FROM THE AUTHOR:
+	
+	This stylesheet was made specially for Internet Explorer
+	because IE likes to be special and thinks that adhering to
+	the web standards is beyond them. Haha. Just kidding.
+	
+	Anyway, I separated my IE hacks so that when IE 7 comes out and
+	would FINALLY adhere to the web standards, modifying this theme
+	won't be too much of a problem.
+	
+	When you modify something in the main stylesheet (style.css),
+	please check if the thing you modified there has an IE hack
+	counterpart here.
+	
+	ENJOY!
+
+*/
+
+/* HEADER STUFF */
+*html .header_navi li a:hover {background:#666666;}
+/* 
+IE doesn't recognize the animation GIF to make the fancy fade-in
+effect you see in Mozilla. How sad.
+*/
+
+/* BLOG POST STUFF */
+*html .titlecolumn {width:418px;}
+*html .entrytitlecomment {width:413px; padding-top:3px;}
+*html .entrybody {padding:10px 14px 5px 14px;}
+
+
+/* SEARCH FORMATTING */
+*html input.searchbox { width:150px;}
+
+
+/* RIGHT BAR STUFF */
+*html .sidenav_box ul {padding:0px 0px 15px 0px;}
+*html .sidenav_box li ul {padding:0px 0px 5px 0px;}
+*html .sidenav_box ul li h2 {padding:8px 0px 10px 8px;}

@@ -1,0 +1,33 @@
+body.mandigo-options legend {
+	font-size: 125%;
+	font-weight: bold;
+	margin-left: -10px;
+}
+
+body.mandigo-options fieldset {
+	padding: 20px 0 20px 10px;
+	margin: 20px 0;
+	border-bottom: 1px solid #CCC;
+}
+
+body.mandigo-options label {
+	margin-top: 10px;
+	display: block;
+	font-weight: bold;
+}
+
+body.mandigo-options .submit {
+	border: none;
+}
+
+body.mandigo-options #versioncheck, #preview {
+	margin-top: 50px;
+}
+
+body.mandigo-options li {
+	margin: 3px 0;
+}
+
+body.mandigo-options li li {
+	margin-left: 20px;
+}

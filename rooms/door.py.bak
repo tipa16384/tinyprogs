@@ -1,0 +1,13 @@
+# door.py
+
+class Door:
+	def __init__(self):
+		self.open = False
+		self.locked = False
+		self.secret = False
+	def isOpen(self):
+		return self.open
+	def open(self):
+		self.open = True
+	def close(self):
+		self.open = False

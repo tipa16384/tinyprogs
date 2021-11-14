@@ -1,0 +1,21 @@
+﻿import pygame
+import Tools
+from pygame.locals import *
+
+def GetDrawingFitness(g,g1):
+	error = 0
+
+	s = pygame.surfarray.array3d(g)
+	s1 = pygame.surfarray.array3d(g1)
+
+	for y in range(Tools.MaxHeight):
+		for x in range(Tools.MaxWidth):
+			r = int(s[x,y,0]) - int(s1[x,y,0])
+			g = int(s[x,y,1]) - int(s1[x,y,1])
+			b = int(s[x,y,2]) - int(s1[x,y,2])
+			#print r,g,b
+			pixelError = r*r+g*g+b*b
+			error = error + pixelError
+
+	return error
+

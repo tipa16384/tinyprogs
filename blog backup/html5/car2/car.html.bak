@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Car demo</title>
+<SCRIPT type="text/javascript" src="./prototype.js"></script>
+<SCRIPT type="text/javascript" src="./car.js"></script>
+<SCRIPT type="text/javascript" src="./scene.js"></script>
+<LINK href="./car.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<header>
+<img src="miniframe.png"/>
+<ul>
+<li>Car demo.</li><li>Currently the car traces out polar equations. Interactivity coming soon!</li>
+<li>Converted the demo to Easel.js</li>
+<li>Converted the demo to DOM animation</li>
+</ul>
+</header>
+<br clear="all"/>
+<br/>
+
+<div id="gameBoard">
+<div id="sprite">
+</div>
+
+</div>
+
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2870"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="UI.svg">
+  <defs
+     id="defs2872">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective2878" />
+    <inkscape:perspective
+       id="perspective3819"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3869"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3924"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask3948">
+      <path
+         d="m -14.285706,153.79076 a 272.85715,272.85715 0 1 1 -545.714294,0 272.85715,272.85715 0 1 1 545.714294,0 z"
+         sodipodi:ry="272.85715"
+         sodipodi:rx="272.85715"
+         sodipodi:cy="153.79076"
+         sodipodi:cx="-287.14285"
+         id="path3950"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         sodipodi:type="arc"
+         transform="translate(8.57143,8.5714287)" />
+    </mask>
+    <inkscape:perspective
+       id="perspective3962"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask3978">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:17.71653557;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="path3980"
+         sodipodi:cx="-287.14285"
+         sodipodi:cy="153.79076"
+         sodipodi:rx="272.85715"
+         sodipodi:ry="272.85715"
+         d="m -14.285706,153.79076 a 272.85715,272.85715 0 1 1 -545.714294,0 272.85715,272.85715 0 1 1 545.714294,0 z"
+         transform="translate(1100,574.28572)" />
+    </mask>
+    <inkscape:perspective
+       id="perspective4098"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="275.48336"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="1004"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata2875">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:2.27020836;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3910"
+       width="2105.2158"
+       height="1608.0729"
+       x="-665.46503"
+       y="-307.38855"
+       rx="30.000565"
+       ry="25.588089"
+       inkscape:export-filename="C:\Users\brenda\Pictures\LWR\g4248.png"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77" />
+    <g
+       id="g4218"
+       transform="translate(-591.42857,171.42857)"
+       style="stroke:#ffffff;stroke-opacity:1"
+       inkscape:export-filename="C:\Users\brenda\Pictures\LWR\g4248.png"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77">
+      <rect
+         style="fill:#ffff00;stroke:#ffffff;stroke-opacity:1"
+         id="rect4211"
+         width="475.59335"
+         height="94.34848"
+         x="-2.8884704"
+         y="-281.95486"
+         rx="15.750108"
+         ry="13.481047" />
+      <rect
+         ry="13.481047"
+         rx="15.750108"
+         y="-355.28824"
+         x="22.82584"
+         height="94.34848"
+         width="475.59335"
+         id="rect4209"
+         style="fill:#0000ff;stroke:#ffffff;stroke-opacity:1" />
+      <rect
+         style="fill:#ff0000;stroke:#ffffff;stroke-opacity:1"
+         id="rect4207"
+         width="475.59335"
+         height="94.34848"
+         x="48.5401"
+         y="-431.47876"
+         rx="15.750108"
+         ry="13.481047" />
+    </g>
+    <g
+       id="g4213"
+       transform="translate(-1.4285714e-7,2.8571457)"
+       inkscape:export-filename="C:\Users\brenda\Pictures\LWR\g4248.png"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77">
+      <rect
+         ry="13.481047"
+         rx="15.750108"
+         y="-344.81204"
+         x="-528.60278"
+         height="94.34848"
+         width="475.59335"
+         id="rect4040"
+         style="fill:#ffffff;stroke:#000000;stroke-width:11.9394865;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         id="text4042"
+         y="-282.76346"
+         x="-331.46045"
+         style="font-size:50.90197372px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Futura Hv;-inkscape-font-specification:Futura Hv"
+         xml:space="preserve"><tspan
+           y="-282.76346"
+           x="-331.46045"
+           id="tspan4044"
+           sodipodi:role="line">Player</tspan></text>
+    </g>
+    <g
+       id="g4036"
+       transform="matrix(0.6348899,0,0,0.6348899,-327.51616,-271.65007)"
+       inkscape:export-filename="C:\Users\brenda\Pictures\LWR\g4248.png"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77">
+      <path
+         transform="translate(-54.28571,-5.7142843)"
+         d="m -14.285706,153.79076 c 0,150.69484 -122.162304,272.85714 -272.857144,272.85714 C -437.83769,426.6479 -560,304.4856 -560,153.79076 c 0,-150.6948451 122.16231,-272.85715 272.85715,-272.85715 150.69484,0 272.857144,122.1623049 272.857144,272.85715 z"
+         sodipodi:ry="272.85715"
+         sodipodi:rx="272.85715"
+         sodipodi:cy="153.79076"
+         sodipodi:cx="-287.14285"
+         id="path3914"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:17.71653557;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:type="arc" />
+      <image
+         transform="translate(-62.85714,-22.857144)"
+         mask="url(#mask3948)"
+         xlink:href="file:///C:/Users/brenda/Pictures/LWR/00-player-fr.png"
+         width="366.50735"
+         height="517.28571"
+         id="image3843"
+         x="-473.28571"
+         y="-73.423515" />
+    </g>
+    <g
+       style="stroke:#ffffff;stroke-opacity:1"
+       transform="matrix(-1,0,0,1,1295.5307,165.71428)"
+       id="g4223"
+       inkscape:export-filename="C:\Users\brenda\Pictures\LWR\g4248.png"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77">
+      <rect
+         ry="13.481047"
+         rx="15.750108"
+         y="-281.95486"
+         x="-2.8884704"
+         height="94.34848"
+         width="475.59335"
+         id="rect4225"
+         style="fill:#ffff00;stroke:#ffffff;stroke-opacity:1" />
+      <rect
+         style="fill:#0000ff;stroke:#ffffff;stroke-opacity:1"
+         id="rect4227"
+         width="475.59335"
+         height="94.34848"
+         x="22.82584"
+         y="-355.28824"
+         rx="15.750108"
+         ry="13.481047" />
+      <rect
+         ry="13.481047"
+         rx="15.750108"
+         y="-431.47876"
+         x="48.5401"
+         height="94.34848"
+         width="475.59335"
+         id="rect4229"
+         style="fill:#ff0000;stroke:#ffffff;stroke-opacity:1" />
+    </g>
+    <g
+       id="g4080"
+       transform="matrix(0.76449611,0,0,0.76449611,640.58229,-407.06319)"
+       inkscape:export-filename="C:\Users\brenda\Pictures\LWR\g4248.png"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77">
+      <rect
+         style="fill:#ffffff;stroke:#000000;stroke-width:17.71653557;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect4046"
+         width="705.71429"
+         height="140"
+         x="137.14287"
+         y="63.790756"
+         rx="23.370966"
+         ry="20.003996" />
+      <text
+         xml:space="preserve"
+         style="font-size:75.53144073px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Futura Hv;-inkscape-font-specification:Futura Hv"
+         x="595.38898"
+         y="158.71941"
+         id="text4048"><tspan
+           sodipodi:role="line"
+           id="tspan4050"
+           x="595.38898"
+           y="158.71941">Dire Rat</tspan></text>
+    </g>
+    <g
+       id="g3982"
+       transform="matrix(0.6551738,0,0,0.6551738,670.54055,-273.86545)"
+       inkscape:export-filename="C:\Users\brenda\Pictures\LWR\g4248.png"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:17.71653557;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="path3952"
+         sodipodi:cx="-287.14285"
+         sodipodi:cy="153.79076"
+         sodipodi:rx="272.85715"
+         sodipodi:ry="272.85715"
+         d="m -14.285706,153.79076 c 0,150.69484 -122.162304,272.85714 -272.857144,272.85714 C -437.83769,426.6479 -560,304.4856 -560,153.79076 c 0,-150.6948451 122.16231,-272.85715 272.85715,-272.85715 150.69484,0 272.857144,122.1623049 272.857144,272.85715 z"
+         transform="translate(1245.7143,-19.999999)" />
+      <image
+         transform="translate(145.71429,-594.28571)"
+         mask="url(#mask3978)"
+         xlink:href="file:///C:/Users/brenda/Pictures/LWR/01-rat-fr.png"
+         width="486.01331"
+         height="490.69653"
+         id="image2826"
+         x="574.19763"
+         y="520.86218" />
+    </g>
+    <g
+       id="g4140"
+       transform="translate(-8.5714286,-82.857143)"
+       inkscape:export-filename="C:\Users\brenda\Pictures\LWR\g4248.png"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77">
+      <g
+         transform="translate(3.8571428e-7,-214.28571)"
+         id="g4052">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.77165353;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="rect3912"
+           width="805.71429"
+           height="588.57141"
+           x="-28.571428"
+           y="455.21933"
+           rx="23.370966"
+           ry="20.003996" />
+        <g
+           id="g3732"
+           transform="matrix(1,0,0,0.89298892,342.85713,111.79216)">
+          <path
+             style="fill:none;stroke:#95fffb;stroke-width:1.77165353;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             d="m 302.57141,386.6479 c 0,662.8572 -2.85714,657.1429 -2.85714,657.1429"
+             id="path3698" />
+          <path
+             id="path3700"
+             d="m 233.71426,386.6479 c 0,662.8572 -2.85714,657.1429 -2.85714,657.1429"
+             style="fill:none;stroke:#95fffb;stroke-width:1.77165353;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <path
+             style="fill:none;stroke:#95fffb;stroke-width:1.77165353;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             d="m 164.85712,386.6479 c 0,662.8572 -2.85714,657.1429 -2.85714,657.1429"
+             id="path3702" />
+          <path
+             id="path3704"
+             d="m 95.99998,386.6479 c 0,662.8572 -2.85714,657.1429 -2.85714,657.1429"
+             style="fill:none;stroke:#95fffb;stroke-width:1.77165353;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <path
+             style="fill:none;stroke:#95fffb;stroke-width:1.77165353;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             d="m 27.142839,386.6479 c 0,662.8572 -2.85714,657.1429 -2.85714,657.1429"
+             id="path3706" />
+          <path
+             id="path3708"
+             d="m -41.714301,386.6479 c 0,662.8572 -2.85714,657.1429 -2.85714,657.1429"
+             style="fill:none;stroke:#95fffb;stroke-width:1.77165353;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <path
+             style="fill:none;stroke:#95fffb;stroke-width:1.77165353;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             d="m -110.57144,386.6479 c 0,662.8572 -2.85714,657.1429 -2.85714,657.1429"
+             id="path3710" />
+          <path
+             id="path3712"
+             d="m -179.42859,386.6479 c 0,662.8572 -2.85714,657.1429 -2.85714,657.1429"
+             style="fill:none;stroke:#95fffb;stroke-width:1.77165353;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <path
+             style="fill:none;stroke:#95fffb;stroke-width:1.77165353;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             d="m -248.28574,386.6479 c 0,662.8572 -2.85714,657.1429 -2.85714,657.1429"
+             id="path3714" />
+          <path
+             id="path3716"
+             d="m -317.14287,386.6479 c 0,662.8572 -2.85714,657.1429 -2.85714,657.1429"
+             style="fill:none;stroke:#95fffb;stroke-width:1.77165353;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <path
+             style="fill:none;stroke:#95fffb;stroke-width:1.77165353;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             d="m 371.42856,378.07647 c 0,662.85723 -2.85714,657.14293 -2.85714,657.14293"
+             id="path3718" />
+        </g>
+        <path
+           style="fill:none;stroke:#95fffb;stroke-width:1.95205522;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 762.26245,1024.9345 c -804.72336,0 -797.78607,-2.8572 -797.78607,-2.8572"
+           id="path3747" />
+        <path
+           id="path3749"
+           d="m 762.26245,956.0773 c -804.72336,0 -797.78607,-2.85714 -797.78607,-2.85714"
+           style="fill:none;stroke:#95fffb;stroke-width:1.95205522;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <path
+           style="fill:none;stroke:#95fffb;stroke-width:1.95205522;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 762.26245,887.22016 c -804.72336,0 -797.78607,-2.85714 -797.78607,-2.85714"
+           id="path3751" />
+        <path
+           id="path3753"
+           d="m 762.26245,818.36302 c -804.72336,0 -797.78607,-2.85714 -797.78607,-2.85714"
+           style="fill:none;stroke:#95fffb;stroke-width:1.95205522;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <path
+           style="fill:none;stroke:#95fffb;stroke-width:1.95205522;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 762.26245,749.50588 c -804.72336,0 -797.78607,-2.85714 -797.78607,-2.85714"
+           id="path3755" />
+        <path
+           id="path3757"
+           d="m 762.26245,680.64874 c -804.72336,0 -797.78607,-2.85714 -797.78607,-2.85714"
+           style="fill:none;stroke:#95fffb;stroke-width:1.95205522;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <path
+           style="fill:none;stroke:#95fffb;stroke-width:1.95205522;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 762.26245,611.7916 c -804.72336,0 -797.78607,-2.85714 -797.78607,-2.85714"
+           id="path3759" />
+        <path
+           id="path3761"
+           d="m 762.26245,542.93445 c -804.72336,0 -797.78607,-2.85714 -797.78607,-2.85714"
+           style="fill:none;stroke:#95fffb;stroke-width:1.95205522;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <path
+           style="fill:none;stroke:#95fffb;stroke-width:1.95205522;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 762.26245,474.0773 c -804.72336,0 -797.78607,-2.85714 -797.78607,-2.85714"
+           id="path3763" />
+        <rect
+           ry="20.003996"
+           rx="23.370966"
+           y="449.62027"
+           x="-28.4562"
+           height="596.91235"
+           width="805.35797"
+           id="rect3696"
+           style="fill:none;stroke:#000000;stroke-width:29.37560844;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <image
+           y="990.80249"
+           x="-272.98752"
+           id="image3857"
+           height="181.4417"
+           width="124.43132"
+           xlink:href="file:///C:/Users/brenda/Pictures/LWR/00-player-top.png"
+           transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)" />
+        <path
+           sodipodi:type="arc"
+           style="fill:none;stroke:#ff0303;stroke-width:54.9777298;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           id="path3988"
+           sodipodi:cx="-512.85712"
+           sodipodi:cy="690.93359"
+           sodipodi:rx="115.71429"
+           sodipodi:ry="115.71429"
+           d="m -397.14283,690.93359 c 0,63.90724 -51.80705,115.71429 -115.71429,115.71429 -63.90723,0 -115.71428,-51.80705 -115.71428,-115.71429 0,-63.90723 51.80705,-115.71428 115.71428,-115.71428 63.90724,0 115.71429,51.80705 115.71429,115.71428 z"
+           transform="matrix(0.46493355,0,0,0.46493355,349.87308,253.9811)" />
+        <image
+           xlink:href="file:///C:/Users/brenda/Pictures/LWR/01-rat-top.png"
+           width="140.01775"
+           height="178.64333"
+           id="image2852"
+           x="-393.37671"
+           y="368.4686"
+           transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)" />
+      </g>
+      <image
+         xlink:href="file:///C:/Users/brenda/Pictures/LWR/01-rat-top.png"
+         width="136.41698"
+         height="174.04924"
+         id="image2840"
+         x="593.29736"
+         y="246.7661" />
+    </g>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:17.71653557;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect4112"
+       width="145.71428"
+       height="148.57143"
+       x="-362.85712"
+       y="1132.3621"
+       rx="23.370966"
+       ry="20.003996"
+       inkscape:export-filename="C:\Users\brenda\Pictures\LWR\g4248.png"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77" />
+    <rect
+       ry="20.003996"
+       rx="23.370966"
+       y="1132.3621"
+       x="834.64288"
+       height="148.57143"
+       width="145.71428"
+       id="rect4114"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:17.71653557;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="C:\Users\brenda\Pictures\LWR\g4248.png"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:17.71653557;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect4116"
+       width="145.71428"
+       height="148.57143"
+       x="663.57147"
+       y="1132.3621"
+       rx="23.370966"
+       ry="20.003996"
+       inkscape:export-filename="C:\Users\brenda\Pictures\LWR\g4248.png"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77" />
+    <rect
+       ry="20.003996"
+       rx="23.370966"
+       y="1132.3621"
+       x="492.50003"
+       height="148.57143"
+       width="145.71428"
+       id="rect4118"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:17.71653557;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="C:\Users\brenda\Pictures\LWR\g4248.png"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:17.71653557;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect4120"
+       width="145.71428"
+       height="148.57143"
+       x="321.42859"
+       y="1132.3621"
+       rx="23.370966"
+       ry="20.003996"
+       inkscape:export-filename="C:\Users\brenda\Pictures\LWR\g4248.png"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77" />
+    <rect
+       ry="20.003996"
+       rx="23.370966"
+       y="1132.3621"
+       x="150.35718"
+       height="148.57143"
+       width="145.71428"
+       id="rect4122"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:17.71653557;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="C:\Users\brenda\Pictures\LWR\g4248.png"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:17.71653557;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect4124"
+       width="145.71428"
+       height="148.57143"
+       x="-20.714256"
+       y="1132.3621"
+       rx="23.370966"
+       ry="20.003996"
+       inkscape:export-filename="C:\Users\brenda\Pictures\LWR\g4248.png"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77" />
+    <rect
+       ry="20.003996"
+       rx="23.370966"
+       y="1132.3621"
+       x="-191.78568"
+       height="148.57143"
+       width="145.71428"
+       id="rect4126"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:17.71653557;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:export-filename="C:\Users\brenda\Pictures\LWR\g4248.png"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:17.71653557;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect4128"
+       width="145.71428"
+       height="148.57143"
+       x="1005.7144"
+       y="1132.3621"
+       rx="23.370966"
+       ry="20.003996"
+       inkscape:export-filename="C:\Users\brenda\Pictures\LWR\g4248.png"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77" />
+    <text
+       xml:space="preserve"
+       style="font-size:41.15716553px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Futura Hv;-inkscape-font-specification:Futura Hv"
+       x="-365.66956"
+       y="935.6441"
+       id="text4130"
+       inkscape:export-filename="C:\Users\brenda\Pictures\LWR\g4248.png"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77"><tspan
+         sodipodi:role="line"
+         id="tspan4132"
+         x="-365.66956"
+         y="935.6441">You glare at Dire Rat!</tspan><tspan
+         sodipodi:role="line"
+         x="-365.66956"
+         y="987.09058"
+         id="tspan4134">Dire Rat staggers!</tspan><tspan
+         sodipodi:role="line"
+         x="-365.66956"
+         y="1038.537"
+         id="tspan4136">Greater Rat spits poison!</tspan><tspan
+         sodipodi:role="line"
+         x="-365.66956"
+         y="1089.9835"
+         id="tspan4138">You are poisoned!</tspan></text>
+    <g
+       id="g4248"
+       transform="translate(-14.285714,-2.8571429)"
+       inkscape:export-xdpi="41.77"
+       inkscape:export-ydpi="41.77">
+      <rect
+         ry="12.084158"
+         rx="37.713726"
+         y="-349.67078"
+         x="126.53844"
+         height="246.923"
+         width="466.92303"
+         id="rect4200"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:13.65064144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         id="text4170"
+         y="-273.35208"
+         x="365.71423"
+         style="font-size:48px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Futura Hv;-inkscape-font-specification:Futura Hv"
+         xml:space="preserve"><tspan
+           id="tspan4174"
+           y="-273.35208"
+           x="365.71423"
+           sodipodi:role="line">Level 3 Fighter</tspan><tspan
+           id="tspan4198"
+           y="-213.35208"
+           x="365.71423"
+           sodipodi:role="line" /><tspan
+           id="tspan4246"
+           y="-153.35208"
+           x="365.71423"
+           sodipodi:role="line">Dungeon Level 2</tspan></text>
+    </g>
+  </g>
+</svg>

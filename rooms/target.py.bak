@@ -1,0 +1,3 @@
+# target.py
+
+from object import Object

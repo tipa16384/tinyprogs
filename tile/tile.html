@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+<head>
+<title>Vietnamese Maze Puzzle</title>
+<script src="http://chasingdings.com/eq2/prototype.js"></script>
+
+<style>
+
+#board {
+	width: 640px;
+	height: 640px;
+	position: relative;
+	top: 0;
+	left: 0;
+	background-color: #FEE;
+}
+
+#board > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80px;
+	height: 80px;
+	background-color: #F0F;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<p style="font-size: 150%; width:640px;">Click on the line segments. Try to fill in as much of the board as possible with fully enclosed blocks.</p>
+
+<div id="board">
+</div>
+
+<script>
+
+var L = 0;
+var R = 1;
+var O = 2;
+
+function getSVG(l,r,seg) {
+	var html;
+	
+	html = '<svg width="80px" height="80px" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" version="1.1">';
+	html += '<rect x="0" y="0" width="80" height="80" fill="'+l+'" stroke="none" stroke-width="0"/>';
+	html += '<polygon fill="'+r+'" stroke="none" stroke-width="0" points="';
+	
+	if (seg == L) {
+		html += '80,0 0,80 80,80';
+	} else {
+		html += '0,0 80,80 80,0';
+	}
+	
+	html += '"/>"';
+
+	if (seg == L) {
+		html += '<line x1="80" y1="0" x2="0" y2="80" stroke-width="9" stroke="black" />';
+	} else {
+		html += '<line x1="0" y1="0" x2="80" y2="80" stroke-width="9" stroke="black" />';
+	}
+	
+	html += '</svg>';
+	
+	return html;
+}
+
+function toggleTile(e) {
+	var ang;
+	
+	ang = (this.className == 'L') ? R : L;
+	this.className = (ang == L) ? 'L' : 'R';
+	colorBoard();
+}
+
+function makeBoard() {
+	var maze = new Array(8);
+	for (var y=0; y<8; ++y) {
+		maze[y] = new Array(8);
+		for (var x=0; x<8; ++x) {
+			maze[y][x] = Math.round(Math.random()) ? L : R;
+		}
+	}
+	
+	return maze;
+}
+
+function retrieveBoard() {
+	var maze = new Array(8);
+	for (var y=0; y<8; ++y) {
+		maze[y] = new Array(8);
+		for (var x=0; x<8; ++x) {
+			maze[y][x] = $('tile'+(8*y+x)).className == 'L' ? L : R;
+		}
+	}
+	
+	return maze;
+}
+
+function replaceColors(lcolors,rcolors,a,b) {
+	if (a == b) {
+		return;
+	}
+	
+	var a1 = Math.min(a,b);
+	var b1 = Math.max(a,b);
+	
+	for (var i=0; i<8; ++i) {
+		for (var j=0; j<8; ++j) {
+			if (lcolors[i][j] == b1) {
+				lcolors[i][j] = a1;
+			}
+			if (rcolors[i][j] == b1) {
+				rcolors[i][j] = a1;
+			}
+		}
+	}
+}
+
+function colorBoard() {
+	var maze = retrieveBoard();
+	var BASECOLOR = 0
+	var lcolors = new Array(8);
+	var rcolors = new Array(8);
+	var curColor = BASECOLOR;
+	
+	for (var i=0; i<8; ++i) {
+		lcolors[i] = new Array(8);
+		rcolors[i] = new Array(8);
+		for (var j=0; j<8; ++j) {
+			lcolors[i][j] = BASECOLOR;
+			rcolors[i][j] = BASECOLOR;
+		}
+	}
+	
+	for (var y=0; y < 8; ++y) {
+		for (var x=0; x < 8; ++x) {
+			var upl = (y==0) ? BASECOLOR : lcolors[y-1][x];
+			var upr = (y==0) ? BASECOLOR : rcolors[y-1][x];
+			var lfl = (x==0) ? BASECOLOR : lcolors[y][x-1];
+			var lfr = (x==0) ? BASECOLOR : rcolors[y][x-1];
+			var seg = maze[y][x];
+			var useg = (y == 0) ? O : maze[y-1][x];
+			var lseg = (x == 0) ? O : maze[y][x-1];
+			
+			if (seg == L) {
+				var c1 = (useg == L) ? upr : upl;
+				var c2 = lfr;
+				replaceColors(lcolors,rcolors,c1,c2);
+				lcolors[y][x] = Math.min(c1,c2);
+				++curColor;
+				rcolors[y][x] = curColor;
+			} else {
+				lcolors[y][x] = lfr;
+				rcolors[y][x] = (useg == L) ? upr : upl;
+			}
+		}
+			
+		replaceColors(lcolors,rcolors,rcolors[y][7],BASECOLOR);
+	}
+	
+	for (var x=0; x < 8; ++x) {
+		var useg = maze[7][x];
+		var upl = lcolors[7][x];
+		var upr = rcolors[7][x];
+		
+		replaceColors(lcolors,rcolors,(useg==L)?upr:upl,BASECOLOR);
+	}
+	
+	for (var y=0; y < 8; ++y) {
+		for (var x=0; x < 8; ++x) {
+			var el = $('tile'+(8*y+x));
+			var lc = lcolors[y][x] ? '#F0F' : 'white';
+			var rc = rcolors[y][x] ? '#F0F' : 'white';
+			el.innerHTML = getSVG(lc,rc,maze[y][x]);
+		}
+	}
+}
+
+function drawBoard(maze) {
+	$('board').innerHTML = '';
+	for(var y=0; y<8; ++y) {
+		for (var x=0; x<8; ++x) {
+			var pos = maze[y][x];
+			var el = new Element('div', {'id': 'tile'+(y*8+x), 'class': (pos==L)?'L':'R'});
+			el.setStyle({'top': (y*80)+'px', 'left': (x*80)+'px', 'position': 'absolute'});
+			el.innerHTML = getSVG('white','white',pos);
+			el.observe('click',toggleTile);
+			$('board').appendChild(el);
+		}
+	}
+}
+
+document.observe("dom:loaded", function() {
+	var maze = makeBoard();
+	drawBoard(maze);
+	colorBoard();
+});
+
+
+</script>
+
+</body>
+
+
+
+</html>
