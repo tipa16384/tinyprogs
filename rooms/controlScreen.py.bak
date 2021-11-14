@@ -1,0 +1,5 @@
+# controlScreen.py
+
+from gamescreen import GameScreen
+
+class ControlScreen(GameScreen):

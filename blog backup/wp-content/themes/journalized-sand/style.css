@@ -1,0 +1,351 @@
+/*
+Theme Name: Journalized Sand
+Theme URI: http://zed1.com/
+Description: Sand theme from Mike Little's Journalized
+Version: 1.00 Released 13 Mar 2005
+Author: Mike Little
+Author URI: http://zed1.com/journalized/
+
+Credit for the original concept and core of the layout comes
+courtesy of Rob Chandanais via: http://bluerobot.com/web/layouts/layout3.html
+*/
+
+body {
+    color: #000000;
+    background: #efefe7;
+    margin: 20px;
+    padding: 0px;
+    font: 11px verdana, arial, helvetica, sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 150%;
+    color: #000000;
+    text-align: center;
+}
+
+img {
+    border-style: none;
+}
+
+.images {
+    padding: 2px;
+    background: transparent;
+    border: none;
+}
+h2 {
+    margin: 12px 210px 10px 190px;
+    padding: 1px 4px 1px 4px;
+    font-size: 12px;
+    color: #eeeeee;
+    position: relative; /* Position is declared "relative" to gain control of stacking order (z-index). */
+    width: auto;
+    min-width: 120px;
+    background: #b5a58c;
+    z-index: 3; /* This allows the content to overlap the right menu in narrow windows in good browsers. */
+    border: 1px solid #000;
+}
+
+h3 {
+    font: bold 12px verdana, arial, helvetica, sans-serif;
+    margin: 0px 0px 5px 0px;
+    padding: 0px;
+}
+
+h4 {
+    font-size: 12px;
+    border: 1px solid #000;
+    border-bottom: none;
+    margin: 0px 0px 0px 0px;
+    color: #e9f2fc;
+    background: #b5a58c;
+    padding: 2px 4px 2px 4px;
+}
+
+abbr {
+    cursor: help;
+}
+
+.storyTitle {
+    font: bold 14px verdana, arial, helvetica, sans-serif;
+    margin: 0px 0px 5px 0px;
+    padding: 0px;
+}
+.storyCategory {
+    font-weight: 400;
+    margin: 0px 0px 5px 0px;
+    padding: 0px;
+}
+.storyAuthor {
+    font-weight: 600;
+    margin: 0px 0px 5px 0px;
+    padding: 0px;
+}
+p {
+    font: 11px/13px verdana, arial, helvetica, sans-serif;
+    margin: 0px 0px 0px 0px;
+    padding: 2px;
+}
+
+#headerMessage {
+    font: 9px verdana, arial, helvetica, sans-serif;
+    margin: 0px 0px 0px 0px;
+    padding: 2px;
+}
+
+pre {
+    font: 10px/11px fixed;
+}
+a {
+    color: #0000dd;
+    font-size: 11px;
+    font-family: verdana, arial, helvetica, sans-serif;
+    text-decoration: none;
+    /* background : transparent; */
+}
+
+a:link    { color: #0000dd; text-decoration: none; }     
+a:visited { color: #0000dd; text-decoration: none; }     
+a:hover   { color: #000000; text-decoration: underline; }
+
+#headerblock {
+    position: relative; /* Position is declared "relative" to gain control of stacking order (z-index). */
+    width: auto;
+    min-width: 120px;
+    margin: 0px 210px 20px 190px;
+    border: 1px solid #000;
+    color: #222;
+    background: #efefe7;
+    padding: 10px;
+    z-index: 3; /* This allows the content to overlap the right menu in narrow windows in good browsers. */
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#header a:link, #header a:visited {
+	font-size: 120%;
+	font-weight: 600;
+    color: #000000;
+}
+
+.commentHeader {
+    position: relative; /* Position is declared "relative" to gain control of stacking order (z-index). */
+    width: auto;
+    margin: 10px 10px 10px 10px;
+    border: 1px solid #000000;
+    background: #cccccc;
+    color: #000000;
+    padding: 10px;
+    z-index: 3; /* This allows the content to overlap the right menu in narrow windows in good browsers. */
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* All the content boxes belong to the content class. */
+.centreblock, .navigation {
+    position: relative; /* Position is declared "relative" to gain control of stacking order (z-index). */
+    width: auto;
+    min-width: 120px;
+    margin: 0px 210px 20px 190px;
+    border: 1px solid #000;
+    color: #222;
+    background: #eee;
+    padding: 10px;
+    z-index: 3; /* This allows the content to overlap the right menu in narrow windows in good browsers. */
+}
+.centreblock>p {margin: 0px;}
+.centreblock>p+p {text-indent: 30px;}
+
+.meta ul {
+  display: inline;
+}
+
+.meta li  {
+    display: inline;
+	list-style-type: none;
+}
+
+.centreblock ul, .leftsideSection ul, .rightsideSection ul {
+	list-style-type: none;
+	margin: 0;
+	padding-left: 3px;
+}
+
+.centreblock ul li {
+}
+
+.storyContent ul li {
+	list-style-type: disc;
+	margin-left: 10px;
+	padding-left: 5px;
+}
+
+.centreblock h4 {
+    border: 1px solid #000;
+    margin: 14px 0px 2px 0px;
+}
+
+.navigation {
+    position: relative; /* Position is declared "relative" to gain control of stacking order (z-index). */
+    width: auto;
+    min-width: 120px;
+    margin: 0px 210px 10px 190px;
+    border: 1px solid #000;
+    color: #222;
+    background: #ded6c6;
+    padding: 2px;
+    z-index: 3; /* This allows the content to overlap the right menu in narrow windows in good browsers. */
+}
+
+.storyContent {
+    color: #222;
+    background: #eee;
+}
+
+.storyCommentContent {
+    border: 1px solid #000;
+    color: #222;
+    background: #eee;
+    width: auto;
+    margin: 10px 10px 10px 10px;
+    padding: 10px;
+}
+
+.storyLinks {
+    text-align: right;
+    margin: 8px;
+}
+
+.storyLinks a:link {    font-size: 10px; color: #000; text-decoration: underline;}
+.storyLinks a:visited { font-size: 10px; color: #000; text-decoration: underline;}
+.storyLinks a:hover {   font-size: 10px; color: #00d; text-decoration: underline;}
+
+
+blockquote {
+    margin: 0.5em;
+    color: #333333;
+    padding: 4px;
+    /*border: 1px solid #000000;*/
+    background: #ded6c6;
+}
+
+q {
+    color: #333333;
+    background: #ded6c6;
+}
+
+#leftside {
+    position: absolute;
+    width: 168px;
+    top: 20px;
+    left: 20px;
+    padding: 5px;
+/*
+    border: 1px solid #b5a58c;
+    color: #464c64;
+*/
+    background: #ded6c6;
+    z-index: 1;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+}
+body>#leftside {width: 168px;}
+
+#leftside a:link { color: #000; text-decoration: underline;}
+#leftside a:visited { color: #000; text-decoration: underline;}
+#leftside a:hover { color: #0000dd; text-decoration: underline;}
+
+.leftsideSection {
+    border: 1px solid #000;
+    color: #222;
+    background: #eee;
+    padding: 4px;
+    margin: 0px 0px 15px 0px;
+}
+
+#rightside {
+    position: absolute;
+    width: 190px;
+    top: 20px;
+    right: 20px;
+    padding: 5px;
+/*
+    border: 1px solid #b5a58c;
+    color: #464c64;
+*/
+    background: #ded6c6;
+    z-index: 1;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+}
+body>#rightside {width: 188px;}
+
+#rightside a:link { color: #000; text-decoration: underline;}
+#rightside a:visited { color: #000; text-decoration: underline;}
+#rightside a:hover { color: #0000dd; text-decoration: underline;}
+
+
+.rightsideSection {
+    border: 1px solid #000;
+    color: #222;
+    background: #eee;
+    padding: 4px;
+    margin: 0px 0px 15px 0px;
+}
+
+#chaff {
+    text-align: right;
+}
+#chaff a {
+   color: #000000;
+   font-size: 8px;
+}
+#chaff a:link { color: #000000; }
+#chaff a:visited { color: #000000; }
+#chaff a:hover { background: #fff; }
+
+.centerP {
+    text-align: center;
+}
+
+#contentcomments input, #centreblock input, #menu input {
+    margin: 1px;
+    padding: 1px 1px 4px 1px;
+    border: 1px solid #000000;
+    font: 11px/14px verdana, arial, helvetica, sans-serif;
+    background: #ffffff;
+}
+#contentcomments textarea, #centreblock textarea, #menu textarea {
+    margin: 1px;
+    padding: 1px;
+    border: 1px solid #000000;
+    background: #ffffff;
+    font: 11px/14px verdana, arial, helvetica, sans-serif;
+}
+.commentfield {
+    margin-bottom: 4px;
+}
+
+.b2calendartable { background: #ded6c6; border: 1px solid #000; font: 11px verdana, arial, helvetica, sans-serif; }
+.b2calendarmonth { }
+.b2calendarrow   { }
+.b2calendarheadercell { color: #e9f2fc; background: #b5a58c; }
+.b2calendarcell { color: #222; }
+.b2calendartoday { color: #dd0000; }
+.b2calendaremptycell { }
+.b2calendarlinkpost { color: #354463; text-decoration: none; }
+
+.blogrollmain {
+    margin-bottom: 4px;
+}
+
+div.NOCSS {display: none;}
+
+.buttonarea {
+    background: #cccccc;
+}
+
+span.searchword {
+    background-color: yellow;
+}

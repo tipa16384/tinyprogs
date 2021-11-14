@@ -1,0 +1,15 @@
+Version 2.3
+
+1. contact.php updated to have an AntiSpam Question
+2. index.php - added support for posts that span across pages. <?php wp_link_pages(); ?>
+3. single.php - added support for posts that span across pages. <?php wp_link_pages(); ?>
+4. page.php - added support for posts that span across pages. <?php wp_link_pages(); ?>
+			- now displays the list of sub-pages(if any), right under the page's content.
+5. style.css - Updated
+	- Sidebar's heading color changed.
+	- Textbox and the TextArea were assigned a background color.
+	- added a background image for images within the post, 
+		that are float to left or right using class="left" or class="right".
+	- Updated the style for blockquote with a background image.
+6. header.php
+	Added the meta tags for keywords and description

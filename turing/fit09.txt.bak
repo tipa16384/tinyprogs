@@ -1,0 +1,43 @@
+solves 0 * 1
+solves 1 * 2
+solves 0 * 0
+solves 2 * 1
+solves 2 * 0
+solves 2 * 2
+solves 1 * 0
+solves 0 * 2
+"$0","No Houses","take $15 from the bank, build 4 houses and move forward"
+"$2","No Houses","move forward"
+"$2","1 House","take $12 from the bank, remove the house and move backward"
+"$2","2 Houses","give all your money to the bank, build a hotel in place of the houses and move backward"
+"$2","4 Houses","remove 2 houses and move backward"
+"$2","Hotel","remove the hotel and move forward"
+"$3","No Houses","take $8 from the bank"
+"$4","Hotel","take $1 from the bank, replace the hotel with 2 houses and move backward"
+"$5","No Houses","take $11 from the bank and move forward"
+"$5","1 House","take $7 from the bank, build 2 houses and move backward"
+"$5","4 Houses","take $5 from the bank and build a hotel in place of the houses"
+"$6","1 House","pay $2 to the bank, build 3 houses and move backward"
+"$6","3 Houses","take $14 from the bank, remove all the houses and move forward"
+"$8","No Houses","build 4 houses"
+"$8","4 Houses","build a hotel in place of the houses and move backward"
+"$10","No Houses","pay $2 to the bank, build a house and move backward"
+"$10","1 House","pay $4 to the bank, build a hotel in place of the house and move forward"
+"$10","Hotel","take $8 from the bank, replace the hotel with a house and move backward"
+"$11","No Houses","pay $1 to the bank"
+"$12","No Houses","build a house and move forward"
+"$12","1 House","pay $2 to the bank and move backward"
+"$12","3 Houses","pay $10 to the bank, build a house and move backward"
+"$12","4 Houses","take $3 from the bank, build a hotel in place of the houses and move forward"
+"$12","Hotel","take $8 from the bank, replace the hotel with a house and move forward"
+"$14","No Houses","pay $9 to the bank and move backward"
+"$14","1 House","pay $8 to the bank and build 2 houses"
+"$14","2 Houses","pay $2 to the bank, remove all the houses and move forward"
+"$15","No Houses","pay $3 to the bank, build a hotel and move backward"
+"$15","1 House","pay $3 to the bank and build 2 houses"
+"$15","2 Houses","pay $1 to the bank, build 2 houses and move forward"
+"$15","Hotel","pay $13 to the bank, remove the hotel and move backward"
+"$16","No Houses","pay $8 to the bank"
+"$18","4 Houses","pay $3 to the bank, remove 3 houses and move forward"
+"$20","No Houses","pay $17 to the bank, build 2 houses and move backward"
+"$20","Hotel","pay $2 to the bank and replace the hotel with 4 houses"

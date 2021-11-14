@@ -1,0 +1,11 @@
+import pygame
+
+# g is a pygame.Surface
+
+black = pygame.Color("Black")
+
+def Render(drawing,g,scale=1):
+	g.fill(black)
+	for polygon in drawing.polygons:
+		polygon.render(g)
+

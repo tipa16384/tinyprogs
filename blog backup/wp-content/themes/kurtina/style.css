@@ -1,0 +1,440 @@
+/*  
+Theme Name: Kurtina
+Theme URI: http://filipinowebdesigner.com/
+Description: A classy, two-column theme
+Version: 1.0
+Author: Gail Dela Cruz
+Author URI: http://kutitots.com/
+
+	FILIPINO LESSON FOR THIS THEME: 
+	"Kurtina" is the Filipino word for "curtain." 
+	
+	The story of this theme is uneventful, I was just looking at the curtains
+	my mom made for my room and got inspired by the pretty texture and patterns.
+	I also used this theme for my photoblog, www.pixeliera.com. But since I've 
+	decided to change its layout, I'm giving it away for free :)
+	
+	This WordPress Theme is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details. (license.txt file in the Kurtina folder)
+	
+	Feel free to modify and use this theme. Just don't forget to give me credit :)
+	I would love to hear from you if you decide to use my theme. 
+	
+	As per the GNU license, I cannot guarantee support for this theme. Should you have any
+	concerns, drop me a line at http://www.filipinowebdesigner.com. I can't promise to answer your
+	questions (I have a life too, you know), but I will try.
+
+*/
+
+/* GENERAL CSS */
+
+body { background-color: #04576B; margin:0px; padding:0px; }
+body,td,th { font-family:Arial, Helvetica, sans-serif; 	color:#898989;}
+
+.container {
+	width:100%;
+	background:#FFFFFF;
+	background-image: url('images/kurtina_bgmain.gif');
+	background-repeat: repeat-x;
+	background-position:top left;
+	margin:0px;
+	padding:0px;
+	text-align:center;
+}
+
+a {color:#00A0C6;}
+a:hover {color:#FFA44A;}
+
+img {border:5px double #00A0C6;}
+
+/* HEADER STUFF */
+.header_box {
+	width:100%;
+	height:161px;
+	background:none;
+	margin:0px;
+	padding:0px;
+	text-align:center;
+}
+.header_banner {
+	width:745px;
+	background-image: url('images/kurtina_banner.gif');
+	background-repeat:no-repeat;
+	height:126px;
+	margin:0px auto 0px auto;
+	text-align:center;
+}
+.header_banner h1 {
+	font-family:"Times New Roman", Times, serif;
+	font-size:28px;
+	font-variant:small-caps;
+	letter-spacing:-2px;
+	line-height:18px;
+	color:#666666;
+	font-weight:normal;
+	margin:0px;
+	padding:45px 0px 0px 0px;
+}
+.header_banner h1 a {color:#666666; text-decoration:none;}
+.header_banner h1 a:hover {color:#04576B; text-decoration:none;}
+
+.header_banner .description {
+	color:#40B8D4;
+	font-size:11px;
+	text-align:center;
+	margin:0px;
+	padding:5px 0px 0px 0px;
+}
+.header_navi {
+	width:723px;
+	height:16px;
+	margin:0px auto 0px auto;
+	text-align:center;
+	text-transform:uppercase;
+	font-size:9px;
+}
+
+.header_navi ul {list-style-type:none; margin:0px 0px 0px 0px; padding:3px 0px 0px 0px;}
+.header_navi li {display:inline;}
+.header_navi li a{color:#00A0C6; text-decoration:none; padding:3px 10px 1px 10px; height:16px; margin:0px 0px 0px 0px;}
+.header_navi li a:hover {color:#FFFFFF; background-image: url('images/kurtina_navbg.gif');}
+
+/* FOOTER PART STUFF */
+.footer_box {
+	width:100%;
+	background:#04576B;
+	background-image: url('images/kurtina_bgfooter.gif');
+	background-repeat: repeat-x;
+	background-position:top left;
+	padding:75px 0px 25px 0px;
+	text-align:center;
+	color:#AACED6;
+	font-size:10px;
+	clear:both; /* Very important. Remove it, and your layout would get screwed. */
+}
+.footer_box a {color:#CBF3FC; text-decoration:none; font-size:11px;}
+.footer_box a:hover {color:#FFFFFF;}
+
+
+/* CONTENT PART STRUCTURE */
+/* This will either make or break your content layout. */
+/* Be careful when modifying it! */
+
+.body_box {
+	width:854px;
+	text-align:center;
+	margin:auto;
+}
+.body_left {
+	width:640px;
+	float:left;
+	text-align:justify;
+}
+.body_right {
+	width:214px;
+	float:right;
+}
+.body_right_search {
+	width:214px;
+	text-align:left;
+	padding:10px 0px 0px 0px;	
+}
+
+/* BLOG POST STUFF */
+.blogbox {width:630px; float:left; margin-bottom:15px;}
+
+.entryheader {width:630px; float:left; margin:0px;}
+.datecolumn {width:74px; height:73px; float:left; border-right:1px solid #DBDBDB;}
+.titlecolumn {width:420px; float:right;}
+
+.dateday {height:29px; font-family:Georgia, "Times New Roman", Times, serif; font-size:24px; color:#666666;
+text-align:center; padding-top:16px;}
+
+.datemonthyear {width: 74px; height:25px; float:left; background:#B2E2EE; 
+color:#047A97; font-size:9px; text-align:center; padding-top:3px; text-transform:uppercase;}
+
+.entrytitle {height:45px; font-family: Georgia, "Times New Roman", Times, serif; font-size:19px;; color:#00A0C6; padding-left:5px; line-height:15px; letter-spacing:-1px; font-weight:normal;}
+.entrytitle a{color:#00A0C6; text-decoration:none;}
+.entrytitle a:hover{color:#FFA44A; text-decoration:none;}
+
+.entrytitlecomment {width: 420px; height:25px; float:left; font-size:8px; color:#959595; padding-left:5px; text-transform:uppercase; padding-top:3px;}
+
+.entrytitlecomment a{color:#40B8D4; text-decoration:none;}
+.entrytitlecomment a:hover{color:#FBAF5C; text-decoration:none;}
+
+.entrybody {width:600px; float:left;  border:1px solid #DBDBDB; padding:5px 14px 10px 14px; margin:0px 0px 0px 0px;}
+.entrybody p {color:#7D7D7D; font-size:12px; line-height:18px; text-align:justify; margin:5px 0px 10px 0px; padding:0px;}
+
+.entrybody blockquote p{
+	border-top:5px double #F4F4F4; 
+	border-bottom:5px double #F4F4F4; 
+	padding:10px 20px 10px 20px;
+	font-family:"Times New Roman", Times, serif;
+	font-style:italic;
+	font-size:16px;
+	line-height:16px;
+	color:#80CFE2;
+}
+
+.entrymore {color:#00A0C6; text-transform:uppercase; font-size:11px; text-align:center; display:block;
+float:right; margin:5px 0px 0px 0px;}
+.entrymore a{color:#00A0C6; text-decoration:none;}
+.entrymore a:hover{color:#047391; text-decoration:none;}
+
+
+/* SINGLE STUFF */
+.trackbacks {
+	width:475px; 
+	float:left; 
+	background:#C2C2C2; 
+	margin:0px 0px 15px 0px; 
+	padding:8px 10px 8px 10px;
+	font-size:11px;
+	color:#FFFFFF;
+	text-align:justify;
+}
+.trackbacks a {color:#E8E7E7; font-style:italic;}
+.trackbacks a:hover {color:#00A0C6;}
+
+
+/* COMMENTS STUFF */
+.commentsbody {width:495px; float:left; margin:0px 0px 0px 0px; padding:0px 0px 10px 0px;}
+.commentsbody h2 {
+	display:block;
+	font-family:"Times New Roman", Times, serif;
+	font-size:20px;
+	font-variant:small-caps;
+	font-weight:normal;
+	letter-spacing:-1px;
+	color:#00A0C6;
+	border-bottom:1px solid #E2E0E0;
+	margin:0px 0px 10px 0px;
+	padding:0px;
+}
+.comment_box {
+	width:475px;
+	margin:5px 0px 5px 0px;
+	padding:8px 10px 8px 10px;
+	font-size:11px;
+	line-height:14px;
+	float:left;
+	color:#A0A0A0;
+	text-align:justify;
+	background:#F4F4F4;
+}
+.comment_box .authordate {
+	font-family:"Times New Roman", Times, serif;
+	font-size:14px;
+	color:#00A0C6;
+	margin:0px 0px 10px 0px;
+	padding:0px;
+	display:block;
+}
+.authordate a {text-decoration:none;}
+.comment_box .datespan {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#C2C2C2;
+}
+.datespan a {color:#C2C2C2; text-decoration:none;}
+.datespan a:hover {color:#00A0C6;}
+.comment_box .thecomment {
+	margin:0px;
+	padding:0px;
+	display:block;
+}
+.comment_box .thecomment p{
+	margin:0px 0px 8px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+
+/* COMMENT FORM STYLINGS */
+.cformbody {width:495px; float:left; border-bottom:1px solid #E2E0E0; margin:0px 0px 0px 0px; padding:0px 0px 18px 0px;}
+.cformbody h2 {
+	display:block;
+	font-family:"Times New Roman", Times, serif;
+	font-size:20px;
+	font-variant:small-caps;
+	font-weight:normal;
+	letter-spacing:-1px;
+	color:#00A0C6;
+	border-bottom:1px solid #E2E0E0;
+	margin:0px 0px 10px 0px;
+	padding:0px;
+}
+.cformbody p {
+	margin:0px;
+	padding:8px 0px 0px 20px;
+	font-size:12px;
+	line-height:18px;
+}
+.cformbody input, .cformbody textarea {background:#F4F4F4; border:1px solid #C2C2C2; color:#666666;}
+
+/* PAGE STUFF */
+.pagebody {width:495px; float:left; border-bottom:1px solid #E2E0E0; margin:0px 0px 0px 0px; padding:0px 0px 10px 0px;}
+.pagebody h1 {
+	display:block;
+	font-family:"Times New Roman", Times, serif;
+	font-size:20px;
+	font-variant:small-caps;
+	font-weight:normal;
+	letter-spacing:-1px;
+	color:#00A0C6;
+	border-bottom:1px solid #E2E0E0;
+	margin:0px 0px 10px 0px;
+	padding:0px;
+}
+.pagebody h1 a {text-decoration:none;}
+.pagebody p {
+	margin:0px;
+	padding:8px 20px 8px 20px;
+	font-size:12px;
+	line-height:18px;
+}
+
+.pagebody ul li {font-size:12px; margin:0px 0px 5px 0px;}
+.pagebody h2 {
+	font-family:"Times New Roman", Times, serif;
+	font-size:14px;
+	font-weight:normal;
+	letter-spacing:-1px;
+	padding:0px 20px 0px 20px;
+	margin:0px;
+}
+.pagebody ul li h2 {
+	font-family:"Times New Roman", Times, serif;
+	font-size:14px;
+	font-weight:normal;
+	letter-spacing:-1px;
+	padding:0px 0px 4px 0px;
+	margin:10px 0px 5px 0px;
+}
+.excerpt_box {
+	width:455px;
+	margin:0px;
+	padding:8px 20px 8px 20px;
+	font-size:12px;
+	line-height:18px;
+	float:left;
+}
+.excerpt_box .titledate {
+	font-family:"Times New Roman", Times, serif;
+	font-size:16px;
+	color:#00A0C6;
+	margin:0px;
+	padding:0px;
+	display:block;
+}
+.excerpt_box .thexcerpt {
+	margin:0px;
+	padding:0px;
+	display:block;
+}
+.excerpt_box .titledate a{text-decoration:none;}
+
+.nextback { width:100%; color:#00A0C6; font-size:12px;}
+.nextback a {text-decoration:none;}
+.next {width:40%; float:right; text-align:right; padding:5px 0px 5px 0px;}
+.back {width:40%; float:left; text-align:left; padding:5px 0px 5px 0px;}
+
+
+/* SEARCH FORMATTING */
+input.searchbox {
+	width:155px;
+	background:#EBEBEB;
+	border:1px solid #9AD9E9;
+}
+input.buttonstyle {
+	width:53px;
+	background:#40B8D4;
+	color:#FFFFFF;
+	border:1px solid #40B8D4;
+}
+
+/* RIGHT BAR STUFF */
+.aboutbox {
+	width:204px;
+	background:#00A0C6;
+	margin:0px;
+	padding:10px 5px 5px 5px;
+	color:#FFFFFF;
+	font-size:11px;
+	line-height:12px;
+	text-align:justify;
+}
+.aboutbox p { padding:0px 5px 10px 5px;	margin:0px; }
+.aboutbox  a {color:#39D7FC;}
+.aboutbox a:hover {color:#666666;}
+
+.sidenav_box {
+	background:#B2E3ED;
+	width:214px;
+	margin:0px;
+	padding:0px;
+	font-size:11px;
+	text-align:left;
+}
+.sidenav_box ul {list-style-type:none; margin:0px; padding:0px 0px 0px 0px;}
+.sidenav_box ul li {margin:0px 0px 0px 0px; padding:0px 0px 2px 0px;}
+.sidenav_box ul li h2 {
+	margin:0px 0px 0px 0px; 
+	padding:8px 0px 5px 8px;
+	background-image: url('images/kurtina_h2bg.gif');
+	background-repeat: repeat-x;
+	background-position:top left;
+	font-family:"Times New Roman", Times, serif;
+	font-size:16px;
+	font-variant:small-caps;
+	color:#666666;
+	font-weight:normal;
+	letter-spacing:-1px;
+}
+.sidenav_box li a {
+	margin:0px 0px 0px 0px; 
+	padding:0px 0px 0px 21px;
+	background-image: url('images/kurtina_listlink1.gif');
+	background-repeat:no-repeat;
+	background-position:top left;
+	text-decoration:none;
+	color:#40B8D4;
+}
+.sidenav_box li a:hover {
+	background-image: url('images/kurtina_listlink2.gif');
+	color:#7D8B8E;
+}
+.sidenav_box li ul { margin:0px 0px 0px 15px; padding:0px 0px 5px 0px;}
+.sidenav_box li form {	padding:0px 0px 15px 8px; margin:0px;}
+
+/* CALENDAR STYLES */
+.calendar_box {
+	width:214px;
+	background:#00A0C6;
+	margin:0px;
+	padding:0px 0px 10px 0px;
+	color:#FFFFFF;
+	font-size:11px;
+	text-align:center;
+}
+.calendar_box a {display:block; background:#028CAD; text-decoration:none; color:#B2E3ED;}
+.calendar_box a:hover {display:block; background:#B2E3ED; text-decoration:none; color:#028CAD;}
+.calendar_box table {width:100%; text-align:center;}
+.calendar_box th {color:#FFFFFF;}
+.calendar_box caption {font-family:"Times New Roman", Times, serif; font-size:15px; letter-spacing:-1px; color:#FFFFFF; border:none; padding:1px; background:#028CAD;}
+
+.calendar_box td {background:#2FB2D1; color:#B2E3ED;}
+.calendar_box td#next a{display:block; background:#028CAD; text-decoration:none; color:#FFFFFF;}
+.calendar_box td#next a:hover{background:#FFFFFF; color:#028CAD;}
+.calendar_box td#next {text-align:right; border:none;}
+.calendar_box td#prev {text-align:left; border:none;}
+.calendar_box td#prev a{display:block; background:#028CAD; text-decoration:none; color:#FFFFFF;}
+.calendar_box td#prev a:hover{background:#FFFFFF; color:#028CAD;}
+.calendar_box td.pad {background:none; border:none;}
+
+

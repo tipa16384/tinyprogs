@@ -1,0 +1,184 @@
+/*
+Theme Name: Tulip Time
+Theme URI: http://www.thesouthernhighlands.com.au/
+Description: Fun and flowery! 3 column liquid layout design. XHTML 1.0 Strict and Search Engine friendly.
+Version: 0.9b
+Author: Highlands by Design
+Author URI: http://www.highlandsbydesign.com/
+*/
+
+/* Begin Base Elements */
+
+* {margin: 0; padding: 0; border: 0;}
+
+body {font: 75%/150% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif; color: #666; background: url('images/shadow_left.png') repeat-y #fff;}
+html>body {width: auto; min-width: 740px;}
+
+a {text-decoration: none; color: #950; font-weight: bold; background: transparent;}
+a:hover {text-decoration: underline; color: #b60;}
+
+small {text-align: right; margin: 1em;}
+
+h1 {font-size: 1.5em;}
+h2, h3, h4 {font-size: 1.2em;}
+
+.date {color: #fc3; padding: 0.5em; text-align: right; float: right; margin: 0 1em;}
+.date1 {font-size: 3em; display: block;}
+.date2 {font-size: 2em; display: block;}
+.date3 {font-size: 2em; display: block; font-weight: bold;}
+
+.pageInfo {font-size: 0.8em; color: #aaa; text-align: right; border-bottom: 1px dashed #ccc; padding: 1em; clear: both;}
+
+.fifty {width: 40%; text-align: center;}
+.boxedup {background: url('images/gradient.png') top repeat-x #fff; border: 1px solid #ec5; padding: 0.5em; margin: 0.5em;}
+
+/* End Base Elements */
+
+/* Begin Layout Elements */
+
+#newheader {height: 165px; background: url('images/page_header.jpg') top right repeat-x; text-align: right;}
+#newheader h1 {padding: 80px 20px 0 0;}
+#newheader h1 a {font-size: 2em; color: #f90;}
+#newheader h1 a:hover {color: #b60;}
+#newheader h2 {color: #f90; padding-right: 20px; font-size: 0.9em; font-weight: normal;}
+
+#wrapper {background: url('images/shadow_right.png') top right repeat-y; padding-top: 3em;}
+
+#highlands {float: left; width: 100%;}
+
+#column1 {background: url('images/front_page.png') top right no-repeat; margin: 0 215px 0 235px;}
+#column1 p {margin: 0 1.5em 1.5em 1.5em; line-height: 1.5em;}
+#column1 h1, #column1 h2, #column1 h3 {color: #b80; font-weight: bold; margin: 0.5em 0;}
+#column1 h2 {font-size: 1.5em;}
+#column1 h2 a {color: #a60;}
+#column1 ul, #column1 ol {margin: 1em;}
+#column1 ul li {margin: 0 1em; padding: 0.5em; list-style: square inside;}
+#column1 ol li {margin: 0 1em; padding: 0.5em; list-style: decimal inside;}
+#column1 blockquote {margin-left: 15px; padding: 0 0 10px 30px; font-style: italic; color: #666; background: url('images/blockquote.png') 0 0 no-repeat;}
+#column1 blockquote p {margin: 1em 2em 0 0;}
+
+#column2 {float: left; width: 210px; margin-left: -100%; font-size: 0.9em;}
+#column2 ul {margin-left: 40px; list-style: none;}
+
+#column3 {float: left; width: 190px; margin-left: -190px; font-size: 0.8em;}
+#column3 ul {margin-right: 38px; list-style: none;}
+
+#footer {background: url('images/shadow_footer.png') top left repeat-x; font-size: 0.9em; clear: both; padding: 20px 10px; margin: 0 210px 0 230px;}
+#footer p {text-align: right; margin: 0; padding: 0;}
+#footer a {color: #b80;} 
+
+#back {clear: both; font-size: 0.8em; text-align: right; padding: 0 10px; clear: both; margin-top: 20px;}
+#back a {font-weight: normal;}
+#back span {float: left;}
+#back strong {color: #006;}
+
+/* End Layout Elements */
+
+/* Begin Navigation Elements */
+
+#navigation {background: url('images/page_nav.png') bottom left repeat-x; position: absolute; top: 165px; left: 0; text-align: center; width: 100%; border-top: 1px solid #fff; border-bottom: 2px solid #999; padding: 1px 0;}
+
+#nav {padding-left: 35px; min-width: 740px; margin: 0 auto;}
+#nav, #nav ul {text-align: left; font-size: 1.1em; list-style: none; font-weight: normal; z-index: 8;}
+#nav li {float: left; padding: 0; margin: 0;}
+#nav a {border-right: 1px solid #ddd; display: block; line-height: 2em; padding: 0 15px; color: #fff; text-decoration: none; font-weight: bold;}
+#nav a:hover {border-right: 1px solid #fc3; color: #fff; background: #d93;}
+#nav li ul {margin: 0; padding: 0; font-size: 1em; border: 1px solid #ddd; background: #eb5; position: absolute; left: -999em; height: auto; width: 14em;}
+#nav li li {width: 14em; margin: 0;}
+#nav li ul a {border-left: 1em solid #eee; margin: 0;}
+#nav li ul a:hover {border-left: 1em solid #fc3;}
+#nav li:hover ul, #nav li li:hover ul, #nav li.sfhover ul, #nav li li.sfhover ul {left: auto;}
+#nav li:hover, #nav li.sfhover {background: #d93;}
+
+#nav li ul ul {margin: -2em 0 0 13em;}
+#nav li:hover ul ul, #nav li.sfhover ul ul {left: -999em;}
+#nav li:hover ul, #nav li li:hover ul, #nav li.sfhover ul, #nav li li.sfhover ul {left: auto;}
+
+#page_nav {padding: 0 10px;}
+#page_nav a {display: block; color: #999; padding: 10px; border: 1px solid #eee;}
+#page_nav a:hover {color: #999; border: 1px solid #f90; background: #fe9; color: #f90;}
+
+#breadcrumbs {position: absolute; font-size: 0.8em; top: 6px; left: 5px; text-align: left; text-transform: lowercase;}
+
+/* End Navigation Elements */
+
+/* Begin Form Elements */
+
+#searchCSS {font-size: 0.9em; position: absolute; top: 6px; right: 5px;}
+#searchform {text-align: center;}
+#searchform #s {width: 108px; padding: 0; border: 1px solid #ca3;}
+#searchsubmit {font-size: 10px; background: #fff url('images/icon_search.png') 1px 1px no-repeat; cursor: pointer; padding: 0 0 0 15px; border: 1px solid #ca3;}
+.entry form {text-align: center;}
+select {width: 130px;}
+#commentform input {width: 170px; padding: 2px; margin: 5px 5px 1px 0; border: 1px solid #ca3; background: #fed;}
+#commentform textarea {width: 95%; padding: 2px; border: 1px solid #ca3; background: #fed;}
+#commentform #submit {border: 1px solid #ca3; color: #666; background: #fe9; vertical-align: top;}
+#commentform #submit:hover {border: 1px solid #f90; background: #fed;}
+#commentform input:focus, #commentform textarea:focus, #searchform #s:focus {background: #fe9;}
+
+.comment_no {padding-top: 10px; float: right; font-size: 3.5em; color: #eee;}
+
+.commentlist {padding: 0; margin: 5px;}
+.commentlist li {clear: both; list-style: none; padding: 10px; background: #fff url('images/gradient.png') 0 -50px repeat-x; border-top: 1px solid #ddd; margin: 10px;}
+.commentlist li:hover {background-position: 0 -30px; border-top: 1px solid #ccc;}
+.commentmetadata {border-top: 1px dashed #ccc; clear: both; text-align: right; font-size: 0.8em; font-weight: normal; color: #ccc;}
+
+.commentlist .gravatar {display: block; float:left; padding: 3px; margin: 0 20px 5px 0; border: 2px solid #ccc; background: #eee;}
+
+.alt {clear: both;}
+
+/* End Form Elements */
+
+/* Begin Images */ 
+
+p img {padding: 0;}
+p img[alt="an image"] {float: left; margin: 0 7px 2px 0;}
+img.alignright {padding: 4px; margin: 0 0 2px 7px; display: inline;}
+img.alignleft {padding: 4px; margin: 0 7px 2px 0; display: inline;}
+
+.center {display: block; margin-left: auto; margin-right: auto;}
+.alignright {float: right;}
+.alignleft {float: left;}
+
+.images {width: 95%; text-align: center;}
+.images img {float: left; clear: both; margin: 0 auto;}
+
+/* End Images */
+
+
+/* Begin Porlets */ 
+
+.calendar {text-align: center;}
+.calendar table {width: 100%; background: #fec;}
+.calendar table caption {background: #fc3;}
+.calendar thead {background: #fc9;}
+.calendar #today {background: #fda;}
+.calendar a {text-decoration: underline;}
+
+#column2 ul, #column3 ul {padding-bottom: 20px; margin-bottom: 1em; background: url('images/portlet_header.png') bottom right no-repeat;}
+#column2 ul li, #column3 ul li {margin: 0; padding: 0.5em; background: #fffae0;}
+#column2 ul li.listHeader, #column3 ul li.listHeader {background: transparent; padding: 0;}
+#column2 ul li h2, #column2 ul li h3, #column3 ul li h2, #column3 ul li h3 {margin: 0; padding: 0.5em; color: #fff; background: url('images/portlet_header.png')}
+
+/* End Porlets */ 
+
+
+/* Begin Icons and Stuff */ 
+
+.icons a {display: block; height: 16px; padding-left: 25px;}
+.icons a:hover {background-position: left bottom ;}
+
+.icons .s_delicious {background: url('icons/delicious.gif') no-repeat;}
+.icons .s_digg {background: url('icons/digg.gif') no-repeat;}
+.icons .s_technorati {background: url('icons/technorati.gif') no-repeat;}
+.icons .s_reddit {background: url('icons/reddit.gif') no-repeat;}
+.icons .s_magnolia {background: url('icons/magnolia.gif') no-repeat;}
+.icons .s_stumbleupon {background: url('icons/stumbleupon.gif') no-repeat;}
+.icons .s_yahoo {background: url('icons/yahoo.gif') no-repeat;}
+.icons .s_google {background: url('icons/google.gif') no-repeat;}
+
+.iconComment a {padding-left: 20px; background: url('icons/icon_comment.png') top left no-repeat;}
+.iconEdit {background: url('icons/icon_edit.png') top left no-repeat; padding: 1px 0 5px 20px;}
+.iconrss {background: url('icons/icon_feed.gif') no-repeat;}
+
+/* End Icons and Stuff */

@@ -1,0 +1,187 @@
+/*
+Theme Name: Silver Lexus
+Description: Classy and Subtle, just like the car! 3 column liquid layout design. XHTML 1.0 Strict and optimised for Search Engines.
+Version: 0.9
+Author: Highlands by Design
+Author URI: http://www.highlandsbydesign.com/
+*/
+
+/* Begin Base Elements */
+
+* {margin: 0; padding: 0; border: 0;}
+
+body {font: 75%/150% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif; color: #999; background: url('images/shadow_left.png') repeat-y #fff;}
+html>body {width: auto; min-width: 740px;}
+
+a {text-decoration: none; color: #aaa; font-weight: bold; background: transparent;}
+a:hover {text-decoration: underline; color: #777;}
+
+small {text-align: right; margin: 1em;}
+
+h1 {font-size: 1.5em;}
+h2, h3, h4 {font-size: 1.2em; border-bottom: 1px dashed #ddd;}
+
+.date {color: #ddc; padding: 0.5em 1em; text-align: right; float: right;}
+.date1 {font-size: 3em; display: block;}
+.date2 {font-size: 2em; display: block;}
+.date3 {font-size: 2em; display: block; font-weight: bold;}
+
+.pageInfo {font-size: 0.8em; color: #aaa; text-align: right; border-bottom: 1px dashed #ccc; padding: 1em; clear: both;}
+
+.fifty {width: 40%; text-align: center;}
+
+.boxedup {background: #fff url('images/gradient.png') top repeat-x; border: 1px solid #eee; padding: 0.5em; margin: 0.5em;}
+
+/* End Base Elements */
+
+/* Begin Layout Elements */
+
+#newheader {background: url('images/page_header.jpg') repeat-x; text-align: left; padding-top: 30px;}
+#headerimage {height: 210px; background: url('images/karana.jpg') top center no-repeat; list-style: none;}
+#newheader h1 {padding: 80px 0 5px 20px; border: 0;}
+#newheader h1 a {font-size: 2em; color: #fda;}
+#newheader h1 a:hover {color: #f90; text-decoration: none;}
+#newheader h2 {color: #fda; font-size: 1em; padding-left: 20px; font-weight: normal; border: 0;}
+
+#wrapper {background: url('images/shadow_right.png') top right repeat-y; padding: 1px;}
+
+#highlands {float: left; width: 100%;}
+
+#column1 {background: url('images/front_page.png') top right no-repeat; margin: 0 215px 0 235px; padding-top: 20px; text-align: left;}
+#column1 p {margin: 0 1.5em 1.5em 1.5em; line-height: 1.5em;}
+#column1 h1, #column1 h2, #column1 h3 {color: #aaa; font-weight: bold; margin: 0.5em 0; padding-bottom: 0.2em; border: 0;}
+#column1 h2 {font-size: 1.5em;}
+#column1 h2 a {color: #999;}
+#column1 h2 a:hover {color: #666;}
+#column1 ul, #column1 ol {margin: 1em;}
+#column1 ul li {margin: 0 1em; padding: 0.5em; list-style: square inside;}
+#column1 ol li {margin: 0 1em; padding: 1em; list-style: decimal inside;}
+#column1 blockquote {margin: 15px; padding: 0 0 10px 30px; font-style: italic; background: url('images/blockquote.png') 0 0 no-repeat;}
+#column1 blockquote p {margin: 1em 2em 0 0;}
+
+#column2 {float: left; width: 210px; margin-left: -100%; font-size: 0.9em; padding-top: 20px;}
+#column2 ul {margin-left: 40px; list-style: none;}
+
+#column3 {float: left; width: 190px; margin-left: -190px; font-size: 0.8em; padding-top: 20px;}
+#column3 ul {margin-right: 38px; list-style: none;}
+
+#footer {background: url('images/shadow_footer.png') top left repeat-x; font-size: 0.8em; clear: both; padding: 20px 10px; margin: 0 210px 0 230px;}
+#footer p {text-align: center; margin: 0; padding: 0;}
+
+#back {clear: both; font-size: 0.8em; text-align: right; padding: 0 10px; clear: both; margin-top: 20px;}
+#back a {font-weight: normal;}
+#back span {float: left;}
+#back strong {color: #006;}
+
+/* End Layout Elements */
+
+/* Begin Navigation Elements */
+
+#navigation {background: url('images/page_nav.png') repeat; position: absolute; top: 220px; left: 0; text-align: center; width: 100%; border-top: 1px solid #eee; border-bottom: 2px solid #ccc; padding: 2px 0;}
+
+#nav {padding-left: 35px; min-width: 740px; margin: 0 auto;}
+#nav, #nav ul {text-align: left; font-size: 1.1em; list-style: none; font-weight: normal; z-index: 8;}
+#nav li {float: left; padding: 0; margin: 0;}
+#nav a {border-right: 1px solid #eee; display: block; line-height: 2em; padding: 0 15px; color: #aaa; text-decoration: none; font-weight: bold;}
+#nav a:hover {border-right: 1px solid #aaa; color: #fff; background: #ccc;}
+#nav li ul {margin: 0; padding: 0; font-size: 1em; border: 1px solid #ddd; background: #eee; position: absolute; left: -999em; height: auto; width: 14em;}
+#nav li li {width: 14em; margin: 0;}
+#nav li ul a {border-left: 1em solid #fda; margin: 0;}
+#nav li ul a:hover {border-left: 1em solid #f90;}
+#nav li:hover ul, #nav li li:hover ul, #nav li.sfhover ul, #nav li li.sfhover ul {left: auto;}
+#nav li:hover, #nav li.sfhover { color: #fff; background: #ccc;}
+
+#nav li ul ul {margin: -2em 0 0 13em;}
+#nav li:hover ul ul, #nav li.sfhover ul ul {left: -999em;}
+#nav li:hover ul, #nav li li:hover ul, #nav li.sfhover ul, #nav li li.sfhover ul {left: auto;}
+
+#page_nav a {display: block; color: #999; padding: 10px; border: 1px solid #eee;}
+#page_nav a:hover {color: #999; border: 1px solid #ddd; background: #eee;}
+
+
+#breadcrumbs {position: absolute; font-size: 0.8em; top: 6px; left: 5px; text-align: left; text-transform: lowercase;}
+
+/* End Navigation Elements */
+
+/* Begin Form Elements */
+
+#searchCSS {font-size: 0.9em; position: absolute; top: 6px; right: 5px;}
+#searchform {text-align: center;}
+#searchform #s {width: 115px; font-size: 9px; padding: 2px; border: 1px solid #ccc;}
+#searchform #s:focus {border: 1px solid #aaa; background: #fafafa;}
+#searchsubmit {font-size: 9px; background: #fff url('icons/icon_search.png') 1px 1px no-repeat; cursor: pointer; padding: 0 0 0 15px; border: 1px solid #aaa;}
+#searchsubmit:hover {border: 1px solid #999;}
+
+.entry form {text-align: center;}
+
+select {width: 140px;}
+#commentform input {width: 170px; padding: 2px; margin: 5px 5px 1px 0; border: 1px solid #ccc;}
+#commentform input:focus {border: 1px solid #aaa; background: #fafafa;}
+#commentform textarea {width: 95%; padding: 2px; border: 1px solid #ccc; background: #fafafa;}
+#commentform textarea:focus {border: 1px solid #aaa; background: #eee;}
+#commentform #submit {border: 1px solid #ccc; color: #666; background: #fafafa; vertical-align: top;}
+#commentform #submit:hover {border: 1px solid #aaa; background: #eee;}
+
+.comment_no {padding-top: 10px; float: right; font-size: 3.5em; color: #eee;}
+
+.commentlist {padding: 0; margin: 5px;}
+.commentlist li {clear: both; list-style: none; padding: 10px; background: #fff url('images/gradient.png') 0 -10px repeat-x; border-top: 1px solid #ddd; margin: 10px;}
+.commentlist li:hover {background-position: 0 0; border-top: 1px solid #ccc;}
+
+.commentlist .gravatar {display: block; float:left; padding: 3px; margin: 0 20px 5px 0; border: 2px solid #ccc; background: #eee;}
+
+.alt {clear: both;}
+
+/* End Form Elements */
+
+/* Begin Images */ 
+
+p img {padding: 0;}
+p img[alt="an image"] {float: left; margin: 0 7px 2px 0;}
+img.alignright {padding: 4px; margin: 0 0 2px 7px; display: inline;}
+img.alignleft {padding: 4px; margin: 0 7px 2px 0; display: inline;}
+
+.center {display: block; margin-left: auto; margin-right: auto;}
+.alignright {float: right;}
+.alignleft {float: left;}
+
+.images {width: 95%; text-align: center;}
+.images img {float: left; clear: both; margin: 0 auto;}
+
+/* End Images */
+
+/* Begin Porlets */ 
+
+.calendar {text-align: center;}
+.calendar table {width: 100%; background: #fff;}
+.calendar table caption {background: #ddd; font-weight: bold;}
+.calendar thead {background: #eee;}
+.calendar #today {background: #eef;}
+.calendar a {text-decoration: underline;}
+
+#column2 ul, #column3 ul {padding-bottom: 20px; margin-bottom: 1em; background: url('images/portlet_header.png') bottom right no-repeat;}
+#column2 ul li, #column3 ul li {margin: 0; padding: 0.5em; background: #fafafa;}
+#column2 ul li.listHeader, #column3 ul li.listHeader {background: transparent; padding: 0;}
+#column2 ul li h2, #column2 ul li h3, #column3 ul li h2, #column3 ul li h3 {margin: 0; padding: 0.5em; color: #999; background: url('images/portlet_header.png')}
+
+/* End Porlets */
+
+/* Begin Icons and Stuff */ 
+
+.icons a {display: block; height: 16px; padding-left: 25px;}
+.icons a:hover {background-position: left bottom ;}
+
+.icons .s_delicious {background: #fafafa url('icons/delicious.gif') no-repeat;}
+.icons .s_digg {background: #f6f6f6 url('icons/digg.gif') no-repeat;}
+.icons .s_technorati {background: #fafafa url('icons/technorati.gif') no-repeat;}
+.icons .s_reddit {background: #f6f6f6 url('icons/reddit.gif') no-repeat;}
+.icons .s_magnolia {background: #fafafa url('icons/magnolia.gif') no-repeat;}
+.icons .s_stumbleupon {background: #f6f6f6 url('icons/stumbleupon.gif') no-repeat;}
+.icons .s_yahoo {background: #fafafa url('icons/yahoo.gif') no-repeat;}
+.icons .s_google {background: #f6f6f6 url('icons/google.gif') no-repeat;}
+
+.iconComment a {padding-left: 20px; background: url('icons/icon_comment.png') top left no-repeat;}
+.iconEdit {background: url('icons/icon_edit.png') top left no-repeat; padding: 1px 0 5px 20px;}
+.iconrss {background: url('icons/icon_feed.gif') no-repeat;}
+
+/* End Icons and Stuff */

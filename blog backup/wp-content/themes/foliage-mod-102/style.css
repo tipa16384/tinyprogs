@@ -1,0 +1,348 @@
+/*
+Theme Name: Foliage Mod
+Theme URI: http://5thirtyone.com/foliagemod
+Description: Foliage Mod is a minimalist dark theme which utilizes the scriptaculus library.
+Version: 1.02
+Author: Derek Punsalan
+Author URI: http://5thirtyone.com/
+
+This theme was designed and coded by Derek Punsalan.
+You can find his ramblings and additional work at http://5thirtyone.com/
+
+The CSS, XHTML and design is released under GPL:
+http://www.opensource.org/licenses/gpl-license.php
+*/ 
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	}
+	
+h1, h2, h3, p, pre, blockquote, form, fieldset, ul, ol {
+	margin: 1em 0; /* give me back my basic margins */
+	}
+	
+body {font: 62.5% 'Lucide Grande', Verdana, Arial, Sans-Serif; 
+	color: #ddd;
+	background: #656C4A;
+	text-align: center;
+	}
+	
+/* links  and fonts */
+a:link, a:active, a:visited {color: #efb;}
+a:hover {color: #d0dda3;}
+a {text-decoration: none;}
+
+h1, h2, h3, h4 {
+	font-family: helvetica, arial, sans-serif;
+	text-transform: lowercase;
+	letter-spacing: -1px;
+	color: #efb;
+	}
+	
+h1 {font-size: 2em;}
+h2 {font-size: 1.7em;}
+h3 {font-size: 1.5em;}
+h4 {font-size: 1.3em;}
+
+.chrondate {color: #3f3f3f; padding-left: 0.5em;}
+.chrondate a {color: #3f3f3f;}
+.chrondate a:hover {color: #d0dda3;}
+	
+/* shelf & navigation */
+#shelfwrap {
+	background: #656C4A;
+	}
+	
+#shelf {
+	color: #d6ddbc;
+	background: #656C4A url(images/shelf_right.jpg) no-repeat top right;
+	text-align: left;
+	width: 58em;
+	margin: 0 auto;
+	line-height: 1.5em;
+	}
+
+	#shelf .left {
+		width: 28em; 
+		padding: 0 0.5em 0.5em;
+		background: #656C4A;
+		}
+		
+		ul#navigation {
+			margin: 0;
+			padding: 0 0 1em 0;
+			list-style: none;
+			}	
+			
+		#navigation li {
+			background: url(images/dot.gif) repeat-x 0.7em 0;
+			}
+			
+		#navigation li a {
+			float: left;
+			background: #646B4A;
+			padding: 0 0.2em 0 0;		
+			}
+			
+		ul#navigation li span {
+			float: right;
+			padding: 0 0.2em;
+			background: #646B4A;
+			}
+			
+		ul#navigation li br {
+			clear: both;
+			}
+		
+	#shelf .right {
+		width: 27em; 
+		padding: 0 0.5em 0.5em;
+		}
+		
+		ul#recentposts {
+			margin: 0;	
+			padding: 0;	
+			list-style: none;	
+			}
+			
+		#recentposts li {
+			background: url(images/li.gif) no-repeat 0 0.3em;
+			padding-left: 15px;	
+			margin-left: 4px;		
+			}
+			
+#shelfbreak {
+	background: #656C4A;
+	height: 1em;
+	}
+	
+#searchbar {
+background: url(images/searchbg.jpg) no-repeat top left;
+display: block; 
+height: 41px;
+width: 280px;
+margin: 0 0 0 -0.2em;
+padding: 0.2em 0 0 1em;
+}
+
+	#searchform div {
+	padding: 0.2em 0 0 0;
+	}
+	
+		#searchform span {
+		margin-left: 3.6em;
+		}
+	
+	#search {
+	width: 140px;
+	border: 1px solid #333;
+	background: #333;
+	font-size: 1em;
+	font-family: 'Lucide Grande', Verdana, Arial, Sans-Serif;
+	color: #eee;
+	}
+	
+/* top banner */
+#banner {
+	background: #333 url(images/lawn.jpg) repeat-x top left;
+	height: 15em;
+	}
+	
+	#foliage {
+		margin: 0 auto;
+		background: url(images/foliage.gif) no-repeat top left;
+		display: block;
+		width: 70em;
+		height: 16em;
+		}
+	
+	#pull a {	
+		float: right;
+		display: block;
+		width: 105px;
+		height: 146px;
+		text-indent: -9999em;
+		background: url(images/pull.jpg) no-repeat top right;
+		}
+		
+	#pull a:hover {
+		background: url(images/pull.jpg) no-repeat bottom right;
+		}
+		
+/* main content area home and index */
+#top {background: #333;}
+
+#content {
+	width: 51em;	
+	margin: 0 auto 0;
+	padding: 0 0 6em 0;
+	text-align: left;
+	line-height: 1.5em;
+	}
+	
+	.post { 
+		padding: 0 0 1.5em 0;
+		}
+		
+	.entrymeta {
+		font-size: 0.9em;
+		margin: -1.7em 0 2em 0;
+		text-transform: lowercase;
+		}
+		
+	.entry {} 
+		
+	.entry ul li, .mulch ul li {
+		list-style: none;
+		background: url(images/li.gif) no-repeat 0 0.3em;
+		padding-left: 1.5em;
+		margin-left: 2.2em;
+		}
+		
+	.entry ol, .mulch ol {
+		margin-left: 3.5em;
+		}
+		
+	.entry li, .mulch li {
+		padding-bottom: 0.3em;
+		width: 423px;
+		font-size: 1em;
+		}
+	
+	.entry blockquote, .mulch blockquote {
+		margin-left: 3.9em;
+		color: #8f8f8f;
+		width: 423px;
+		}
+		
+	.entry strong, .mulch strong {
+		color: #efb;
+		}
+		
+.returnhome {
+	float: right;
+	}
+	
+/* single post pages and comments */
+.commentnote {
+	color: #B3BE82;
+	padding: 0.5em 0.3em 0 0.9em;
+	}
+
+#singlecontent {
+	width: 75em;
+	margin: 0 auto;
+	padding-bottom: 3em;
+	text-align: left;
+	line-height: 1.5em;
+	}
+	
+	#singlecontent .post {	
+		float: left;
+		width: 45em;
+		}
+		
+#relatedposts {margin: 0; padding: 0;}
+	
+#relatedposts h3 {margin: 0;}
+#relatedposts ul {margin: 1em 0 0 0;}
+		
+#commentscolumn {
+	color: #d6ddbc;
+	margin: 2em 0 3em 0;
+	float: right;
+	width: 28em;
+	background: #656C4A url(images/snippet_right.gif) no-repeat bottom right;
+	}
+	
+	.comments {
+		color: #d6ddbc;
+		margin: 0;
+		padding: 9px 9px 0 9px;
+		background: url(images/snippet_left.gif) no-repeat -1px -1px;
+		}
+		
+#commentwrap {
+	float: left;
+	margin:0;
+	padding-bottom: 3em;
+	}
+	
+	#commentform small {color: #555;}
+	
+.commentlist {}
+	
+	.commentlist li {
+		list-style: none;
+		border-top: 1px solid #717a50;
+		padding-top: 0.3em;
+		}
+		
+	.commentlist .alt {}
+		
+	.author .commententry {
+		background: url(images/author.gif) no-repeat top right;
+		}
+		
+	.commententry {
+		padding: 0 0.8em 0 0.9em;
+		overflow: hidden;
+		}
+		
+	.commententry blockquote {color: #B3BE82; margin-left: 1em;}
+		
+#author, #email, #url, #comment {font: 11px 'Lucida Grande', Verdana, Arial, Sans-Serif; 
+	background: #333;
+	border: 1px solid #555;
+	color: #ddd;
+	
+	
+	padding: 2px;
+	}
+
+#author, #email, #url {width: 185px;}	
+#comment {width: 436px; height: 125px; overflow: auto; font-size: 10px;}
+#submit {background: #656C4A; border: 1px solid #d6ddbc; color: #d6ddbc; font-size: 11px; padding: 0 1em;}
+		
+/* bottom content area */
+#footercontent {
+	background: #656c4a url(images/bottom_wrap.gif) repeat-x top left;
+	margin: 0 0 -1em 0;
+	line-height: 1.5em;
+	}
+	
+	#bottomwrap {
+		background: url(images/bottom_right.jpg) no-repeat top right;
+		width: 70em;
+		margin: -1.4em auto 0;
+		text-align: left;
+		}	
+		
+	#bottomcontent {
+		color: #d6ddbc;
+		width: 51em;
+		margin: 0 auto;
+		padding: 5em 0 4em;
+		}
+		
+#footer {
+	color: #d6ddbc;
+	width: 51em;
+	margin: 2em auto 0;
+	text-transform: lowercase;
+	}
+		
+/* misc and images */
+.left {float: left;}
+.right {float: right;}
+.clear {clear: both;}
+.center {text-align: center;}
+
+.entry img {
+	padding: 3px;
+	background: #444;
+	border: 1px solid #444;
+	}
+	

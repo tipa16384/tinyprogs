@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/137/trunk/Genetics/EvoLisa/Core/AST
+END
+DnaPoint.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/137/trunk/Genetics/EvoLisa/Core/AST/DnaPoint.cs
+END
+DnaDrawing.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/137/trunk/Genetics/EvoLisa/Core/AST/DnaDrawing.cs
+END
+DnaBrush.cs
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/137/trunk/Genetics/EvoLisa/Core/AST/DnaBrush.cs
+END
+DnaPolygon.cs
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/137/trunk/Genetics/EvoLisa/Core/AST/DnaPolygon.cs
+END

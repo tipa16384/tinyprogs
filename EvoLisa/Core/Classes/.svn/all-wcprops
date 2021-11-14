@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/138/trunk/Genetics/EvoLisa/Core/Classes
+END
+FileUtil.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/138/trunk/Genetics/EvoLisa/Core/Classes/FileUtil.cs
+END
+Settings.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/132/trunk/Genetics/EvoLisa/Core/Classes/Settings.cs
+END
+Tools.cs
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/132/trunk/Genetics/EvoLisa/Core/Classes/Tools.cs
+END
+FitnessCalculator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/132/trunk/Genetics/EvoLisa/Core/Classes/FitnessCalculator.cs
+END
+Renderer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/132/trunk/Genetics/EvoLisa/Core/Classes/Renderer.cs
+END
+Serializer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/137/trunk/Genetics/EvoLisa/Core/Classes/Serializer.cs
+END

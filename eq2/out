@@ -1,0 +1,168 @@
+Content-Type: text/html
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>D&amp;D 4e Character Roller 0.5</title>
+</head>
+<body>
+
+<style>
+.sect {
+	border: solid black 2px;
+	height: 100%;
+	padding: 5px;
+}
+
+.classes td {
+	text-align: center;
+}
+
+.classes td:first-child {
+	text-align: left;
+}
+
+.classes tr:nth-child(odd) {
+	background-color: #EEE;
+}
+
+.classes tr:first-child {
+	background-color: #444;
+	color: white;
+}
+
+.heading {
+	background-color: #444;
+	color: white;
+	text-align: center;
+}
+
+.title {
+	font-size: 200%;
+}
+
+
+</style>
+
+<form action="roller.py" method="get">
+
+<table cellspacing="5" cellpadding="2">
+
+<tr>
+<td colspan="3" class="heading title">
+D&amp;D 4e Character Roller 0.5
+</td>
+</tr>
+
+<tr>
+<td colspan="3">
+</td>
+
+<tr>
+<td colspan="3">
+<button type="submit">Roll</button>
+&nbsp;
+<label>Role:
+<select name="ROLE">
+<option value="">All</option>
+<option value="Leader">Leader</option>
+<option value="Striker">Striker</option>
+<option value="Controller">Controller</option>
+<option value="Defender">Defender</option>
+</select>
+</label>
+&nbsp;
+<label>Race:
+<select name="RACE">
+<option value="Deva">Deva (INT:+2,WIS:+2)</option>
+<option value="Gnome">Gnome (INT:+2,CHA:+2)</option>
+<option value="Half-Orc">Half-Orc (DEX:+2,STR:+2)</option>
+<option value="Halfling">Halfling (DEX:+2,CHA:+2)</option>
+<option value="Elf">Elf (DEX:+2,WIS:+2)</option>
+<option value="Eladrin">Eladrin (DEX:+2,INT:+2)</option>
+<option value="Half-Elf">Half-Elf (CHA:+2,CON:+2)</option>
+<option value="Tiefling">Tiefling (INT:+2,CHA:+2)</option>
+<option value="Dragonborn">Dragonborn (CHA:+2,STR:+2)</option>
+<option value="Shifter">Shifter (WIS:+2,STR:+2)</option>
+<option value="Dwarf">Dwarf (WIS:+2,CON:+2)</option>
+<option value="Human" selected>Human (Choose)</option>
+<option value="Goliath">Goliath (STR:+2,CON:+2)</option>
+</select>
+</label>
+&nbsp;
+<label>Human stat bonus:
+<select name="BONUS">
+<option value="STR" selected>STR</option>
+<option value="CON">CON</option>
+<option value="DEX">DEX</option>
+<option value="INT">INT</option>
+<option value="WIS">WIS</option>
+<option value="CHA">CHA</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td valign="top">
+
+<div class="sect">
+
+<table>
+<tr><th>STR:</th><td>16</td><tr>
+<tr><th>CON:</th><td>12</td><tr>
+<tr><th>DEX:</th><td>12</td><tr>
+<tr><th>INT:</th><td>13</td><tr>
+<tr><th>WIS:</th><td>11</td><tr>
+<tr><th>CHA:</th><td>14</td><tr>
+</table>
+
+</div>
+
+</td>
+
+<td valign="top" colspan="2">
+<div class="sect">
+<table class="classes">
+
+<col width="200">
+<col width="50">
+<col width="50">
+<col width="50">
+<col width="100">
+<col width="100">
+
+<tr>
+<th>Class</th>
+<th>Prime</th>
+<th>2nd</th>
+<th>3rd</th>
+<th>Pool</th>
+<th>Role</th>
+</tr>
+<tr>
+<td>Warlord (Inspiring)</td>
+<td>STR</td>
+<td>CHA</td>
+<td>INT</td>
+<td>Martial</td>
+<td>Leader</td>
+</tr>
+<tr>
+<td>Barbarian (Thaneborn)</td>
+<td>STR</td>
+<td>CHA</td>
+<td>CON</td>
+<td>Primal</td>
+<td>Striker</td>
+</tr>
+</table>
+</div>
+</td>
+
+
+</tr>
+
+</table>
+</form>
+
+</html>

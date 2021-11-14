@@ -1,0 +1,153 @@
+import Tools, Settings
+from copy import deepcopy
+import pygame
+import FitnessCalculator
+from pygame.locals import *
+import random
+from time import time
+
+imageFile = 'dina.jpg'
+
+lspread = 10
+hspread = 200
+
+polyNumber = 0
+surfaceHash = {}
+blitSave = {}
+chroma = pygame.Color("white")
+
+def GetDrawingFitness(g,pa,rect):
+	error = 0
+
+	s = pygame.surfarray.array3d(g)
+
+	for y in range(rect.y,rect.y+rect.h):
+		rowOffs = y * Tools.MaxWidth
+		for x in range(rect.x,rect.x+rect.w):
+			p = pa[rowOffs + x]
+			r = int(s[x,y,0]) - int(p[0])
+			g = int(s[x,y,1]) - int(p[1])
+			b = int(s[x,y,2]) - int(p[2])
+			pixelError = r*r+g*g+b*b
+			error = error + pixelError
+
+	return error
+
+
+def Main():
+	global chroma
+	global surfaceHash
+	global blitSave
+	global hspread
+
+	pygame.init()
+	
+	Settings.activePolygonsMin = 10
+
+	image = pygame.image.load(imageFile)
+	r = image.get_rect()
+	sr = image.get_rect()
+	if r.w > r.h:
+		sr.h = 2*sr.h
+		imagexy = (0,r.h)
+	else:
+		sr.w = 2*sr.w
+		imagexy = (r.w,0)
+
+#	screen = pygame.display.set_mode((sr.w,sr.h))
+	screen = pygame.display.set_mode((r.w,r.h))
+	xscreen = pygame.Surface((r.w,r.h))
+	dot = pygame.Surface((hspread,hspread))
+	dot = dot.convert()
+	image = image.convert()
+#	chroma = image.get_at((r.w/2,r.h/2))
+	#chroma = pygame.Color("black")
+	print "chroma color",chroma
+	dot.set_colorkey(chroma)
+	Tools.MaxWidth = r.w
+	Tools.MaxHeight = r.h
+
+	generation = 0
+	screen.fill(chroma)
+	xscreen.fill(chroma)
+#	screen.blit(xscreen,(0,0))
+#	screen.blit(image,imagexy)
+	pygame.display.flip()
+
+	for i in range(lspread,hspread+1):
+		dot = pygame.Surface((i,i))
+		dot = dot.convert()
+		dot.set_colorkey(chroma)
+		surfaceHash[i] = dot
+		dot = pygame.Surface((i,i))
+		dot = dot.convert()
+		dot.set_colorkey(chroma)
+		blitSave[i] = dot
+
+	imagePixels = []
+
+	for y in range(r.h):
+		for x in range(r.w):
+			color = image.get_at((x,y))
+			imagePixels.append(color)
+
+	best = GetDrawingFitness(screen,imagePixels,r)
+
+	tries = 0
+	gtime = time()
+
+	count = 0
+
+	while True:
+		spr = random.randint(lspread,hspread)
+		x = random.randint(0,r.w-spr)
+		y = random.randint(0,r.h-spr)
+		red = random.randint(0,255)
+		g = random.randint(0,255)
+		b = random.randint(0,255)
+		alpha = random.randint(80,160)
+		dot = surfaceHash[spr]
+		dot.set_alpha(alpha)
+		dot.fill(chroma)
+		spot = blitSave[spr]
+		drawArea = pygame.Rect(x,y,spr,spr)
+		spot.blit(screen,(0,0),drawArea)
+		error = GetDrawingFitness(screen,imagePixels,drawArea)
+
+		pygame.draw.ellipse(dot,(red,g,b),dot.get_rect())
+		screen.blit(dot,(x,y))
+
+		tries = tries + 1
+		error1 = GetDrawingFitness(screen,imagePixels,pygame.Rect(x,y,spr,spr))
+
+		if error1 < error:
+			#print "error",error
+			best = error
+			#screen.blit(xscreen,(0,0))
+			if spr == hspread:
+				count = count + 1
+		else:
+			screen.blit(spot,(x,y))
+			continue
+
+#		screen.blit(image,imagexy)
+		if (generation % 100) == 0:
+			pygame.display.flip()
+			print "generation",generation
+			ntime = time()
+			if ntime != gtime and tries > 0:
+				print "%f tries/second" % (tries/(ntime-gtime))
+			tries = 0
+			fn = imageFile.split('.')
+			fn = "%s-render.tga" % (fn[0])
+			pygame.image.save(screen,fn)
+			gtime = time()
+			if count == 0 and hspread > lspread:
+				hspread = (hspread+lspread)/2
+				print "hspread now",hspread
+			else:
+				count = 0
+		generation = generation + 1
+
+Main()
+

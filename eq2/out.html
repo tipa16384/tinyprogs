@@ -1,0 +1,399 @@
+Content-Type: text/html
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>D&amp;D 4e Character Roller 0.8</title>
+<script src="http://chasingdings.com/eq2/prototype.js"></script>
+</head>
+<body>
+
+<style>
+#layoutTable {
+	min-width: 480px;
+}
+
+@media only screen and (max-device-width: 480px) {
+
+body {
+	width: 480px;
+}
+
+#layoutTable {
+	width: 100%;
+}
+
+}
+
+@media only screen and (max-device-width: 960px) {
+
+body {
+	width: 960px;
+	font-size: 200%;
+}
+
+#layoutTable {
+	width: 100%;
+}
+
+#dtwenty {
+	width: 192px;
+}
+
+select {
+    -webkit-appearance: none;
+}
+}
+
+.sect {
+	border: solid black 2px;
+	height: 100%;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+table.classes {
+	width: 100%;
+}
+
+.classes td {
+	text-align: center;
+}
+
+.classes tr:nth-child(odd) {
+	background-color: #EEE;
+}
+
+.classes tr:first-child {
+	background-color: #444;
+	color: white;
+}
+
+.heading {
+	background-color: #444;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.title {
+	font-size: 200%;
+}
+
+.data {
+	font-size: 125%;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid black;
+	padding-left: 2px;
+	padding-right: 2px;
+	background-color: white;
+	width: 25px;
+}
+
+.stats {
+	width: 100%;
+}
+
+</style>
+
+<form action="roller.py" method="get">
+
+<table id="layoutTable" cellspacing="5" cellpadding="2">
+
+<tr>
+<td class="heading title">
+D&amp;D 4e Character Roller 0.8
+</td>
+</tr>
+
+<tr>
+<td>
+<table width="100%">
+<tr>
+<td rowspan="4">
+<input id="dtwenty" type="image" src="http://chasingdings.com/images/rollme.png" />
+</td>
+<td>
+<label>Role:
+<select name="ROLE">
+<option value="">All</option>
+<option value="Controller">Controller</option>
+<option value="Defender">Defender</option>
+<option value="Leader">Leader</option>
+<option value="Striker">Striker</option>
+</select>
+</label>
+</td>
+</tr>
+<tr>
+<td>
+<label>Race:
+<select name="RACE">
+<option value="Dragonborn">Dragonborn (CHA:+2,STR:+2)</option>
+<option value="Dwarf">Dwarf (WIS:+2,CON:+2)</option>
+<option value="Eladrin">Eladrin (DEX:+2,INT:+2)</option>
+<option value="Elf">Elf (DEX:+2,WIS:+2)</option>
+<option value="Half-Elf">Half-Elf (CHA:+2,CON:+2)</option>
+<option value="Halfling">Halfling (DEX:+2,CHA:+2)</option>
+<option value="Human" selected>Human (Choose)</option>
+<option value="Tiefling">Tiefling (INT:+2,CHA:+2)</option>
+<option value="Deva">Deva (INT:+2,WIS:+2)</option>
+<option value="Gnome">Gnome (INT:+2,CHA:+2)</option>
+<option value="Goliath">Goliath (STR:+2,CON:+2)</option>
+<option value="Half-Orc">Half-Orc (DEX:+2,STR:+2)</option>
+<option value="Shifter-Tooth">Shifter-Tooth (WIS:+2,STR:+2)</option>
+<option value="Shifter-Claw">Shifter-Claw (DEX:+2,WIS:+2)</option>
+</select>
+</label>
+</td>
+</tr>
+
+<tr>
+<td>
+<label>Human stat bonus:
+<select name="BONUS">
+<option value="STR" selected>STR</option>
+<option value="DEX">DEX</option>
+<option value="WIS">WIS</option>
+<option value="CON">CON</option>
+<option value="INT">INT</option>
+<option value="CHA">CHA</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>
+<label>Rulebooks:
+<select name="RULE">
+<option value="">All</option>
+<option value="PHB">Player&#39;s Handbook</option>
+<option value="PHB2">Player&#39;s Handbook 2</option>
+<option value="PHB3">Player&#39;s Handbook 3</option>
+</select>
+</label>
+</td>
+</tr>
+
+</table>
+</td>
+</tr>
+
+<tr>
+<td>
+
+<div class="sect">
+<table class="stats">
+<tr>
+<td class="heading">STR</td>
+<td class="data" id="STR">13</td>
+<td class="data statmod" id="STRMOD">+1</td>
+
+
+<td class="heading">DEX</td>
+<td class="data" id="DEX">10</td>
+<td class="data statmod" id="DEXMOD">+0</td>
+
+
+<td class="heading">WIS</td>
+<td class="data" id="WIS">12</td>
+<td class="data statmod" id="WISMOD">+1</td>
+</tr>
+<tr>
+<td class="heading">CON</td>
+<td class="data" id="CON">13</td>
+<td class="data statmod" id="CONMOD">+1</td>
+
+
+<td class="heading">INT</td>
+<td class="data" id="INT">17</td>
+<td class="data statmod" id="INTMOD">+3</td>
+
+
+<td class="heading">CHA</td>
+<td class="data" id="CHA">15</td>
+<td class="data statmod" id="CHAMOD">+2</td>
+</tr>
+</table>
+</div>
+
+<div class="sect">
+<table class="classes">
+
+<tr>
+<th>&nbsp;</th>
+<th>Class</th>
+<th>Prime</th>
+<th>2nd</th>
+<th>3rd</th>
+<th>Pool</th>
+<th>Role</th>
+</tr>
+<tr>
+<td><input type="radio" name="classselect" checked value="1"/>
+<span class="defbonus" style="display:none;">Will:2</span>
+<span class="basehp" style="display:none;">12</span>
+<span class="basesurges" style="display:none;">6</span>
+</td>
+<td>Psion (Telepathic)</td>
+<td class="cstat">INT</td>
+<td class="cstat">CHA</td>
+<td class="cstat">WIS</td>
+<td>Psionic</td>
+<td>Controller</td>
+</tr>
+</table>
+</div>
+
+<div class="sect">
+<table class="stats">
+<tr><td class="data">+0</td>
+<td class="heading">Initiative</td>
+<td class="data">+0</td>
+<td class="data">0</td>
+<td class="data">&nbsp;</td>
+<tr>
+</table>
+</div>
+
+<div class="sect">
+<table class="stats">
+<tr>
+<td class="data defval">10</td>
+<td class="heading def">Armor Class</td>
+<td class="data baseval">10</td>
+<td class="data modabil">+1</td>
+<td class="data modclass">+0</td>
+<td class="data">&nbsp;</td>
+<td class="data">&nbsp;</td>
+<td class="data">&nbsp;</td>
+<td class="data">&nbsp;</td>
+<tr>
+<tr>
+<td class="data defval">12</td>
+<td class="heading def">Fortitude</td>
+<td class="data baseval">10</td>
+<td class="data modabil">+2</td>
+<td class="data modclass">+0</td>
+<td class="data">&nbsp;</td>
+<td class="data">&nbsp;</td>
+<td class="data">&nbsp;</td>
+<td class="data">&nbsp;</td>
+<tr>
+<tr>
+<td class="data defval">13</td>
+<td class="heading def">Reflexes</td>
+<td class="data baseval">10</td>
+<td class="data modabil">+3</td>
+<td class="data modclass">+0</td>
+<td class="data">&nbsp;</td>
+<td class="data">&nbsp;</td>
+<td class="data">&nbsp;</td>
+<td class="data">&nbsp;</td>
+<tr>
+<tr>
+<td class="data defval">13</td>
+<td class="heading def">Will</td>
+<td class="data baseval">10</td>
+<td class="data modabil">+3</td>
+<td class="data modclass">+0</td>
+<td class="data">&nbsp;</td>
+<td class="data">&nbsp;</td>
+<td class="data">&nbsp;</td>
+<td class="data">&nbsp;</td>
+<tr>
+</table>
+</div>
+
+<div class="sect">
+<table class="stats">
+<tr>
+<td class="data" id="maxhp">0</td>
+<td class="heading">Hit Points</td>
+<td class="data" id="bloodied">0</td>
+<td class="data" id="surge">0</td>
+<td class="data" id="numsurges">0</td>
+<tr>
+</table>
+</div>
+
+</td>
+
+
+</tr>
+
+<tr>
+<td align="center">
+<a href="http://chasingdings.com/cgi-bin/roller.py?LINK=6X0NKMNRPX">Permanent link to this character sheet</a>
+</td>
+</tr>
+
+</table>
+</form>
+
+<script>
+
+function applyClassMods() {
+//alert('1');
+	var el;
+	
+	$$('td.modclass').each(function(elm){elm.update('+0');});
+	el = $$('[name=classselect]').detect(function(elm){return elm.checked;});
+
+//alert('2 checked='+el);
+	
+	if (el) {
+		var row = el.up('tr');
+		var hp = parseInt(row.down('.basehp').innerHTML) + parseInt($('CON').innerHTML);
+		
+		$('maxhp').update(hp);
+		$('bloodied').update(Math.floor(hp/2));
+		$('surge').update(Math.floor(hp/4));
+		$('numsurges').update(parseInt(row.down('.basesurges').innerHTML) + parseInt($('CONMOD').innerHTML));
+		
+		$$('.defbonus').each(function(elm){
+			if (elm.descendantOf(row)) {
+				var val = elm.innerHTML.split(':');
+				var defs = val[0];
+				var bon = val[1];
+				el = $$('td.def').detect(function(elm){return elm.innerHTML == defs;});
+				if (el) {
+					el.up().down('td.modclass').update('+'+bon);
+				}
+			}
+		});
+		
+		$$('.statmod').each(function(elm){
+			elm.setStyle({borderColor: 'black'});
+		});
+		
+		$$('.cstat').each(function(elm){
+			if (elm.descendantOf(row)) {
+				var v = elm.innerHTML;
+				var id = v+'MOD';
+				$(id).setStyle({borderColor: 'red'});
+			}
+		});
+	}
+	
+//alert('5 setting mods');
+	$$('td.modclass').each(function(elm){
+		var row = elm.up('tr');
+		var tot = 10;
+		tot += parseInt(row.down('.modabil').innerHTML);
+		tot += parseInt(row.down('.modclass').innerHTML);
+		row.down('.defval').update(tot);
+	});
+}
+
+document.observe("dom:loaded", function() {
+	applyClassMods();
+	$$('[name=classselect]').each(function(el){
+		el.observe('click',applyClassMods);
+	});
+});
+</script>
+
+</body>
+</html>

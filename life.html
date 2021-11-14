@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<!-- create a table with no borders 20 rows by 20 cells -->
+<html>
+<head>
+<title>Table with no borders</title>
+<style>
+table, th, td {
+    border: 0px solid black;
+}
+</style>
+</head>
+<body>
+    <h1>My table</h1>
+    <table>
+        <!-- 20 rows -->
+        <?php for($i = 0; $i < 20; $i++): ?>
+            <tr>
+                <!-- 20 cells -->
+                <?php for($j = 0; $j < 20; $j++): ?>
+                    <td>
+                        <?php echo $i . ' ' . $j; ?>
+                    </td>
+                <?php endfor; ?>
+            </tr>
+    </table>
+</body>
+</html>

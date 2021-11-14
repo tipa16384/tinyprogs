@@ -1,0 +1,44 @@
+#gameBoard {
+  position: relative;
+  top: 0;
+  left: 0;
+    background-color: #999999;
+   background-image:url('bg.jpg');
+    height: 600px;
+    width: 600px;
+}
+
+#sprite {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  background-image:url('minisprites.png');
+  background-position: 0px 0px;
+  width: 128px;
+  height: 128px;
+}
+
+#fps {
+  color: yellow;
+  font-size: 36px;
+  font-weight: bold;
+  position: absolute;
+  font-family: arial, sanserif;
+  top: 0px;
+  left: 10px;
+}
+
+
+
+img[src='miniframe.png'] {
+  float: left;
+  margin-right: 30px;
+}
+
+
+header {
+  font-size: 18pt;
+  color: #F63;
+}
+
+

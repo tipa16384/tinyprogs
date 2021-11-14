@@ -1,0 +1,27 @@
+solves 0 * 1
+solves 2 * 0
+solves 1 * 0
+solves 0 * 0
+solves 0 * 2
+"$0","No Houses","take $8 from the bank and move backward"
+"$0","4 Houses","take $11 from the bank, remove all the houses and move forward"
+"$2","No Houses","take $4 from the bank and move backward"
+"$3","No Houses","take $8 from the bank, build 4 houses and move backward"
+"$4","No Houses","take $11 from the bank, build 4 houses and move forward"
+"$6","No Houses","take $4 from the bank, build 2 houses and move forward"
+"$6","2 Houses","pay $2 to the bank, build 2 houses and move forward"
+"$7","No Houses","take $7 from the bank, build 4 houses and move forward"
+"$8","No Houses","take $11 from the bank, build 4 houses and move backward"
+"$8","1 House","build a house and move backward"
+"$8","2 Houses","take $12 from the bank, remove all the houses and move backward"
+"$9","No Houses","pay $3 to the bank, build a house and move forward"
+"$10","No Houses","pay $6 to the bank, build 2 houses and move forward"
+"$11","No Houses","take $4 from the bank and move forward"
+"$11","3 Houses","pay $4 to the bank and move forward"
+"$14","No Houses","give all your money to the bank, build 3 houses and move backward"
+"$15","No Houses","pay $4 to the bank, build 4 houses and move forward"
+"$15","1 House","pay $6 to the bank, remove the house and move backward"
+"$15","2 Houses","pay $8 to the bank, build 2 houses and move forward"
+"$15","4 Houses","pay $13 to the bank, remove 2 houses and move forward"
+"$19","No Houses","pay $11 to the bank, build 3 houses and move backward"
+"$20","No Houses","pay $17 to the bank and move backward"

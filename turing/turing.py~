@@ -1,0 +1,88 @@
+#!/usr/bin/python
+
+# 1. 1 -> 
+# 2. 
+
+from random import randint
+
+# (state,mark,state1,mark1,dir)
+
+maxstates = 1000
+
+def gencode():
+	state = randint(0,16)
+	mark = randint(0,4)
+	state1 = randint(0,16)
+	mark1 = randint(0,4)
+	next = randint(0,2)-1
+	
+	return (state,mark,state1,mark1,next)
+
+def runprog(prog,tape,seen):
+	state = 0
+	pc = 0
+	for i in range(1000):
+		if pc not in tape:
+			tape[pc] = 0
+		ins = (state,tape[pc])
+		if ins not in prog:
+			return
+		dst = prog[ins]
+		seen[ins] = dst
+		state = dst[0]
+		tape[pc] = dst[1]
+		pc = pc + dst[2]
+
+bestprog = None
+bestfit = 0
+gen = 0
+
+while True:
+	gen = gen+1
+#	print "Generation",gen
+	prog = {}
+	seen = {}
+	worksfor = {}
+
+	for i in range(maxstates):
+		ins = gencode()
+		indx = (ins[0],ins[1])
+		dst = (ins[2],ins[3],ins[4])
+		prog[indx] = dst
+		
+	if False:	
+		if bestprog is not None:
+			for k in bestprog.keys():
+				prog[k] = bestprog[k]
+
+	fitness = 0
+	for p1 in range(5):
+		for p2 in range(p1+1):
+			tape = {}
+			tape[0] = p1
+			tape[1] = p2
+			tape[2] = 0
+				
+			runprog(prog,tape,seen)
+				
+			if tape[2] == p1*p2:
+				worksfor[(p1,p2)] = 1
+				fitness = fitness+1
+		
+	if fitness > bestfit:
+		bestprog = seen
+		bestfit = fitness
+		print "best fitness now:",bestfit
+			
+		fn = 'fit%d.txt' % (bestfit)
+		f = open(fn,'w')
+		for v in worksfor.keys():
+			f.write("solves %d * %d\n" % (v[0],v[1]))
+		ks = seen.keys()
+		ks.sort()
+		for k in ks:
+			v = seen[k]
+			f.write("%d %d %d %d %d\n" % (k[0],k[1],v[0],v[1],v[2]))
+		f.close()
+
+

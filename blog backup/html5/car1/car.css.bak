@@ -1,0 +1,10 @@
+#gameBoard {
+    background-color: #999999;
+}
+
+header {
+  font-size: 12pt;
+  color: #F63;
+}
+
+

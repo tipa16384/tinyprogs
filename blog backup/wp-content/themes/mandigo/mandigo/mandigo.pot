@@ -1,0 +1,331 @@
+# This file is distributed under the same license as the Mandigo package.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mandigo\n"
+"Report-Msgid-Bugs-To: <tom@onehertz.com>\n"
+"POT-Creation-Date: 2007-02-16 20:23-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: archive.php:9
+#, php-format
+msgid "Archive for the %s Category"
+msgstr ""
+
+#: archive.php:12 archive.php:15 archive.php:18
+#, php-format
+msgid "Archive for %s"
+msgstr ""
+
+#: archive.php:21 search.php:7
+msgid "Search Results"
+msgstr ""
+
+#: archive.php:24
+msgid "Author Archive"
+msgstr ""
+
+#: archive.php:27
+msgid "Blog Archives"
+msgstr ""
+
+#: archive.php:33 archive.php:62 search.php:10 search.php:27
+msgid "Previous Entries"
+msgstr ""
+
+#: archive.php:34 archive.php:63 search.php:11 search.php:28
+msgid "Next Entries"
+msgstr ""
+
+#: archive.php:47 index.php:17 search.php:18
+#, php-format
+msgid "Permanent Link to %s"
+msgstr ""
+
+#: archive.php:48 index.php:18 search.php:21 single.php:22
+#, php-format
+msgid "Posted by %s in %s"
+msgstr ""
+
+#: archive.php:48 index.php:18 search.php:21 single.php:22
+#, php-format
+msgid "Posted on %s by %s in %s"
+msgstr ""
+
+#: archive.php:48 index.php:18
+msgid "Edit this post"
+msgstr ""
+
+#: archive.php:48 index.php:18 search.php:21
+msgid "Edit"
+msgstr ""
+
+#: archive.php:55 index.php:25 search.php:21
+msgid "No Comments"
+msgstr ""
+
+#: archive.php:55 index.php:25 search.php:21
+msgid "1 Comment"
+msgstr ""
+
+#: archive.php:55 index.php:25 search.php:21
+msgid "% Comments"
+msgstr ""
+
+#: archive.php:68 index.php:37
+msgid "Not Found"
+msgstr ""
+
+#: archive.php:69
+msgid "Sorry, but you are looking for something that isn't here"
+msgstr ""
+
+#: archives.php:13
+msgid "Archives by Month"
+msgstr ""
+
+#: archives.php:18
+msgid "Archives by Subject"
+msgstr ""
+
+#: attachment.php:18 index.php:22 single.php:26
+msgid "Read the rest of this entry"
+msgstr ""
+
+#: attachment.php:20 page.php:11 sidebar.php:28 single.php:28
+msgid "Pages"
+msgstr ""
+
+#: attachment.php:24 single.php:32
+#, php-format
+msgid "This entry was posted on %s at %s and is filed under %s."
+msgstr ""
+
+#: attachment.php:25 single.php:33
+#, php-format
+msgid "You can follow any responses to this entry through the %s feed."
+msgstr ""
+
+#: attachment.php:29 single.php:37
+#, php-format
+msgid ""
+"You can <a href=\"#respond\">leave a response</a>, or <a href=\"%s\" rel="
+"\"trackback\">trackback</a> from your own site."
+msgstr ""
+
+#: attachment.php:33 single.php:41
+#, php-format
+msgid ""
+"Responses are currently closed, but you can <a href=\"%s\" rel=\"trackback"
+"\">trackback</a> from your own site."
+msgstr ""
+
+#: attachment.php:37 single.php:45
+msgid ""
+"You can <a href=\"#respond\">skip to the end</a> and leave a response. "
+"Pinging is currently not allowed."
+msgstr ""
+
+#: attachment.php:41 single.php:49
+msgid "Both comments and pings are currently closed."
+msgstr ""
+
+#: attachment.php:43 single.php:51
+msgid "Edit this entry."
+msgstr ""
+
+#: attachment.php:55 single.php:64
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: comments.php:23
+msgid "No Responses to "
+msgstr ""
+
+#: comments.php:23
+msgid "One Response to "
+msgstr ""
+
+#: comments.php:23
+msgid "% Responses to "
+msgstr ""
+
+#: comments.php:30
+#, php-format
+msgid "%s says:"
+msgstr ""
+
+#: comments.php:32
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: comments.php:36
+#, php-format
+msgid "%s at %s"
+msgstr ""
+
+#: comments.php:58
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:66
+msgid "Leave a Reply"
+msgstr ""
+
+#: comments.php:69
+msgid "You must be logged in to post a comment."
+msgstr ""
+
+#: comments.php:69
+msgid "Login"
+msgstr ""
+
+#: comments.php:76
+msgid "Logged in as %s"
+msgstr ""
+
+#: comments.php:76
+msgid "Log out of this account"
+msgstr ""
+
+#: comments.php:76
+msgid "Logout"
+msgstr ""
+
+#: comments.php:81
+msgid "Name"
+msgstr ""
+
+#: comments.php:81 comments.php:84
+msgid "required"
+msgstr ""
+
+#: comments.php:84
+msgid "E-mail"
+msgstr ""
+
+#: comments.php:84
+msgid "will not be published"
+msgstr ""
+
+#: comments.php:87
+msgid "Website"
+msgstr ""
+
+#: comments.php:95
+msgid "Submit Comment"
+msgstr ""
+
+#: footer.php:15
+msgid "Powered by <a href=\"http://wordpress.org/\">WordPress</a>"
+msgstr ""
+
+#: footer.php:16
+msgid "Entries (RSS)"
+msgstr ""
+
+#: footer.php:17
+msgid "and"
+msgstr ""
+
+#: footer.php:17
+msgid "Comments (RSS)"
+msgstr ""
+
+#: functions.php:22 functions.php:27
+msgid "Search"
+msgstr ""
+
+#: functions.php:40
+msgid "Calendar"
+msgstr ""
+
+#: functions.php:48 functions.php:62
+msgid "Meta"
+msgstr ""
+
+#: functions.php:160
+msgid "Update Options &raquo;"
+msgstr ""
+
+#: header.php:46
+msgid "Home"
+msgstr ""
+
+#: index.php:38
+msgid "Sorry, but you are looking for something that isn't here."
+msgstr ""
+
+#: links.php:11
+msgid "Links"
+msgstr ""
+
+#: page.php:9
+msgid "Read the rest of this page"
+msgstr ""
+
+#: page.php:16
+msgid "Edit this page"
+msgstr ""
+
+#: search.php:33
+msgid "No posts found. Try a different search?"
+msgstr ""
+
+#: search.php:34
+msgid ""
+"Sorry, no posts matched your search criteria. Please try and search again."
+msgstr ""
+
+#: sidebar.php:9
+#, php-format
+msgid "You are currently browsing the archives for the '%s' category."
+msgstr ""
+
+#: sidebar.php:12
+#, php-format
+msgid "You are currently browsing the %s weblog archives for the day %s."
+msgstr ""
+
+#: sidebar.php:15
+#, php-format
+msgid "You are currently browsing the %s weblog archives for %s."
+msgstr ""
+
+#: sidebar.php:18
+#, php-format
+msgid "You are currently browsing the %s weblog archives for the year %s."
+msgstr ""
+
+#: sidebar.php:21
+#, php-format
+msgid ""
+"You have searched the %s weblog archives for %s. If you are unable to find "
+"anything in these search results, you can try one of these links."
+msgstr ""
+
+#: sidebar.php:24
+#, php-format
+msgid "You are currently browsing the %s weblog archives."
+msgstr ""
+
+#: sidebar.php:30
+msgid "Categories"
+msgstr ""
+
+#: comments.php:1
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:1
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:1
+msgid "Click here to cancel reply"
+msgstr ""
