@@ -110,7 +110,7 @@ def run_test():
     word_list = get_wordle_list()
     assert game_loop(word_list, ',r1e4,ais', True) == 'arise'
     assert game_loop(word_list, ',e3r4,out', True) == 'outer'
-    assert game_loop(word_list, ',e1,r0,dly', True) == 'redly'
+    assert game_loop(word_list, 'e1,r0,dly', True) == 'redly'
 
 
 def game_loop(word_list, guess=None, quiet=False):
@@ -142,6 +142,8 @@ def game_loop(word_list, guess=None, quiet=False):
     except:
         if not quiet:
             print("Invalid guess")
+        else:
+            assert False
 
     return word
 
