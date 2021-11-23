@@ -25,7 +25,6 @@ def create_wordle_file():
 def get_wordle_list():
     "return a list of words from wordle_file"
     create_wordle_file()
-    print("Reading word list")
     with open(wordle_file, 'r') as f:
         return [line.strip() for line in f]
 
@@ -132,15 +131,14 @@ def game_loop(word_list, guess=None, quiet=False):
 
     # get the user's guess
     if not guess:
-        guess = input("Wordle says: ")
+        guess = input("Wordle says: ").strip()
 
-    if not guess.strip():
+    if not guess:
         sys.exit(0)
     try:
         (green, yellow, gray) = guess.split(',')
-        prune_words(word_list, lambda x: contains_gray(x, gray))
-        prune_words(word_list, lambda x: contains_green(x, green))
-        prune_words(word_list, lambda x: contains_yellow(x, yellow))
+        prune_words(word_list, lambda x: contains_gray(x, gray)
+                    or contains_green(x, green) or contains_yellow(x, yellow))
     except:
         if not quiet:
             print("Invalid guess")
