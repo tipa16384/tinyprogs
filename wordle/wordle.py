@@ -105,15 +105,57 @@ def choose_word(word_list):
     return sorted_words[0]
 
 
-def run_test():
-    "unit tests"
+def run_tests():
+    "run unit tests"
+
+    # test legacy input method
     word_list = get_wordle_list()
     assert game_loop(word_list, ',r1e4,ais', True) == 'arise'
     assert game_loop(word_list, ',e3r4,out', True) == 'outer'
     assert game_loop(word_list, 'e1,r0,dly', True) == 'redly'
 
+    # test alternate input method
+    word_list = get_wordle_list()
+    assert game_loop(word_list, 'bybby', True) == 'arise'
+    assert game_loop(word_list, 'bbbyy', True) == 'outer'
+    assert game_loop(word_list, 'ygbbb', True) == 'redly'
+
+
+def is_alternate_guess(guess):
+    "return True if guess contains only the letters g, b or y"
+    for letter in guess:
+        if letter not in 'gby':
+            return False
+    return True
+
+
+def alternate_guess(guess, word):
+    "return the alternate guess"
+    # three empty strings -- green, gray, yellow
+    green = ''
+    gray = ''
+    yellow = ''
+    # for each letter in guess
+    position = 0
+    for letter in guess:
+        word_letter = word[position]
+        # if the letter is g, append word_letter and its position to green
+        if letter == 'g':
+            green += "%s%d" % (word_letter, position)
+        # if the letter is b, append word_letter to gray
+        elif letter == 'b':
+            gray += word_letter
+        # if the letter is y, append word_letter and its position to yellow
+        elif letter == 'y':
+            yellow += "%s%d" % (word_letter, position)
+        # increment position
+        position += 1
+    # return the alternate guess
+    return green, yellow, gray
+
 
 def game_loop(word_list, guess=None, quiet=False):
+    "guess a word and process Wordle's response"
     uniques = get_words_with_no_duplicates(word_list)
     unique_length = len(uniques)
     if not uniques:
@@ -136,7 +178,10 @@ def game_loop(word_list, guess=None, quiet=False):
     if not guess:
         sys.exit(0)
     try:
-        (green, yellow, gray) = guess.split(',')
+        # if guess consists only of the letters g, b and y, then call alternate_guess
+        (green, yellow, gray) = alternate_guess(
+            guess, word) if is_alternate_guess(guess) else guess.split(',')
+
         prune_words(word_list, lambda x: contains_gray(x, gray)
                     or contains_green(x, green) or contains_yellow(x, yellow))
     except:
@@ -149,7 +194,7 @@ def game_loop(word_list, guess=None, quiet=False):
 
 
 def play_game():
-    run_test()
+    run_tests()
     word_list = get_wordle_list()
     while True:
         game_loop(word_list)
