@@ -30,18 +30,20 @@ def sanity_check():
 
 
 def mark_ball_in_board(ball, matrix):
+    "mark the ball in the board"
     for row in matrix:
         if ball in row:
             row[row.index(ball)] = -1
 
 
 def mark_ball_in_boards(ball, matrices):
+    "mark the ball in all the boards"
     for matrix in matrices:
         mark_ball_in_board(ball, matrix)
 
 
 def winning_board(matrix):
-    "return True if any row, column or diagonal is -1"
+    "return True if any row or column is -1"
     for row in matrix:
         if sum(row) == -5:
             return True
@@ -52,6 +54,7 @@ def winning_board(matrix):
 
 
 def get_winning_boards(matrices):
+    "return a list of winning boards"
     winning_boards = []
     for matrix in matrices:
         if winning_board(matrix):
@@ -60,7 +63,7 @@ def get_winning_boards(matrices):
 
 
 def play_bingo(part2=False):
-    # read the puzzle data file and get the balls and the matrix
+    "read the puzzle data file and get the balls and the matrix"
     with open(puzzle_data_file, 'r') as fp:
         balls = get_balls(fp)
         matrices = list(get_matrix(fp))
@@ -79,7 +82,7 @@ def play_bingo(part2=False):
 
 
 def score_board(ball, board):
-    "return the sum of all the numbers in the board that are not -1"
+    "return product of the ball and the sum of all the numbers in the board that are not -1"
     return ball * sum([sum([x for x in row if x != -1]) for row in board])
 
 
