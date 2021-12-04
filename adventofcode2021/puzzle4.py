@@ -1,4 +1,5 @@
 import re
+from functools import reduce
 
 puzzle_data_file = 'puzzle4.dat'
 
@@ -8,75 +9,67 @@ def get_balls(fp):
     return [int(x) for x in fp.readline().split(',')]
 
 
-def get_matrix(fp):
+def get_board(fp):
     """
     given a file pointer, skip the first line and read the next five lines as a
-    5x5 matrix of integers separated by spaces
+    5x5 board of integers separated by spaces
     """
     while fp.readline() != '':
-        matrix = []
+        board = []
         for i in range(5):
-            matrix.append([int(x)
-                           for x in re.split(u'\s+', fp.readline().strip())])
-        yield matrix
+            board.append([int(x)
+                          for x in re.split(u'\s+', fp.readline().strip())])
+        yield board
 
 
 def sanity_check():
-    "open the puzzle data file and print the return from get_balls() and get_matrix()"
+    "open the puzzle data file and print the return from get_balls() and get_board()"
     with open(puzzle_data_file, 'r') as fp:
         print(get_balls(fp))
-        for matrix in get_matrix(fp):
-            print(matrix)
+        for board in get_board(fp):
+            print(board)
 
 
-def mark_ball_in_board(ball, matrix):
+def mark_ball_in_board(ball, board):
     "mark the ball in the board"
-    for row in matrix:
+    for row in board:
         if ball in row:
             row[row.index(ball)] = -1
 
 
-def mark_ball_in_boards(ball, matrices):
+def mark_ball_in_boards(ball, boards):
     "mark the ball in all the boards"
-    for matrix in matrices:
-        mark_ball_in_board(ball, matrix)
+    for board in boards:
+        mark_ball_in_board(ball, board)
 
 
-def winning_board(matrix):
+def winning_board(board):
     "return True if any row or column is -1"
-    for row in matrix:
-        if sum(row) == -5:
-            return True
-    for i in range(5):
-        if sum([row[i] for row in matrix]) == -5:
-            return True
-    return False
+    row_winners = [sum(row) == -5 for row in board]
+    col_winners = [sum([row[i] for row in board]) == -5 for i in range(5)]
+    return reduce(lambda x, y: x or y, row_winners + col_winners)
 
 
-def get_winning_boards(matrices):
+def get_winning_boards(boards):
     "return a list of winning boards"
-    winning_boards = []
-    for matrix in matrices:
-        if winning_board(matrix):
-            winning_boards.append(matrix)
-    return winning_boards
+    return [board for board in boards if winning_board(board)]
 
 
 def play_bingo(part2=False):
-    "read the puzzle data file and get the balls and the matrix"
+    "read the puzzle data file and get the balls and the board"
     with open(puzzle_data_file, 'r') as fp:
         balls = get_balls(fp)
-        matrices = list(get_matrix(fp))
+        boards = list(get_board(fp))
         for ball in balls:
-            mark_ball_in_boards(ball, matrices)
-            winning_boards = get_winning_boards(matrices)
+            mark_ball_in_boards(ball, boards)
+            winning_boards = get_winning_boards(boards)
             if winning_boards:
-                if not part2 or len(matrices) == 1:
+                if not part2 or len(boards) == 1:
                     assert len(winning_boards) == 1
                     return ball, winning_boards[0]
                 else:
                     for board in winning_boards:
-                        matrices.remove(board)
+                        boards.remove(board)
 
     raise Exception('no winning board found')
 
@@ -88,7 +81,7 @@ def score_board(ball, board):
 
 if __name__ == '__main__':
     # sanity_check()
-    ball, board = play_bingo(False)
+    ball, board = play_bingo()
     print(score_board(ball, board))
     ball, board = play_bingo(True)
     print(score_board(ball, board))
