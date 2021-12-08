@@ -10,10 +10,10 @@ def read_input():
 def figure_it_out(sample):
     decrypt_map = {}
 
-    one = [x for x in sample if len(x) == 2][0]
-    seven = [x for x in sample if len(x) == 3][0]
-    four = [x for x in sample if len(x) == 4][0]
-    top = [x for x in seven if x not in one][0]
+    one = next(x for x in sample if len(x) == 2)
+    seven = next(x for x in sample if len(x) == 3)
+    four = next(x for x in sample if len(x) == 4)
+    top = next(x for x in seven if x not in one)
 
     decrypt_map[top] = 'a'
 
