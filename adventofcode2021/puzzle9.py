@@ -1,4 +1,4 @@
-import numpy
+from math import prod
 
 lines = [line.strip() for line in open('puzzle9.dat')]
 rows = len(lines)
@@ -22,5 +22,5 @@ def find_basin(x, y, basin):
 
 print('Part 1:', sum(int(lines[y][x])+1 for x, y in yield_low_point()))
 
-print('Part 2:', numpy.prod(sorted(find_basin(x, y, set())
+print('Part 2:', prod(sorted(find_basin(x, y, set())
                                 for x, y in yield_low_point())[-3:]))
