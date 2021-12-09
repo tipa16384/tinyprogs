@@ -10,14 +10,11 @@ def orthogonal(x, y): return [xy for xy in [
 def yield_low_point():
     for row in range(rows):
         for col in range(cols):
-            adjacent = [lines[r][c] for c, r in orthogonal(col, row)]
-            if min(adjacent) > lines[row][col]:
+            if min(lines[r][c] for c, r in orthogonal(col, row)) > lines[row][col]:
                 yield col, row
 
-def find_basin(x, y, basin=None):
-    if basin is None:
-        basin = set()
-    if lines[y][x] != '9' and (x, y) not in basin:
+def find_basin(x, y, basin):
+    if lines[y][x] < '9' and (x, y) not in basin:
         basin.add((x, y))
         for xy in orthogonal(x, y):
             find_basin(xy[0], xy[1], basin)
@@ -25,5 +22,5 @@ def find_basin(x, y, basin=None):
 
 print('Part 1:', sum(int(lines[y][x])+1 for x, y in yield_low_point()))
 
-print('Part 2:', numpy.prod(sorted(find_basin(x, y)
+print('Part 2:', numpy.prod(sorted(find_basin(x, y, set())
                                 for x, y in yield_low_point())[-3:]))
