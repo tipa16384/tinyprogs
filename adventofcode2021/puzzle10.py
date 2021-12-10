@@ -1,8 +1,8 @@
 from statistics import median
-from functools import reduce
+import numpy as np
 
 delims = '()[]{}<>'
-corrupt_scores = {')': 3, ']': 57, '>': 25137, '}': 1197}
+corrupt = [0, 3, 57, 1197, 25137]
 
 def read_input():
     with open('puzzle10.dat', 'r') as f:
@@ -10,22 +10,22 @@ def read_input():
             yield line.strip()
 
 def score_line(line):
-    stack = []
+    score = 0
     for c in line:
         pos = delims.find(c)
         val = pos // 2 + 1
         if pos % 2 == 1:
-            if not stack or stack[-1] != val:
-                return corrupt_scores[c], 0
-            stack.pop()
+            if val != score % 5:
+                return corrupt[val], 0
+            score //= 5
         else:
-            stack.append(val)
+            score = score * 5 + val
 
-    return 0, reduce(lambda x, y: x * 5 + y, stack[::-1]) if stack else 0
+    return 0, int(np.base_repr(score, 5)[::-1], 5)
 
 # Part 1
 print(sum(score_line(line)[0] for line in read_input()))
 
 # Part 2
 print(median(score_line(line)[1]
-             for line in read_input() if score_line(line)[1] > 0))
+            for line in read_input() if score_line(line)[1] > 0))
