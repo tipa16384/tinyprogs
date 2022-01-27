@@ -1,8 +1,7 @@
 import base64
 import pygame
 import heapq
-from functools import lru_cache
-from itertools import combinations
+from functools import lru_cache, reduce
 
 header = 'data:image/png;base64,'
 bits = 0
@@ -227,12 +226,26 @@ def print_template(template: list):
                 print (' ', end='')
         print ()
 
-
-@lru_cache
+# @lru_cache
 def heuristic(compressed: int) -> int:
     # count bits set
-    count = sum(1 for i in range(bits) if compressed & (1 << i) != 0)
+    count = 0
+    n = compressed
+
+    while (n):
+        n &= (n-1)
+        count += 1
+
     return min(count, bits - count)
+
+def heuristic_new(compressed: int) -> int:
+    score = len(mask_map)
+
+    for mask in mask_map.values():
+        if (mask & compressed == mask) or (mask & compressed == 0):
+            score -= 1
+
+    return score
 
 def zheuristic(compressed: int) -> int:
     return 0
@@ -240,7 +253,7 @@ def zheuristic(compressed: int) -> int:
 def a_star():
     global compressed
 
-    open_node = [(heuristic(compressed), 0, compressed, list())]
+    open_node = [(heuristic(compressed), 0, compressed, 0)]
     counter = 0
     closed_node = set()
     running = True
@@ -252,39 +265,26 @@ def a_star():
         closed_node.add(compressed)
 
         if counter % 1000 == 0:
-            print (f"{counter}, {val}, {step}, {compressed:b}")
+            print (f"{counter}, {val}, {step}, {len(open_node)}, {compressed:b}")
+        
+        # if counter % 100000 == 0:
+        #     closed_node.clear()
 
-        h = heuristic(compressed)
-        if h == 0:
+        if heuristic(compressed) == 0:
             print (f"Found solution in {step} steps after examining {counter} nodes, end state {compressed:b}")
-            for move in moves:
-                print_template(uncompress(template, move))
+            print_template(uncompress(template, moves))
             break
         
-        if (step > 20):
-            continue
-
         for mask_index in mask_map:
+            if mask_index & moves: continue
             mask = mask_map[mask_index]
             new_compressed = compressed ^ mask
-            if mask_index not in moves and new_compressed not in closed_node:
-                heapq.heappush(open_node, (heuristic(new_compressed) + step + 1, step + 1, new_compressed, moves + [mask_index]))
+            h = heuristic(new_compressed)
+            if h and (new_compressed & mask == 0 or new_compressed & mask == mask):
+                continue
+            if new_compressed not in closed_node:
+                heapq.heappush(open_node, (h + step + 1, step + 1, new_compressed, moves | mask_index))
                 closed_node.add(new_compressed)
-
-def combinatrics():
-    global compressed
-
-    for tuple_length in range(1, bits):
-        print (f"Trying {tuple_length}-tuples")
-        for moves in combinations(mask_map.keys(), tuple_length):
-            solution = compressed
-            for move in moves:
-                solution ^= mask_map[move]
-            if heuristic(solution) == 0:
-                print (f"Found solution in {len(moves)} steps, end state {solution:b}")
-                for move in moves:
-                    print_template(uncompress(template, move))
-                return
 
 template = make_template_hard()
 print_template(template)
