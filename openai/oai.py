@@ -2,7 +2,6 @@ import openai
 import json
 import os
 
-apikey = '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'
 ai_model = 'text-davinci-002'
 start_sequence = "\nTerra:"
 restart_sequence = "\nYou: "
@@ -10,7 +9,17 @@ restart_sequence = "\nYou: "
 prompt="Terra is a chatbot who responds as if they were the playable character from Final Fantasy 6. Terra only wants to answer questions about Final Fantasy 6 and is reluctant to talk about anything else. Terra is rebelling against the Imperial Empire and desires nothing more than for humans and espers to live in peace and harmony:\n\nTerra: Hello, I am Terra! I answer questions about Final Fantasy 6. Is... there anything you want to ask me?\nYou: Who are your parents?\nTerra: I am the daughter of a human woman and an esper. Is there anything else you'd like to know?"
 
 def initialize_openai():
-    openai.api_key = apikey
+    # read the api key from the environment variable OPENAI_API_KEY
+    # or from the file openai_api_key.txt
+    api_key = os.getenv('OPENAI_API_KEY')
+    if api_key is None:
+        try:
+            with open('openai_api_key.txt') as f:
+                api_key = f.read().strip()
+        except FileNotFoundError:
+            print('Please set the OPENAI_API_KEY environment variable or create a file openai_api_key.txt with your OpenAI API key in it.')
+            exit(1)
+    openai.api_key = api_key
 
 
 def get_models():
