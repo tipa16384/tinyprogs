@@ -1,0 +1,216 @@
+<!-- an HTML page with a form that makes a POST call to http://127.0.0.1:5000/terrachat with a SUBMIT button labeled 'Chat' -->
+<html>
+
+<head>
+    <!-- include the latest version of jQuery from the Google cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Chat</title>
+    <!-- include a favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- style to load a web font in WOFF format named 'San Francisco' -->
+
+    <style>
+        /* H1 font San Francisco, George, Arial, or Sans-Serif */
+        #title {
+            font-family: 'San Francisco', 'George', 'Arial', 'Sans-Serif';
+            /* Displayed in a bubble */
+            background-color: #f0f0f0;
+            /* Rounded corners */
+            border-radius: 10px;
+            /* Padding */
+            padding: 10px;
+            /* Margin */
+            margin: 10px;
+            /* Centered */
+            text-align: center;
+            font-weight: 700;
+            font-size: 30px;
+        }
+        /* div with ID 'chat' background black */
+        #chat {
+            overflow-x: hidden;
+            width: 100%;
+            height: 75vh;
+        }
+
+        .fromTerra {
+            /* background image left justified filename 'terra.png' don't repeat */
+            background-image: url(static/terra72.png);
+            background-repeat: no-repeat;
+            /* Set the font to San Francisco, George, Arial, or Sans-Serif */
+            font-family: 'San Francisco', 'George', 'Arial', 'Sans-Serif';
+            /* text color is #007aff */
+            color: #007aff;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 10px 10px 10px 72px;
+            margin: 10px;
+            width: 50%;
+            float: left;
+            min-height: 62px;
+        }
+
+        .fromUser {
+            background-image: url(static/celes72.png);
+            /* background image right justified filename 'celes.png' don't repeat */
+            background-repeat: no-repeat;
+            background-position: right;
+            font-family: 'San Francisco', 'George', 'Arial', 'Sans-Serif';
+            /* text color is white */
+            color: #fff;
+            background-color: #007aff;
+            border-radius: 10px;
+            /* background gradient from not transparent on the right to 25% transparent on the left */
+            padding: 10px 72px 10px 10px;
+            margin: 10px;
+            width: 50%;
+            float: right;
+            color: white;
+            min-height: 62px;
+            text-align: right;
+        }
+
+        /* div with ID 'content' margins auto */
+        #content {
+            /*margin: auto;*/
+            position: relative;
+            width: 50%;
+            max-width: 1024px;
+            min-width: 768px;
+            display: inline-block;
+        }
+
+        body {
+            /* gradient background from light teal in top right to light gray in bottom left */
+            background: linear-gradient(to bottom left, #00bfff, #f0f0f0);
+        }
+
+        #terrapic {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            padding: 10px;
+        }
+
+        /* input id 'mychat' no border transparent background */
+        #mychat {
+            border: none;
+            background: transparent;
+            /* font San Francisco, George, Arial, or Sans-Serif */
+            font-family: 'San Francisco', 'George', 'Arial', 'Sans-Serif';
+            /* font size 20px */
+            font-size: 20px;
+            /* text color white */
+            color: blue;
+            /* width 100% */
+            width: 100%;
+            /* height 100% */
+            height: 100%;
+            /* padding 10px */
+            padding: 10px;
+        }
+
+        /* div with ID 'page' width 100% */
+        #page {
+            width: 100%;
+            position: absolute;
+        }
+
+        /* Hide the button with the id 'chatbutton' */
+        #chatbutton {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <div id="terrapic">
+            <img src="static/terrablog.png" alt="Terra" width="256" height="256">
+        </div>
+        <!-- div named 'content' centered in the body -->
+        <div id="content">
+            <div id="title">Talk to Terra!</div>
+            <!-- scrolling DIV containing a single column table. the table takes 100% width and the DIV is 1024 pixels wide and 968 pixels tall. -->
+            <div id="chat">
+                <table id="smsscroll" style="width:100%">
+                </table>
+            </div>
+            <form>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="text" name="prompt" id="mychat" placeholder="Talk to Terra here!" size="80" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Chat" id="chatbutton" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <script>
+        let conversation = [];
+
+        // function that takes a string, appends it to conversation, pushes it to the textarea, and clears the input field
+        function appendToConversation(string, fromTerra) {
+            conversation.push(string);
+            // set styleClass to 'fromTerra' if fromTerra is true, otherwise set it to 'fromUser'
+            let styleClass = fromTerra ? 'fromTerra' : 'fromUser';
+            // add the string as a new row to the table with id smsscroll, and scroll the fiv with id chat to the bottom
+            $('#smsscroll').append('<tr><td class=' + styleClass + '>' + string + '</td></tr>');
+            $('#chat').scrollTop($('#chat')[0].scrollHeight);
+            $("input[name='prompt']").val("");
+        }
+
+        $(document).ready(function () {
+            // add style 'overflow-y: auto' to the div with id chat when mouse enters the div
+            $('#chat').mouseenter(function () {
+                $('#chat').css('overflow-y', 'auto');
+            });
+            // remove style 'overflow-y: auto' from the div with id chat when mouse leaves the div
+            $('#chat').mouseleave(function () {
+                $('#chat').css('overflow-y', 'hidden');
+            });
+            // append this static string to the conversation
+            appendToConversation("Hello, I am Terra! I answer questions about Final Fantasy 6. Is... there anything you want to ask me?", true);
+            $('form').submit(function (event) {
+                event.preventDefault();
+                var prompt = $('input[name="prompt"]').val();
+                appendToConversation(prompt, false);
+                // create a json object with the prompt
+                var data = { prompt: prompt };
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://127.0.0.1:5000/terrachat',
+                    // format the data as json
+                    data: JSON.stringify(data),
+                    // content type is json
+                    contentType: 'application/json',
+                    dataType: "text",
+                    success: function (data) {
+                        // data is in json format
+                        var json = JSON.parse(data);
+                        // get the answer from the json object
+                        var answer = json.answer;
+                        // if answer is empty, set it to 'I don't know'
+                        if (answer == "") {
+                            answer = "I don't know how to answer that.";
+                        }
+                        // add the answer to the conversation prefixed with 'Terra: '
+                        appendToConversation(answer, true);
+                    }
+                });
+            });
+        });
+
+
+    </script>
+
+</body>
+
+</html>

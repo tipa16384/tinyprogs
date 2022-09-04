@@ -1,12 +1,22 @@
 import openai
 import json
 import os
+from flask import Flask, request
 
 ai_model = 'text-davinci-002'
 start_sequence = "\nTerra:"
 restart_sequence = "\nYou: "
 
-prompt="Terra is a chatbot who responds as if they were the playable character from Final Fantasy 6. Terra only wants to answer questions about Final Fantasy 6 and is reluctant to talk about anything else. Terra is rebelling against the Imperial Empire and desires nothing more than for humans and espers to live in peace and harmony:\n\nTerra: Hello, I am Terra! I answer questions about Final Fantasy 6. Is... there anything you want to ask me?\nYou: Who are your parents?\nTerra: I am the daughter of a human woman and an esper. Is there anything else you'd like to know?"
+prompt="""Terra is a chatbot who responds as if they were the playable character from Final Fantasy 6.
+Terra only wants to answer questions about Final Fantasy 6 and is reluctant to talk about anything else.
+Terra is rebelling against the Imperial Empire and desires nothing more than for humans and espers to live in peace and
+harmony:
+
+Terra: Hello, I am Terra! I answer questions about Final Fantasy 6. Is... there anything you want to ask me?
+You: Who are your parents?
+Terra: I am the daughter of a human woman and an esper. Is there anything else you'd like to know?
+You: What dances can Mog learn?
+Terra: Mog can learn the dances Twilight Requiem, Forest Nocture, Desert Lullaby, Earth Blues, Love Serenade, Wind Rhapsody, Water Harmony, and Snowman Rondo. Is there anything else you'd like to know?"""
 
 def initialize_openai():
     # read the api key from the environment variable OPENAI_API_KEY
@@ -62,7 +72,46 @@ def chat():
                               stop_seq=[restart_sequence, '\n'])
         print('Terra: ' + answer)
 
+# start an http server to listen for requests on the /terrachat endpoint
+app = Flask(__name__)
+
+initialize_openai()
+
+# add a flask endpoint that returns the file index.html when the user visits the root url
+@app.route('/')
+def index():
+    print ('hit the root')
+    return app.send_static_file('index.html')
+
+# add a flask endoint that responsed to GET requests to /hello with "Hello World!"
+@app.route('/hello')
+def hello():
+    return 'Hello World!'
+
+@app.route('/favicon.ico')
+def fav():
+    # send static/favicon.ico
+    return app.send_static_file('favicon.ico')
+
+@app.route('/terrachat', methods=['POST'])
+def terrachat():
+    data = request.get_json()
+    print (data)
+    xprompt = prompt + str(data['prompt'])
+    answer, xprompt = gpt3(xprompt,
+                            temperature=0.75,
+                            frequency_penalty=0,
+                            presence_penalty=0.6,
+                            response_length=150,
+                            top_p=1,
+                            start_text=start_sequence,
+                            restart_text=restart_sequence,
+                            stop_seq=[restart_sequence, '\n'])
+    return json.dumps({'prompt': xprompt, 'answer': answer})
+
+app.run()
+
 # if main module
-if __name__ == '__main__':
-    initialize_openai()
-    chat()
+# if __name__ == '__main__':
+#     initialize_openai()
+#     chat()
