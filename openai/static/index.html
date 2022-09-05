@@ -95,7 +95,6 @@
 
         /* input id 'mychat' no border transparent background */
         #mychat {
-            border: none;
             background: transparent;
             /* font San Francisco, George, Arial, or Sans-Serif */
             font-family: 'San Francisco', 'George', 'Arial', 'Sans-Serif';
@@ -109,6 +108,9 @@
             height: 100%;
             /* padding 10px */
             padding: 10px;
+            /* light gray border with rounded corners */
+            border: 2px solid #685e5e;
+            border-radius: 10px;
         }
 
         /* div with ID 'page' width 100% */
@@ -131,7 +133,7 @@
         </div>
         <!-- div named 'content' centered in the body -->
         <div id="content">
-            <div id="title">Talk to Terra!</div>
+            <div id="title">TerraChat is LIVE!</div>
             <!-- scrolling DIV containing a single column table. the table takes 100% width and the DIV is 1024 pixels wide and 968 pixels tall. -->
             <div id="chat">
                 <table id="smsscroll" style="width:100%">
@@ -203,6 +205,10 @@
                         }
                         // add the answer to the conversation prefixed with 'Terra: '
                         appendToConversation(answer, true);
+                    },
+                    failure: function (data) {
+                        // if the ajax call fails, add 'I don't know' to the conversation
+                        appendToConversation("I'm so sorry, but there was a system error. Could you ask again?", true);
                     }
                 });
             });
