@@ -11,9 +11,9 @@
     <!-- style to load a web font in WOFF format named 'San Francisco' -->
 
     <style>
-        /* H1 font San Francisco, George, Arial, or Sans-Serif */
+        /* H1 font San Francisco, Georgia, Arial, or Sans-Serif */
         #title {
-            font-family: 'San Francisco', 'George', 'Arial', 'Sans-Serif';
+            font-family: 'San Francisco', 'Georgia', 'Arial', 'Sans-Serif';
             /* Displayed in a bubble */
             background-color: #f0f0f0;
             /* Rounded corners */
@@ -27,6 +27,7 @@
             font-weight: 700;
             font-size: 30px;
         }
+
         /* div with ID 'chat' background black */
         #chat {
             overflow-x: hidden;
@@ -38,8 +39,8 @@
             /* background image left justified filename 'terra.png' don't repeat */
             background-image: url(static/terra72.png);
             background-repeat: no-repeat;
-            /* Set the font to San Francisco, George, Arial, or Sans-Serif */
-            font-family: 'San Francisco', 'George', 'Arial', 'Sans-Serif';
+            /* Set the font to San Francisco, Georgia, Arial, or Sans-Serif */
+            font-family: 'San Francisco', 'Georgia', 'Arial', 'Sans-Serif';
             /* text color is #007aff */
             color: #007aff;
             background-color: #f0f0f0;
@@ -56,7 +57,7 @@
             /* background image right justified filename 'celes.png' don't repeat */
             background-repeat: no-repeat;
             background-position: right;
-            font-family: 'San Francisco', 'George', 'Arial', 'Sans-Serif';
+            font-family: 'San Francisco', 'Georgia', 'Arial', 'Sans-Serif';
             /* text color is white */
             color: #fff;
             background-color: #007aff;
@@ -96,8 +97,8 @@
         /* input id 'mychat' no border transparent background */
         #mychat {
             background: transparent;
-            /* font San Francisco, George, Arial, or Sans-Serif */
-            font-family: 'San Francisco', 'George', 'Arial', 'Sans-Serif';
+            /* font San Francisco, Georgia, Arial, or Sans-Serif */
+            font-family: 'San Francisco', 'Georgia', 'Arial', 'Sans-Serif';
             /* font size 20px */
             font-size: 20px;
             /* text color white */
@@ -157,6 +158,29 @@
     </div>
     <script>
         let conversation = [];
+        let serviceAvailable = true;
+
+        // function that takes a new value for serviceAvailable and updates the UI
+        function updateServiceStatus(newStatus) {
+            if (serviceAvailable != newStatus) {
+                serviceAvailable = newStatus;
+                if (serviceAvailable) {
+                    $('#mychat').prop('disabled', false);
+                    $('#chatbutton').prop('disabled', false);
+                    $('#title').text('TerraChat is LIVE!');
+                    appendToConversation("Terra is back online!", true);
+                    // show mychat
+                    $('#mychat').show();
+                } else {
+                    appendToConversation("Terra is offline. Please try again later.", true);
+                    $('#title').text('TerraChat is DOWN!');
+                    $('#mychat').prop('disabled', true);
+                    $('#chatbutton').prop('disabled', true);
+                    // hide #mychat
+                    $('#mychat').hide();
+                }
+            }
+        }
 
         // function that takes a string, appends it to conversation, pushes it to the textarea, and clears the input field
         function appendToConversation(string, fromTerra) {
@@ -170,6 +194,19 @@
         }
 
         $(document).ready(function () {
+            // hit the /hello endpoint every second. On a failure, set the serviceAvailable flag to false, otherwise set it to true
+            setInterval(function () {
+                $.ajax({
+                    url: '/hello',
+                    type: 'GET',
+                    success: function (data) {
+                        updateServiceStatus(true);
+                    },
+                    error: function (data) {
+                        updateServiceStatus(false);
+                    }
+                });
+            }, 1000);
             // add style 'overflow-y: auto' to the div with id chat when mouse enters the div
             $('#chat').mouseenter(function () {
                 $('#chat').css('overflow-y', 'auto');
