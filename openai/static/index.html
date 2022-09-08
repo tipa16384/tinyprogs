@@ -159,6 +159,10 @@
     <script>
         let conversation = [];
         let serviceAvailable = true;
+        const gpt_start_sequence = "\nTerra:";
+        const gpt_restart_sequence = "\nYou: ";
+
+        let context = "Terra is a chatbot who responds as if they were the playable character from Final Fantasy 6. You are\nCeles, a member of the resistance against the Empire. You and Terra are rivals for the love of Locke. Locke is a\nmaster thief who feels responsible for the death of his lover. Locke isn't sure if he likes you or Terra better,\nbut he is leaning toward Terra, but he doesn't want to hurt your feelings. Setzer is a gambler and the captain of the airship\nthe Blackjack. He acts as a mentor to the adventurers. Gau is a feral beast child who speaks in the third person using\nvery simple language. He is a confidante to you. Edgar Figaro is the prince of Figaro Castle. He is an engineer. His\ntwin brother, Sabin, is a monk. After the death of their father, they went their separate ways, but now Sabin has returned.\nCyan is a samurai with the power of Bushido. He is enemies with the ninja Shadow. Shadow's past is a mystery. His dog\nis named Interceptor, and is fiercely loyal to Shadow. Relm Arrowny is a young artist and secretely Relm's daughter.\nTerra only wants to answer questions about Final Fantasy 6 and is reluctant to talk about anything else.\nTerra is rebelling against the Imperial Empire and desires nothing more than for humans and espers to live in peace and\nharmony:\n\nTerra: Hello, I am Terra! I answer questions about Final Fantasy 6. Is... there anything you want to ask me?\nYou: Who are your parents?\nTerra: I am the daughter of a human woman and an esper. Is there anything else you'd like to know?\nYou: What dances can Mog learn?\nTerra: Mog can learn the dances Twilight Requiem, Forest Nocture, Desert Lullaby, Earth Blues, Love Serenade, Wind Rhapsody, Water Harmony, and Snowman Rondo. Is there anything else you'd like to know?";
 
         // function that takes a new value for serviceAvailable and updates the UI
         function updateServiceStatus(newStatus) {
@@ -184,7 +188,8 @@
 
         // function that takes a string, appends it to conversation, pushes it to the textarea, and clears the input field
         function appendToConversation(string, fromTerra) {
-            conversation.push(string);
+            startSequence = fromTerra ? "Terra:" : "You: ";
+            conversation.push(startSequence + string);
             // set styleClass to 'fromTerra' if fromTerra is true, otherwise set it to 'fromUser'
             let styleClass = fromTerra ? 'fromTerra' : 'fromUser';
             // add the string as a new row to the table with id smsscroll, and scroll the fiv with id chat to the bottom
@@ -206,7 +211,7 @@
                         updateServiceStatus(false);
                     }
                 });
-            }, 1000);
+            }, 10000);
             // add style 'overflow-y: auto' to the div with id chat when mouse enters the div
             $('#chat').mouseenter(function () {
                 $('#chat').css('overflow-y', 'auto');
@@ -216,13 +221,15 @@
                 $('#chat').css('overflow-y', 'hidden');
             });
             // append this static string to the conversation
-            appendToConversation("Hello, I am Terra! I answer questions about Final Fantasy 6. Is... there anything you want to ask me?", true);
+            appendToConversation(" Hello, I am Terra! I answer questions about Final Fantasy 6. Is... there anything you want to ask me?", true);
             $('form').submit(function (event) {
                 event.preventDefault();
-                var prompt = $('input[name="prompt"]').val();
+                let prompt = $('input[name="prompt"]').val();
                 appendToConversation(prompt, false);
+                // let fullPrompt be context + conversation joined by line feeds.
+                let fullPrompt = context + "\n" + conversation.join("\n");
                 // create a json object with the prompt
-                var data = { prompt: prompt };
+                var data = { prompt: fullPrompt, start_sequence: gpt_start_sequence, restart_sequence: gpt_restart_sequence };
                 $.ajax({
                     type: 'POST',
                     url: 'http://127.0.0.1:5000/terrachat',
