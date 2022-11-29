@@ -6,7 +6,7 @@ from flask import Flask, request
 # start an http server to listen for requests on the /terrachat endpoint
 app = Flask(__name__)
 
-ai_model = 'text-davinci-002'
+ai_model = 'text-davinci-003'
 
 def initialize_openai():
     # read the api key from the environment variable OPENAI_API_KEY
