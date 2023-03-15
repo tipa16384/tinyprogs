@@ -3,11 +3,12 @@ import json
 import os
 from flask import Flask, request
 from squaredle import find_words
+import re
 
 # start an http server to listen for requests on the /terrachat endpoint
 application = Flask(__name__)
 
-ai_model = 'text-davinci-003'
+ai_model = 'gpt-3.5-turbo'
 word_set = None
 
 def initialize_openai():
@@ -30,22 +31,35 @@ def get_models():
 
     return [model.id for model in model_list]
 
-def gpt3(xprompt, engine=ai_model, response_length=64,
-         temperature=0.7, top_p=1, frequency_penalty=0, presence_penalty=0,
-         start_text='', restart_text='', stop_seq=[]):
-    response = openai.Completion.create(
-        prompt=xprompt + start_text,
-        engine=engine,
-        max_tokens=response_length,
-        temperature=temperature,
-        top_p=top_p,
-        frequency_penalty=frequency_penalty,
-        presence_penalty=presence_penalty,
-        stop=stop_seq,
-    )
-    answer = response.choices[0]['text']
-    new_prompt = xprompt + start_text + answer + restart_text
-    return answer, new_prompt
+def gptturbo(messages, response_length=1024,
+         temperature=0.7, top_p=1, frequency_penalty=0.7, presence_penalty=0.3):
+    response = openai.ChatCompletion.create(model = ai_model, messages = messages,
+                                            max_tokens=response_length,
+                                            temperature=temperature,
+                                            top_p=top_p,
+                                            frequency_penalty=frequency_penalty,
+                                            presence_penalty=presence_penalty)
+    return response
+
+def find_regex(start, end, length):
+    global word_set
+    
+    start = '' if start == '?' else start.replace('?', '').lower()
+    end = '' if end == '?' else end.replace('?', '').lower()
+    length = int(length) if length.isnumeric() else 0
+
+    if length:
+        length = length - len(start) - len(end)
+    
+    regex = f'^{start}.*{end}$' if not length else f'^{start}.{{{length}}}{end}$'
+
+    print (regex)
+
+    # find all words that match the regex
+    answers = [word for word in word_set if re.match(regex, word)]
+
+    return 'Being sure to include all these words in your response, please tell the user that they might like these words: ' + ', '.join(answers) if answers else 'Please tell the user that no words were found.'
+
 
 # add a flask endpoint that returns the file index.html when the user visits the root url
 @application.route('/')
@@ -59,7 +73,7 @@ def words():
     global word_set
     if not word_set:
         word_set = find_words()
-    return ', '.join(word_set)
+    return json.dumps(list(word_set))
 
 # add a flask endoint that responsed to GET requests to /hello with "Hello World!"
 @application.route('/hello')
@@ -75,24 +89,31 @@ def fav():
 def terrachat():
     data = request.get_json()
     # print (data)
-    xprompt = str(data['prompt'])
-    start_sequence = str(data['start_sequence'])
-    restart_sequence = str(data['restart_sequence'])
+    # convert data['messages'] from JSON to an array of dict
 
-#    print ("Input to gpt3: " + xprompt)
-    answer, _ = gpt3(xprompt,
-                            temperature=0.75,
-                            frequency_penalty=0,
-                            presence_penalty=0.6,
-                            response_length=150,
-                            top_p=1,
-                            start_text=start_sequence,
-                            restart_text=restart_sequence,
-                            stop_seq=[restart_sequence, '\n']);
-    xprompt += start_sequence + answer;
-#    print ('return answer: ' + answer)
+    messages =data['messages']
+    response = gptturbo(messages)
+    terra_says = response['choices'][0]['message']['content'];
 
-    return json.dumps({'prompt': xprompt, 'answer': answer})
+    if 'REGEX' in terra_says:
+        # parse the string REGEX a,b,c from terra_says
+        m = re.search('REGEX (.*),(.*),(\?|\d+)', terra_says)
+        if m:
+            print (terra_says)
+            print (m.group(1), m.group(2), m.group(3))
+            # remove the last entry from messages
+            messages.pop()
+            terra_says = find_regex(m.group(1), m.group(2), m.group(3))
+            messages.append({ 'role': 'system', 'content': terra_says })
+            response = gptturbo(messages)
+            terra_says = response['choices'][0]['message']['content'];
+            messages.pop()
+    else:
+        messages.append({ 'role': 'assistant', 'content': terra_says })
+
+    print (messages)
+
+    return json.dumps({'answer': terra_says, 'conversation': messages})
 
 # if main module
 if __name__ == '__main__':
