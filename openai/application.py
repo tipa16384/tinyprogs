@@ -8,7 +8,7 @@ import re
 # start an http server to listen for requests on the /terrachat endpoint
 application = Flask(__name__)
 
-ai_model = 'gpt-3.5-turbo'
+ai_model = 'gpt-4'
 word_set = None
 
 def initialize_openai():
@@ -96,6 +96,7 @@ def terrachat():
     terra_says = response['choices'][0]['message']['content'];
 
     if 'REGEX' in terra_says:
+        print ("Terra says: " + terra_says)
         # parse the string REGEX a,b,c from terra_says
         m = re.search('REGEX (.*),(.*),(\?|\d+)', terra_says)
         if m:
@@ -106,6 +107,8 @@ def terrachat():
             terra_says = find_regex(m.group(1), m.group(2), m.group(3))
             messages.append({ 'role': 'system', 'content': terra_says })
             response = gptturbo(messages)
+            print (response)
+            print (dir(response))
             terra_says = response['choices'][0]['message']['content'];
             messages.pop()
     else:
