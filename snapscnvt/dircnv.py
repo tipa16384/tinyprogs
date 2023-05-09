@@ -3,7 +3,7 @@ def cnv_win_to_cyg_path(path):
     Converts a windows path to a cygwin path.
     """
     path = path.replace('\\', '/')
-    if path[1] == ':':
+    if len(path) > 1 and path[1] == ':':
         path = '/cygdrive/' + path[0].lower() + path[2:]
     return path
 

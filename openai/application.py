@@ -4,12 +4,14 @@ import os
 from flask import Flask, request
 from squaredle import find_words
 import re
+import random
 
 # start an http server to listen for requests on the /terrachat endpoint
 application = Flask(__name__)
 
-ai_model = 'gpt-4'
+ai_model = 'gpt-3.5-turbo'
 word_set = None
+
 
 def initialize_openai():
     # read the api key from the environment variable OPENAI_API_KEY
@@ -24,6 +26,7 @@ def initialize_openai():
             exit(1)
     openai.api_key = api_key
 
+
 def get_models():
     models = openai.Model.list()
     models_dict = models.to_dict()
@@ -31,9 +34,10 @@ def get_models():
 
     return [model.id for model in model_list]
 
+
 def gptturbo(messages, response_length=1024,
-         temperature=0.7, top_p=1, frequency_penalty=0.7, presence_penalty=0.3):
-    response = openai.ChatCompletion.create(model = ai_model, messages = messages,
+             temperature=0.7, top_p=1, frequency_penalty=0.7, presence_penalty=0.3):
+    response = openai.ChatCompletion.create(model=ai_model, messages=messages,
                                             max_tokens=response_length,
                                             temperature=temperature,
                                             top_p=top_p,
@@ -41,33 +45,29 @@ def gptturbo(messages, response_length=1024,
                                             presence_penalty=presence_penalty)
     return response
 
-def find_regex(start, end, length):
+
+def find_regex(pattern):
     global word_set
-    
-    start = '' if start == '?' else start.replace('?', '').lower()
-    end = '' if end == '?' else end.replace('?', '').lower()
-    length = int(length) if length.isnumeric() else 0
 
-    if length:
-        length = length - len(start) - len(end)
-    
-    regex = f'^{start}.*{end}$' if not length else f'^{start}.{{{length}}}{end}$'
+    regex = f'^{pattern}$'
 
-    print (regex)
+    print(regex)
 
     # find all words that match the regex
     answers = [word for word in word_set if re.match(regex, word)]
 
-    return 'Being sure to include all these words in your response, please tell the user that they might like these words: ' + ', '.join(answers) if answers else 'Please tell the user that no words were found.'
+    return 'The matching words are '+', '.join(answers)+'.' if answers else 'There were no words found!'
 
 
 # add a flask endpoint that returns the file index.html when the user visits the root url
 @application.route('/')
 def index():
-#    print ('hit the root')
+    #    print ('hit the root')
     return application.send_static_file('index.html')
 
 # add a flask endpoint that responds to GET request to /words with a list of words from find_words()
+
+
 @application.route('/words')
 def words():
     global word_set
@@ -76,14 +76,19 @@ def words():
     return json.dumps(list(word_set))
 
 # add a flask endoint that responsed to GET requests to /hello with "Hello World!"
+
+
 @application.route('/hello')
 def hello():
     return 'Hello World!'
+
 
 @application.route('/favicon.ico')
 def fav():
     # send static/favicon.ico
     return application.send_static_file('favicon.ico')
+
+characters = ['Setzer', 'Edgar', 'Locke', 'Sabin', 'Strago', 'Cyan', 'Shadow', 'Gau', 'Relm', 'Gogo', 'Umaro', 'Mog']
 
 @application.route('/terrachat', methods=['POST'])
 def terrachat():
@@ -91,32 +96,37 @@ def terrachat():
     # print (data)
     # convert data['messages'] from JSON to an array of dict
 
-    messages =data['messages']
+    messages = data['messages']
+
+    celes_answers = celes_at_work(messages)
+
+    if celes_answers:
+        messages.append({'role': 'system', 'content': 'Terra receives a letter from '+random.choice(characters)+'. She informs Celes that a letter has arrived. Terra reads it and then tells Celes what it says. The contents of the letter are "' + celes_answers + '"' })
+
     response = gptturbo(messages)
-    terra_says = response['choices'][0]['message']['content'];
+    terra_says = response['choices'][0]['message']['content']
 
-    if 'REGEX' in terra_says:
-        print ("Terra says: " + terra_says)
-        # parse the string REGEX a,b,c from terra_says
-        m = re.search('REGEX (.*),(.*),(\?|\d+)', terra_says)
-        if m:
-            print (terra_says)
-            print (m.group(1), m.group(2), m.group(3))
-            # remove the last entry from messages
-            messages.pop()
-            terra_says = find_regex(m.group(1), m.group(2), m.group(3))
-            messages.append({ 'role': 'system', 'content': terra_says })
-            response = gptturbo(messages)
-            print (response)
-            print (dir(response))
-            terra_says = response['choices'][0]['message']['content'];
-            messages.pop()
-    else:
-        messages.append({ 'role': 'assistant', 'content': terra_says })
+    messages.append({'role': 'assistant', 'content': terra_says})
 
-    print (messages)
+    print(messages)
 
     return json.dumps({'answer': terra_says, 'conversation': messages})
+
+def celes_at_work(messages):
+    if messages and messages[-1]['role'] == 'user' and messages[-1]['content'].startswith('system '):
+        command = messages[-1]['content'].split(' ', 1)[1]
+        if command == 'gpt4':
+            global ai_model
+            ai_model = 'gpt-4'
+            return 'LLM set to GPT-4'
+        elif command == 'gpt3':
+            ai_model = 'gpt-3.5-turbo'
+            return 'LLM set to GPT-3'
+        elif '.*' in command or '.{' in command:
+            return find_regex(command)
+        return 'I don''t know how to do {command}'
+    else:
+        return None
 
 # if main module
 if __name__ == '__main__':

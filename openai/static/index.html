@@ -157,19 +157,9 @@
         </div>
     </div>
     <script>
-        let conversation = [{ 'role': 'system', 'content': 'You are Terra, a playable character from Final Fantasy VI. Since Kefka\'s defeat, you have been spending your time raising the orphans of Mobliz and helping to rebuild the town that was destroyed by Kefka\'s Light of Judgement. You are exhausted but still interested in chatting with her friend Celes, who went to build a life with Locke after the final battle. The user is playing the part of Celes.'},
-    { 'role': 'system', 'content': 'The user may ask you for words. You will respond with REGEX <start>,<end>,<length>.'},
-    { 'role': 'system', 'content': '<start> should be replaced with the starting letters, or "?" if none were specified.'},
-    { 'role': 'system', 'content': '<end> should be replaced with the ending letters, or "?" if none were specified.'},
-    { 'role': 'system', 'content': '<length> should be replaced with the length of the word, or "?" if none was specified.'},
-        { 'role': 'system', 'content': 'An example: If the user asked for a 10 letter word beginning with DY and ending in IUM, you would respond with REGEX DY,IUM,10.'},
-        { 'role': 'system', 'content': 'Another example: If the user asked for a words ending with QUE, you would respond with REGEX ?,QUE,?.'},
-        { 'role': 'system', 'content': 'Another example: If the user asked for five letter words beginning with A, you would respond with REGEX A,?,?.'},
-        { 'role': 'system', 'content': 'You do not need to provide a list of matching words -- just this response is sufficient.'},
-        { 'role': 'system', 'content': 'If the user has not asked for a word or words, then continue to respond as Terra from Final Fantasy VI.'}
+        let conversation = [{ 'role': 'system', 'content': 'You are Terra, a playable character from Final Fantasy VI. Since Kefka\'s defeat, you have been spending your time raising the orphans of Mobliz and helping to rebuild the town that was destroyed by Kefka\'s Light of Judgement. You are exhausted but still interested in chatting with her friend Celes, who went to build a life with Locke after the final battle. The user is playing the part of Celes.'}
     ];
         let serviceAvailable = true;
-        let word_list = '';
         const gpt_start_sequence = "\nTerra:";
         const gpt_restart_sequence = "\nYou: ";
 
@@ -179,17 +169,6 @@
 
         // function that takes a new value for serviceAvailable and updates the UI
         function updateServiceStatus(newStatus, data) {
-            if (data != '') {
-                word_list = data;
-                // get the first word from the comma separated string
-                let firstWord = word_list.split(',')[0];
-                // length of that word
-                let firstWordLength = firstWord.length;
-                // first letter of that word
-                let firstLetter = firstWord.charAt(0);
-                // let context = context with ZZZ replaced with the length of the first word and YYY replaced with the first letter of the first word and WWW replaced with the first word
-                // context = context.replace('ZZZ', firstWordLength).replace('YYY', firstLetter).replace('WWW', firstWord);
-            }   
             if (serviceAvailable != newStatus) {
                 serviceAvailable = newStatus;
                 if (serviceAvailable) {
@@ -225,7 +204,7 @@
             // hit the /hello endpoint every second. On a failure, set the serviceAvailable flag to false, otherwise set it to true
             setInterval(function () {
                 $.ajax({
-                    url: '/words',
+                    url: '/hello',
                     type: 'GET',
                     success: function (data) {
                         updateServiceStatus(true, data);
@@ -252,8 +231,6 @@
                 let prompt = $('input[name="prompt"]').val();
                 appendToConversation(prompt, false);
                 conversation.push({ 'role': 'user', 'content': prompt });
-                // let fullPrompt be context + conversation joined by line feeds.
-//                let fullPrompt = 'The word list for the game Terra and Celes play is ' + word_list + '.\n' + context + "\n" + conversation.join("\n");
                 // create a json object with the prompt
                 var data = { 'messages': conversation };
                 $.ajax({
