@@ -9,7 +9,7 @@ import random
 # start an http server to listen for requests on the /terrachat endpoint
 application = Flask(__name__)
 
-ai_model = 'gpt-3.5-turbo'
+ai_model = 'gpt-3.5-turbo-1106'
 word_set = None
 
 
@@ -117,10 +117,10 @@ def celes_at_work(messages):
         command = messages[-1]['content'].split(' ', 1)[1]
         if command == 'gpt4':
             global ai_model
-            ai_model = 'gpt-4'
+            ai_model = 'gpt-4-1106-preview'
             return 'LLM set to GPT-4'
         elif command == 'gpt3':
-            ai_model = 'gpt-3.5-turbo'
+            ai_model = 'gpt-3.5-turbo-1106'
             return 'LLM set to GPT-3'
         elif '.*' in command or '.{' in command:
             return find_regex(command)
