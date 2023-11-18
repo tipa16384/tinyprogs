@@ -8,7 +8,8 @@ function updateTimes() {
 
     // Convert to metric time
     const metricHourRatio = 10 / 24;
-    const hours = now.getUTCHours() + now.getUTCMinutes() / 60 + now.getUTCSeconds() / 3600;
+//    const hours = now.getUTCHours() + now.getUTCMinutes() / 60 + now.getUTCSeconds() / 3600;
+    const hours = now.getHours() + now.getMinutes() / 60 + now.getSeconds() / 3600;
     const metricTime = hours * metricHourRatio;
     const metricHours = Math.floor(metricTime);
     const metricMinutes = Math.floor((metricTime - metricHours) * 100);
