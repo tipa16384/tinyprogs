@@ -53,7 +53,7 @@ def notaccompanying(scrub, squad, goal, m, affinitybonus):
 			break
 	
 	if not race:
-		print "No race found for",scrub
+		print ("No race found for",scrub)
 		sys.exit(1)
 
 	earned = True if affinitybonus > 1.0 else False
@@ -119,7 +119,7 @@ def samerace(scrub, squad, goal, m, affinitybonus):
 			break
 	
 	if not race:
-		print "No race found for", scrub
+		print ("No race found for", scrub)
 		sys.exit(1)
 
 	earned = True if affinitybonus > 1.0 else False
@@ -150,7 +150,7 @@ def sameclass(scrub, squad, goal, m, affinitybonus):
 			break
 	
 	if not job:
-		print "No job found for", scrub
+		print ("No job found for", scrub)
 		sys.exit(1)
 
 	earned = True if affinitybonus > 1.0 else False
@@ -242,7 +242,7 @@ def decodeAffinity(scrub, squad, goal, affinitybonus):
 			break
 
 	if not found:
-		print "Could not find",scrub,chem
+		print ("Could not find",scrub,chem)
 		sys.exit(1)
 
 	return func(scrub, squad, goal, m, affinitybonus)

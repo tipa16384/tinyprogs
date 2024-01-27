@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-from __future__ import print_function
 import pickle
 import os.path
 from googleapiclient.discovery import build
@@ -46,7 +45,7 @@ def validTraining(training, trainingPoints):
 	return True
 
 def testtrainingtype(expected, actual):
-	if expected <> actual:
+	if expected != actual:
 		print ("expected '{}', got '{}'".format(expected, actual))
 		sys.exit(1)
 
