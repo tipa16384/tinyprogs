@@ -28,7 +28,7 @@ def convert_folder(dirname):
     print (f"converting folder {dirname}")
     for filename in os.listdir(dirname):
         ext = os.path.splitext(filename)[1]
-        if ext in [".png", ".jpg", ".jpeg", ".bmp", ".gif", ".tiff", ".CR2", ".JPG"]:
+        if ext in [".png", ".jpg", ".jpeg", ".bmp", ".gif", ".tiff", ".CR2", ".JPG", ".HEIC"]:
             convert_file(dirname, filename, ext)
 
 if __name__ == "__main__":

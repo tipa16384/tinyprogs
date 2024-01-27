@@ -23,3 +23,11 @@ h2 {
     background-color: black;
     color: white;
 }
+
+/* set the size of the canvas element to 200x200 pixels */
+canvas {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+}
