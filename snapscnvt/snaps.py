@@ -5,35 +5,80 @@ import os
 import sys
 import subprocess
 
-dirname = "/cygdrive/e/Games/PCSX2 1.6.0/snaps"
+import os
+import subprocess
+import argparse
 
-def is_wide(path):
-    width = subprocess.check_output(["magick", "identify", "-format", "%w", path])
-    return int(width) > 1024
+class SnapCnvt:
+    def __init__(self, input_folder, output_folder, remove_files=False):
+        self.input_folder = input_folder
+        self.output_folder = output_folder
+        self.remove_files = remove_files
+        self.resize = True
+        self.max_width = 1024
 
-def convert_file(dirname, filename, source_ext):
-    dest_ext = ".jpg"
-    source = os.path.join(dirname, filename)
-    dest = os.path.join(dirname, filename.replace(source_ext, dest_ext))
-    # if dest does not exist, convert source to dest
-    wide = is_wide(source)
-    if not os.path.exists(dest) or wide:
-        print("converting", source, "to", dest)
-        resize = " -resize 1024x1024" if wide else ""
-        os.system('magick convert "' + source + '"' + resize + ' "' + dest + "\"")
-        # delete source
-        os.remove(source)
+    def is_wide(self, path):
+        try:
+            width = int(subprocess.check_output(["magick", "identify", "-format", "%w", path]))
+            # log file name and detected width
+            # print(f"{path} is {width} wide, max_width is {self.max_width}")
+            return width > self.max_width
+        except Exception as e:
+            print("error getting width of", path, e)
+            return False
 
-def convert_folder(dirname):
-    print (f"converting folder {dirname}")
-    for filename in os.listdir(dirname):
-        ext = os.path.splitext(filename)[1]
-        if ext in [".png", ".jpg", ".jpeg", ".bmp", ".gif", ".tiff", ".CR2", ".JPG", ".HEIC"]:
-            convert_file(dirname, filename, ext)
+    def convert_file(self, filename, source_ext):
+        print("convert_file", self.input_folder, self.output_folder, filename, source_ext)
+        dest_ext = ".jpg"
+        source = os.path.join(self.input_folder, filename)
+        dest_path = os.path.join(self.input_folder, self.output_folder)
+        os.makedirs(dest_path, exist_ok=True)
+        dest = os.path.join(dest_path, os.path.splitext(filename)[0] + dest_ext)
+        wide = self.is_wide(source)
+        if not os.path.exists(dest) or wide:
+            print("converting", source, "to", dest)
+            resize = " -resize {w}x{w}".format(w = self.max_width) if (wide and self.resize) else ""
+            # log this
+            # print ('magick convert "' + source + '"' + resize + ' "' + dest + "\"")
+            try:
+                os.system('magick convert "' + source + '"' + resize + ' "' + dest + "\"")
+                if self.remove_files:
+                    print("removing", source)
+                    os.remove(source)
+            except Exception as e:
+                print("error converting", source, "to", dest, e)
+        else:
+            print("skipping", source, "because", dest, "exists")
+
+    def convert_folder(self):
+        print (f"converting folder {self.input_folder}")
+        for filename in os.listdir(self.input_folder):
+            # if this is a folder, skip it
+            if os.path.isdir(os.path.join(self.input_folder, filename)):
+                continue
+            ext = os.path.splitext(filename)[-1].lower()
+            if ext in [".png", ".jpg", ".jpeg", ".bmp", ".gif", ".tiff", ".cr2", ".heic", ".webp", ".svg", ".jfif"]:
+                self.convert_file(filename, ext.lower())
 
 if __name__ == "__main__":
-    # if there is a command line argument, use it as the directory to convert
-    if len(sys.argv) > 1:
-        dirname = cnv_win_to_cyg_path(sys.argv[1])
-    convert_folder(dirname)
+    parser = argparse.ArgumentParser(description='Image conversion tool')
+    parser.add_argument('-if', '--input-folder', type=str, help='input folder')
+    parser.add_argument('-of', '--output-folder', type=str, help='output folder')
+    parser.add_argument('-rm', '--remove-files', action='store_true', help='remove files after conversion')
+    parser.add_argument('-nr', '--no-resize', action='store_false', help='disable resizing')
+    # add switch to set max width as -w or --max-width with default 1024
+    parser.add_argument('-w', '--max-width', type=int, help='max width for images')
+
+    args = parser.parse_args()
+
+    input_folder = args.input_folder if args.input_folder else "F:\\PS5\\CREATE\\Screenshots\\Unicorn Overlord"
+    output_folder = args.output_folder if args.output_folder else "converted"
+
+    snaps = SnapCnvt(input_folder, output_folder, args.remove_files)
+    snaps.resize = args.no_resize
+    snaps.max_width = args.max_width if args.max_width else 1024
+
+    snaps.convert_folder()
+
     print("done")
+    
