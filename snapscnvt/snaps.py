@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 
-from dircnv import cnv_win_to_cyg_path
-import os
-import sys
-import subprocess
-
 import os
 import subprocess
 import argparse
@@ -16,6 +11,7 @@ class SnapCnvt:
         self.remove_files = remove_files
         self.resize = True
         self.max_width = 1024
+        self.crop = False
 
     def is_wide(self, path):
         try:
@@ -38,10 +34,11 @@ class SnapCnvt:
         if not os.path.exists(dest) or wide:
             print("converting", source, "to", dest)
             resize = " -resize {w}x{w}".format(w = self.max_width) if (wide and self.resize) else ""
+            cropper = " -gravity center -crop 4:3" if self.crop else ""
             # log this
             # print ('magick convert "' + source + '"' + resize + ' "' + dest + "\"")
             try:
-                os.system('magick convert "' + source + '"' + resize + ' "' + dest + "\"")
+                os.system('magick convert "' + source + '"' + resize + cropper + ' "' + dest + "\"")
                 if self.remove_files:
                     print("removing", source)
                     os.remove(source)
@@ -60,25 +57,27 @@ class SnapCnvt:
             if ext in [".png", ".jpg", ".jpeg", ".bmp", ".gif", ".tiff", ".cr2", ".heic", ".webp", ".svg", ".jfif"]:
                 self.convert_file(filename, ext.lower())
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Image conversion tool')
-    parser.add_argument('-if', '--input-folder', type=str, help='input folder')
-    parser.add_argument('-of', '--output-folder', type=str, help='output folder')
-    parser.add_argument('-rm', '--remove-files', action='store_true', help='remove files after conversion')
-    parser.add_argument('-nr', '--no-resize', action='store_false', help='disable resizing')
-    # add switch to set max width as -w or --max-width with default 1024
-    parser.add_argument('-w', '--max-width', type=int, help='max width for images')
+parser = argparse.ArgumentParser(description='Image conversion tool')
+parser.add_argument('-if', '--input-folder', type=str, required=True, help='input folder')
+parser.add_argument('-of', '--output-folder', type=str, help='output folder')
+parser.add_argument('-rm', '--remove-files', action='store_true', help='remove files after conversion')
+parser.add_argument('-nr', '--no-resize', action='store_false', help='disable resizing')
+# add switch to set max width as -w or --max-width with default 1024
+parser.add_argument('-w', '--max-width', type=int, help='max width for images')
+# add switch for crop.
+parser.add_argument('-c', '--crop', action='store_true', help='crop images to 4:3 aspect ratio')
 
-    args = parser.parse_args()
+args = parser.parse_args()
 
-    input_folder = args.input_folder if args.input_folder else "F:\\PS5\\CREATE\\Screenshots\\Unicorn Overlord"
-    output_folder = args.output_folder if args.output_folder else "converted"
+input_folder = args.input_folder if args.input_folder else "F:\\PS5\\CREATE\\Screenshots\\Unicorn Overlord"
+output_folder = args.output_folder if args.output_folder else "converted"
 
-    snaps = SnapCnvt(input_folder, output_folder, args.remove_files)
-    snaps.resize = args.no_resize
-    snaps.max_width = args.max_width if args.max_width else 1024
+snaps = SnapCnvt(input_folder, output_folder, args.remove_files)
+snaps.resize = args.no_resize
+snaps.max_width = args.max_width if args.max_width else 1024
+# set snaps.crop to args.crop
+snaps.crop = args.crop
 
-    snaps.convert_folder()
+snaps.convert_folder()
 
-    print("done")
-    
+print("done")
