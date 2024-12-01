@@ -14,8 +14,13 @@ class SnapCnvt:
         self.resize = True
         self.max_width = 1024
         self.crop = False
+        self.force_resize = False
+        self.dest_ext = 'jpg'
 
     def is_wide(self, path):
+        if self.force_resize:
+            return True
+        
         try:
             width = int(subprocess.check_output(["identify", "-format", "%w", path]))
             # log file name and detected width
@@ -27,11 +32,10 @@ class SnapCnvt:
 
     def convert_file(self, filename):
         # print("convert_file", self.input_folder, self.output_folder, filename)
-        dest_ext = ".jpg"
         source = os.path.join(self.input_folder, filename)
         dest_path = os.path.join(self.input_folder, self.output_folder)
         os.makedirs(dest_path, exist_ok=True)
-        dest = os.path.join(dest_path, os.path.splitext(filename)[0] + dest_ext)
+        dest = os.path.join(dest_path, os.path.splitext(filename)[0] + '.' + self.dest_ext)
         wide = self.is_wide(source)
         if not os.path.exists(dest) or wide:
             print("converting", filename)
@@ -56,7 +60,7 @@ class SnapCnvt:
             if os.path.isdir(os.path.join(self.input_folder, filename)):
                 continue
             ext = os.path.splitext(filename)[-1].lower()
-            if ext in [".png", ".jpg", ".jpeg", ".bmp", ".gif", ".tiff", ".cr2", ".heic", ".webp", ".svg", ".jfif"]:
+            if ext in [".png", ".jpg", ".jpeg", ".bmp", ".gif", ".tiff", ".cr2", ".heic", ".webp", ".svg", ".jfif", ".avif"]:
                 self.convert_file(filename)
 
 def convert_to_linux_path(path: str) -> str:
@@ -74,6 +78,10 @@ parser.add_argument('-nr', '--no-resize', action='store_false', help='disable re
 parser.add_argument('-w', '--max-width', type=int, help='max width for images')
 # add switch for crop.
 parser.add_argument('-c', '--crop', action='store_true', help='crop images to 4:3 aspect ratio')
+# add switch for forcing resize
+parser.add_argument('-fr', '--force-resize', action='store_true', help='force resize of all images')
+# add switch for destination extension (default jpg)
+parser.add_argument('-f', '--format', type=str, help='destination extension for images')
 
 args = parser.parse_args()
 
@@ -85,6 +93,9 @@ snaps.resize = args.no_resize
 snaps.max_width = args.max_width if args.max_width else 1024
 # set snaps.crop to args.crop
 snaps.crop = args.crop
+# set force_resize
+snaps.force_resize = args.force_resize
+snaps.dest_ext = args.format if args.format else 'jpg'
 
 snaps.convert_folder()
 

@@ -8,4 +8,4 @@ for r in red:
 	for b in blue:
 		for g in green:
 			if r+b+g == 100:
-				print "{} {} {}".format(g,b,r)
+				print ("{} {} {}".format(g,b,r))

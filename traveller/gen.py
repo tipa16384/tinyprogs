@@ -35,6 +35,6 @@ while True:
 	if avgstat > 7.0:
 		break
 
-print stats
-print statcode(stats)
+print (stats)
+print (statcode(stats))
 

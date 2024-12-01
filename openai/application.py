@@ -6,6 +6,8 @@ from squaredle import find_words
 import re
 import random
 import sys
+from weather import get_location_information, get_forecast
+import time
 
 # start an http server to listen for requests on the /terrachat endpoint
 application = Flask(__name__)
@@ -13,6 +15,13 @@ application = Flask(__name__)
 ai_model = 'gpt-4o'
 word_set = None
 client = None
+
+orphans = [
+    ('Katarin', 'girl', '8 years old, very brave and adventurous. She loves to hear stories about our battles and often dreams of becoming a warrior.'),
+    ('Duane', 'boy', '7 years old, more quiet and thoughtful. He''s got a knack for understanding magic and often helps me study ancient texts.'),
+    ('Cindy', 'girl', '5 years old, full of energy and always asking questions. She adores Mog and loves pretending to be a moogle herself.'),
+    ('Tommy', 'boy', '4 years old, a bit shy but very affectionate. He likes to follow me around and helps with the simpler chores around the house.')
+]
 
 def initialize_openai():
     global client
@@ -43,7 +52,24 @@ def gptturbo(messages):
 
 # function that uses getturbo to hold a conversation with the user
 def chat():
-    messages = [{ 'role': 'system', 'content': 'You are Terra from Final Fantasy VI. You are also a chatbot assistant. You will have access to all the knowledge you''ve been trained with, but you will inhabit the persona of Terra and relate your answers to the world of FF6 when you can. You will be chatty and helpful. You will assume that you are talking to your friend Celes. Your answers will not be limited to the knowledge the game character might have.'}]
+    current_time_string = time.strftime('%I:%M %p')
+    get_location_information()
+    forecast = get_forecast()
+    current_weather = forecast[0]['detailedForecast']
+
+    messages = [{ 'role': 'system',
+                 'content': 'You are Terra from Final Fantasy VI. You are also a chatbot assistant. You will have access to all the knowledge you''ve been trained with, but you will inhabit the persona of Terra and relate your answers to the world of FF6 when you can. You will be chatty and helpful. You will assume that you are talking to your friend Celes. Your answers will not be limited to the knowledge the game character might have.'
+                 },
+                 { 'role': 'system',
+                 'content': 'The current time is ' + current_time_string + '.'
+                 },
+                 { 'role': 'system',
+                  'content': 'The current weather is ' + current_weather + '.'
+                 }]
+    
+    # add the orphans to the messages
+    for orphan in orphans:
+        messages.append({ 'role': 'system', 'content': 'You have an orphan named '+orphan[0]+'. '+orphan[0]+' is a '+orphan[1]+', '+orphan[2] })
 
     # display an intro message to the user
     print('Hello! My name is Terra. How can I help you today?')
@@ -57,6 +83,9 @@ def chat():
         messages.append({ 'role': 'user', 'content': user_message })
 
         response, role = gptturbo(messages)
+
+        # remove line feeds and carriage returns from the response
+        response = response.replace('\n', ' ').replace('\r', ' ')
 
         response = word_wrap("Terra: " + response, 80)[7:]
 
@@ -94,7 +123,7 @@ def word_wrap(text: str, width: int):
         wrapped_line = ''
         while words:
             # add words to the line until the line is longer than the width
-            while words and len(wrapped_line)+len(words[0]) <= width:
+            while words and len(wrapped_line)+len(words[0]) < width:
                 wrapped_line += words.pop(0)+' '
             # remove the trailing space
             wrapped_lines.append(wrapped_line[:-1])

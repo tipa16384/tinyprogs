@@ -19,4 +19,4 @@ for step in range(maxsteps):
 	if couchdist is 0:
 		timeatcouch += 1 
 
-print "After {} steps, baby stayed at couch {}% of the time.".format(maxsteps, float(timeatcouch*100)/float(maxsteps))
+print ("After {} steps, baby stayed at couch {}% of the time.".format(maxsteps, float(timeatcouch*100)/float(maxsteps)))
