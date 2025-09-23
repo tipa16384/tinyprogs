@@ -229,6 +229,8 @@ def render_markdown(blog_title, items):
     path = f"{slug}.md"
     with open(path, "w", encoding="utf-8") as f:
         f.write(md)
+    with open("latest.md", "w", encoding="utf-8") as f:
+        f.write(md)
     return path, title
 
 # --- (Optional) auto-post to WordPress ---
