@@ -2,3 +2,9 @@
 squad/token.pickle
 squad/credentials.json
 openai/openai_api_key.txt
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd

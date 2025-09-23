@@ -241,9 +241,16 @@ def post_to_wordpress(md_path, wp_url, username, app_password, status="draft"):
     body = content[first_nl:].strip() if first_nl > 0 else content
 
     api = wp_url.rstrip("/") + "/wp-json/wp/v2/posts"
+    headers = {
+        "Content-Type": "application/json; charset=utf-8",
+        "Accept": "application/json",
+        "User-Agent": "DailyBlogrollBot/1.0 (+https://chasingdings.com)"
+    }
+    payload = {"title": title, "content": body, "status": status}
     r = requests.post(api,
         auth=(username, app_password),
-        json={"title": title, "content": body, "status": status})
+        headers=headers,
+        data=json.dumps(payload))
     r.raise_for_status()
     return r.json().get("link")
 
@@ -260,16 +267,16 @@ def main():
 
     print("Wrote", md_path)
     # Auto-post if env vars are present
-    # wp_url = os.getenv("WP_URL")
-    # if wp_url:
-    #     link = post_to_wordpress(
-    #         md_path,
-    #         wp_url=wp_url,
-    #         username=os.getenv("WP_USER"),
-    #         app_password=os.getenv("WP_APP_PASSWORD"),
-    #         status=os.getenv("WP_STATUS","draft")
-    #     )
-    #     print("WordPress:", link)
+    wp_url = os.getenv("WP_URL")
+    if wp_url:
+        link = post_to_wordpress(
+            md_path,
+            wp_url=wp_url,
+            username=os.getenv("WP_USER"),
+            app_password=os.getenv("WP_APP_PASSWORD"),
+            status=os.getenv("WP_STATUS","draft")
+        )
+        print("WordPress:", link)
 
 def load_state():
     return json.loads(STATE_PATH.read_text(encoding="utf-8"))
