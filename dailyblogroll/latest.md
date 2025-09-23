@@ -2,7 +2,7 @@
 
 ## General
 
-- **[Chasing Dings!](https://chasingdings.com/2025/09/22/dune-awakening-apotheosis/{:target="_blank"})** — Tipa dives deep into 'Dune Awakening' DLC, revealing mysteries and her trusty treadwheel's adventures through desert and danger.
+- **[Chasing Dings!](https://chasingdings.com/2025/09/22/dune-awakening-apotheosis/){:target="_blank"}** — Tipa dives deep into 'Dune Awakening' DLC, revealing mysteries and her trusty treadwheel's adventures through desert and danger.
 - **[An Archaeopteryx](https://anarchaeopteryx.bearblog.dev/2025-09-22-bearblog-theme-css-v6/)** — Archaeopteryx tweaks Bearblog's CSS, learning the hard way that styling blockquotes can be deceptively intricate.
 - **[Musing over Pints and Coffee](https://musingsoverpintsandcoffee.wordpress.com/2025/09/22/redefining-retirement/)** — Joargarrosh reimagines retirement, ditching the gold watch for a flexible, purpose-driven future that balances work and passion.
 ## Gaming
