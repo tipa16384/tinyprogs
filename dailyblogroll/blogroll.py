@@ -19,7 +19,7 @@ CFG_PATH = "feeds.yaml"
 SYSTEM = """You are compiling a 'Daily Blogroll'—a terse, link-heavy roundup.
 Style: one sentence per item (max ~30 words), credit the blog by name, add a quick take in a casual, conversational but concise manner.
 Do not invent facts or quotes; stay within provided excerpts.
-Return JSON with an array 'items': [{source, title, url, one_liner}].
+Return JSON with an array 'items': [{source, title, url, one_liner, category}].
 """
 
 SCHEMA = {
@@ -33,9 +33,10 @@ SCHEMA = {
           "source": {"type": "string"},
           "title":  {"type": "string"},
           "url":    {"type": "string"},
-          "one_liner": {"type": "string", "maxLength": 200}
+          "one_liner": {"type": "string", "maxLength": 200},
+          "category": {"type": "string"}
         },
-        "required": ["source", "url", "one_liner", "title"],
+        "required": ["source", "url", "one_liner", "title", "category"],
         "additionalProperties": False
       }
     }
@@ -149,6 +150,7 @@ def collect_new_items(cfg):
                     "author": f.get("blogger") or "",
                     "feed_url": feed_url,
                     "url": url,
+                    "category": f.get("category") or "General",
                     "published": published,
                     "title": title.strip(),
                     "excerpt": body[:3000],
@@ -186,6 +188,7 @@ def call_model(items):
         URL: {it['url']}
         PUBLISHED: {it['published']}
         AUTHOR: {it['author']}
+        CATEGORY: {it['category']}
         EXCERPT:
         {it['excerpt']}
         """).strip())
@@ -197,7 +200,7 @@ def call_model(items):
             "role": "user",
             "content": [
                 {"type": "input_text",
-                "text": f"Date: {today}. Create one-liners for these posts. Keep each line under ~30 words. Do not include the URL in the one-liner; it will be added automatically. If the author name is given, use that instead of the blog name when referring to the author of the blog within the one-liner."},
+                "text": f"Date: {today}. Create one-liners for these posts. Keep each line under ~30 words. Do not include the URL in the one-liner; it will be added automatically. If the author name is given, use that instead of the blog name when referring to the author of the blog within the one-liner. The category should be your best guess from Gaming, Tech, Writing, or General."},
                 *[{"type": "input_text", "text": c} for c in chunks],
             ],
         }],
@@ -214,16 +217,37 @@ def call_model(items):
         metadata={"prompt_cache_key": "daily-blogroll-v1"},
     )
 
-    data = json.loads(resp.output[0].content[0].text)
+    try:
+        data = json.loads(resp.output[0].content[0].text)
+    except Exception as e:
+        print("Error parsing response:", e)
+        # write to a file for inspection
+        with open("debug_response.json", "w", encoding="utf-8") as f:
+            f.write(resp.output[0].content[0].text)
+        return []
+
     return data["items"]
 
 def render_markdown(blog_title, items):
     # Optionally group by source for a “multiple links per blog” look
     title = f"{blog_title}: {datetime.date.today().isoformat()}"
     lines = [f"# {title}", ""]
+
+    # make a map of items with key being category and value being a list of items with that category
+    category_map = {}
     for it in items:
-        # bullet: blog name — one-liner (with link)
-        lines.append(f"- **[{it['source']}]({it['url']})** — {it['one_liner'].rstrip()}")
+        category = it.get("category", "Uncategorized")
+        if category not in category_map:
+            category_map[category] = []
+        category_map[category].append(it)
+
+    # output items by category with a heading for each category
+    for category, cat_items in category_map.items():
+        lines.append(f"## {category}\n")
+        for it in cat_items:
+            # bullet: blog name — one-liner (with link)
+            lines.append(f"- **[{it['source']}]({it['url']})** — {it['one_liner'].rstrip()}")
+            
     md = "\n".join(lines) + "\n"
     slug = slugify(title)
     path = f"{slug}.md"

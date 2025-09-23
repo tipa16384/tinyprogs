@@ -4,70 +4,42 @@
     "last_ts": 1758542400
   },
   "https://anarchaeopteryx.bearblog.dev/feed/": {
-    "modified": "Tue, 23 Sep 2025 09:08:02 GMT",
+    "modified": "Tue, 23 Sep 2025 22:32:00 GMT",
     "last_ts": 1758560400
   },
   "https://musingsoverpintsandcoffee.wordpress.com/feed/": {
-    "modified": "Mon, 22 Sep 2025 23:51:31 GMT",
+    "modified": "Mon, 22 Sep 2025 16:50:31 GMT",
     "last_ts": 1758559767
   },
   "https://www.heartlessgamer.com/feeds/posts/default?alt=rss": {
-    "modified": "Mon, 22 Sep 2025 19:10:34 GMT",
+    "modified": "Tue, 23 Sep 2025 17:20:31 GMT",
     "last_ts": 1758557040
   },
   "https://aggronaut.com/feed/": {
-    "last_ts": 1758545043
+    "last_ts": 1758640408
   },
   "https://wordsundermyname.wordpress.com/feed/": {
-    "modified": "Sun, 21 Sep 2025 23:54:41 GMT",
+    "modified": "Mon, 22 Sep 2025 00:01:47 GMT",
     "last_ts": 1758498873
   },
   "https://dragonchasers.com/feed/": {
-    "etag": "\"7b24cb11b0d15313dc36e18d9f7d0498\"",
-    "modified": "Sat, 20 Sep 2025 17:42:14 GMT",
-    "last_ts": 1758390101
+    "etag": "\"ed078f5bdef4b6ee2c5d5cb4acee63ba\"",
+    "modified": "Tue, 23 Sep 2025 17:55:51 GMT",
+    "last_ts": 1758650151
   },
   "https://bhagpuss.blogspot.com/feeds/posts/default?alt=rss": {
-    "etag": "W/\"da071ccf8c1ca44108772605187bb2ed2c78fb08f72a430081d038da0394b5fb\"",
-    "modified": "Tue, 23 Sep 2025 11:05:21 GMT",
-    "last_ts": 1758375780
+    "etag": "W/\"12ccb50973bd9484fdf00f3b028a7ec5446504caee4f722122bfe65a857f1387\"",
+    "modified": "Tue, 23 Sep 2025 21:20:49 GMT",
+    "last_ts": 1758642120
   },
   "https://scopique.com/feed/": {
-    "etag": "\"c1af4393061ad4ebb4bfeccc9a12dee0\"",
-    "modified": "Fri, 19 Sep 2025 12:34:48 GMT",
-    "last_ts": 1758285236
+    "etag": "\"bd2a11ecfa60fe9758708e7a8234b393\"",
+    "modified": "Tue, 23 Sep 2025 14:52:07 GMT",
+    "last_ts": 1758639125
   },
   "https://thefriendlynecromancer.blogspot.com/feeds/posts/default?alt=rss": {
     "etag": "W/\"e93fa12519cf163318aa614af5ace982ffd5041072c03fe794d8a3657f96257b\"",
     "modified": "Sat, 20 Sep 2025 11:31:46 GMT",
     "last_ts": 1757647980
-  },
-  "https://www.antipope.org/charlie/blog-static/atom.xml": {
-    "last_ts": 0
-  },
-  "https://tagn.wordpress.com/feed/": {
-    "modified": "Mon, 22 Sep 2025 15:15:40 GMT",
-    "last_ts": 1758554129
-  },
-  "https://lisettesmxtadventures.wordpress.com/feed/?alt=rss": {
-    "modified": "Tue, 23 Sep 2025 11:03:08 GMT",
-    "last_ts": 1758605514
-  },
-  "https://monsterladysdiary.wordpress.com/feed/": {
-    "modified": "Mon, 22 Sep 2025 20:30:02 GMT",
-    "last_ts": 1758546000
-  },
-  "https://nkantar.com/blog/feed/": {
-    "etag": "\"dczkqnj5uhme1ekt\"",
-    "modified": "Mon, 22 Sep 2025 19:26:00 GMT",
-    "last_ts": 1758412800
-  },
-  "https://www.ghastlymirror.xyz/rss.xml": {
-    "etag": "\"2fb7c9fdb1050a132261697997f37381-ssl-df\"",
-    "last_ts": 1756598400
-  },
-  "https://frostilyte.ca/feed/": {
-    "modified": "Sat, 20 Sep 2025 01:22:51 GMT",
-    "last_ts": 1758118318
   }
 }

@@ -1,5 +1,5 @@
 # feeds.yaml
-max_items_total: 30
+max_items_total: 10
 max_items_per_feed: 1
 min_chars_for_article: 500
 first_run_skip_backlog: false
@@ -95,3 +95,48 @@ feeds:
     update_frequency: daily
     category: Tech
     blogger: Dave Winer
+  - name: Steve's Blog
+    url: https://forums.grc.com/forums/blog/index.rss
+    update_frequency: daily
+    category: Tech
+    blogger: Steve Gibson
+  - name: Stories about the Original Macintosh
+    url: http://www.folklore.org/folklore.xml
+    update_frequency: daily
+    category: Tech
+    blogger: Andy Hertzfeld
+  - name: Walter Bright's D-Lang Blog
+    url: https://feeds.feedburner.com/OfficialDBlog
+    update_frequency: daily
+    category: Tech
+    blogger: D
+  - name: The Old New Thing
+    url: https://devblogs.microsoft.com/oldnewthing/feed/
+    update_frequency: daily
+    category: Tech
+    blogger: Raymond Chen
+  - name: Coding Horror
+    url: https://blog.codinghorror.com/rss/
+    update_frequency: daily
+    category: Tech
+    blogger: Jeff Atwood
+  - name: Schneier on Security
+    url: https://www.schneier.com/feed/
+    update_frequency: daily
+    category: Tech
+    blogger: Bruce Schneier
+  - name: Ongoing
+    url: https://www.tbray.org/ongoing/ongoing.atom
+    update_frequency: daily
+    category: Tech
+    blogger: Tim Bray
+  - name: Jamie Zawinski's Blog
+    url: https://cdn.jwz.org/blog/feed/
+    update_frequency: daily
+    category: Tech
+    blogger: Jamie Zawinski
+  - name: Joel on Software
+    url: https://www.joelonsoftware.com/feed/
+    update_frequency: daily
+    category: Tech
+    blogger: Joel Spolsky

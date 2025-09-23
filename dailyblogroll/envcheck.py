@@ -7,7 +7,8 @@ vars_to_check = [
     'WP_APP_PASSWORD',
     'WP_STATUS',
     'CABAL_DIR',
-    'NUMBER_OF_PROCESSORS'
+    'NUMBER_OF_PROCESSORS',
+    'OPENAI_API_KEY'
 ]
 
 for var in vars_to_check:
