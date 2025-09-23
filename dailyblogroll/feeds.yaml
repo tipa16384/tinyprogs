@@ -60,3 +60,34 @@ feeds:
     update_frequency: daily
     category: General
     blogger: Charles Stross
+  - name: The Ancient Gaming Noob
+    url: https://tagn.wordpress.com/feed/
+    update_frequency: daily
+    category: Gaming
+    blogger: Wilhelm
+  - name: Lisette's Mxtadventures
+    url: https://lisettesmxtadventures.wordpress.com/feed/?alt=rss
+    update_frequency: daily
+    category: Writing
+    blogger: Crimson
+  - name: Monsterlady's Diary
+    url: https://monsterladysdiary.wordpress.com/feed/
+    update_frequency: daily
+    category: Gaming
+    blogger: Emily
+  - name: Nik Kantar
+    url: https://nkantar.com/blog/feed/
+    update_frequency: daily
+    category: General
+    blogger: Nik
+  - name: The Ghastly Mirror
+    url: https://www.ghastlymirror.xyz/rss.xml
+    update_frequency: daily
+    category: Gaming
+    blogger: Ghastly
+  - name: Frostilyte Writes
+    url: https://frostilyte.ca/feed/
+    update_frequency: daily
+    category: Gaming
+    blogger: Frostilyte
+    

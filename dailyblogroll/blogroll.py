@@ -268,7 +268,7 @@ def main():
     print("Wrote", md_path)
     # Auto-post if env vars are present
     wp_url = os.getenv("WP_URL")
-    if wp_url:
+    if None and wp_url:
         link = post_to_wordpress(
             md_path,
             wp_url=wp_url,
