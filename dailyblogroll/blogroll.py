@@ -17,7 +17,7 @@ DB_PATH = "blogroll.db"
 CFG_PATH = "feeds.yaml"
 
 SYSTEM = """You are compiling a 'Daily Blogroll'—a terse, link-heavy roundup.
-Style: one sentence per item (max ~30 words), credit the blog by name, add a quick take, end with the URL.
+Style: one sentence per item (max ~30 words), credit the blog by name, add a quick take in a casual, conversational but concise manner.
 Do not invent facts or quotes; stay within provided excerpts.
 Return JSON with an array 'items': [{source, title, url, one_liner}].
 """
@@ -242,7 +242,7 @@ def call_model(items):
             "role": "user",
             "content": [
                 {"type": "input_text",
-                "text": f"Date: {today}. Create one-liners for these posts. Keep each line under ~30 words."},
+                "text": f"Date: {today}. Create one-liners for these posts. Keep each line under ~30 words. Do not include the URL in the one-liner; it will be added automatically."},
                 *[{"type": "input_text", "text": c} for c in chunks],
             ],
         }],
@@ -268,7 +268,7 @@ def render_markdown(blog_title, items):
     lines = [f"# {title}", ""]
     for it in items:
         # bullet: blog name — one-liner (with link)
-        lines.append(f"- **{it['source']}** — {it['one_liner'].rstrip()} [{it['url']}]({it['url']})")
+        lines.append(f"- **[{it['source']}]({it['url']})** — {it['one_liner'].rstrip()}")
     md = "\n".join(lines) + "\n"
     slug = slugify(title)
     path = f"{slug}.md"
@@ -305,16 +305,16 @@ def main():
 
     print("Wrote", md_path)
     # Auto-post if env vars are present
-    wp_url = os.getenv("WP_URL")
-    if wp_url:
-        link = post_to_wordpress(
-            md_path,
-            wp_url=wp_url,
-            username=os.getenv("WP_USER"),
-            app_password=os.getenv("WP_APP_PASSWORD"),
-            status=os.getenv("WP_STATUS","draft")
-        )
-        print("WordPress:", link)
+    # wp_url = os.getenv("WP_URL")
+    # if wp_url:
+    #     link = post_to_wordpress(
+    #         md_path,
+    #         wp_url=wp_url,
+    #         username=os.getenv("WP_USER"),
+    #         app_password=os.getenv("WP_APP_PASSWORD"),
+    #         status=os.getenv("WP_STATUS","draft")
+    #     )
+    #     print("WordPress:", link)
 
 def load_state():
     return json.loads(STATE_PATH.read_text(encoding="utf-8"))
