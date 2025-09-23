@@ -1,0 +1,51 @@
+# feeds.yaml
+max_items_total: 30
+max_items_per_feed: 1
+min_chars_for_article: 500
+first_run_skip_backlog: false
+title: Daily Blogroll
+feeds:
+  - name: Chasing Dings!
+    url: https://chasingdings.com/feed/
+    category: General
+    update_frequency: daily
+  - name: An Archaeopteryx
+    url: https://anarchaeopteryx.bearblog.dev/feed/
+    update_frequency: daily
+    category: General
+  - name: Musing over Pints and Coffee
+    url: https://musingsoverpintsandcoffee.wordpress.com/feed/
+    update_frequency: daily
+    category: General
+  - name: Heartless Gamer
+    url: https://www.heartlessgamer.com/feeds/posts/default?alt=rss
+    update_frequency: daily
+    category: Gaming
+  - name: Tales of the Aggronaut
+    url: https://aggronaut.com/feed/
+    update_frequency: daily
+    category: Gaming
+  - name: Words Under My Name
+    url: https://wordsundermyname.wordpress.com/feed/
+    update_frequency: daily
+    category: Writing
+  - name: Dragonchasers
+    url: https://dragonchasers.com/feed/
+    update_frequency: daily
+    category: Writing
+  - name: Inventory Full
+    url: https://bhagpuss.blogspot.com/feeds/posts/default?alt=rss
+    update_frequency: daily
+    category: Gaming
+  - name: Scopique
+    url: https://scopique.com/feed/
+    update_frequency: daily
+    category: Gaming
+  - name: The Friendly Necromancer
+    url: https://thefriendlynecromancer.blogspot.com/feeds/posts/default?alt=rss
+    update_frequency: daily
+    category: Writing
+  - name: Antipope
+    url: https://www.antipope.org/charlie/blog-static/atom.xml
+    update_frequency: daily
+    category: General
