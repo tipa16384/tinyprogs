@@ -9,43 +9,54 @@ feeds:
     url: https://chasingdings.com/feed/
     category: General
     update_frequency: daily
+    blogger: Tipa
   - name: An Archaeopteryx
     url: https://anarchaeopteryx.bearblog.dev/feed/
     update_frequency: daily
     category: General
+    blogger: Archaeopteryx
   - name: Musing over Pints and Coffee
     url: https://musingsoverpintsandcoffee.wordpress.com/feed/
     update_frequency: daily
     category: General
+    blogger: joargarrosh
   - name: Heartless Gamer
     url: https://www.heartlessgamer.com/feeds/posts/default?alt=rss
     update_frequency: daily
     category: Gaming
+    blogger: Heartless
   - name: Tales of the Aggronaut
     url: https://aggronaut.com/feed/
     update_frequency: daily
     category: Gaming
+    blogger: Belghast
   - name: Words Under My Name
     url: https://wordsundermyname.wordpress.com/feed/
     update_frequency: daily
     category: Writing
+    blogger: Blockade85
   - name: Dragonchasers
     url: https://dragonchasers.com/feed/
     update_frequency: daily
     category: Writing
+    blogger: Nimgimli
   - name: Inventory Full
     url: https://bhagpuss.blogspot.com/feeds/posts/default?alt=rss
     update_frequency: daily
     category: Gaming
+    blogger: Bhagpuss
   - name: Scopique
     url: https://scopique.com/feed/
     update_frequency: daily
     category: Gaming
+    blogger: Scopique
   - name: The Friendly Necromancer
     url: https://thefriendlynecromancer.blogspot.com/feeds/posts/default?alt=rss
     update_frequency: daily
     category: Writing
+    blogger: The Friendly Necromancer
   - name: Antipope
     url: https://www.antipope.org/charlie/blog-static/atom.xml
     update_frequency: daily
     category: General
+    blogger: Charles Stross

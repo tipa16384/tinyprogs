@@ -146,6 +146,7 @@ def collect_new_items(cfg):
                     continue
                 picked.append({
                     "source": f.get("name") or urlparse(feed_url).netloc,
+                    "author": f.get("blogger") or "",
                     "feed_url": feed_url,
                     "url": url,
                     "published": published,
@@ -169,53 +170,6 @@ def collect_new_items(cfg):
 
     return picked
 
-
-def x_collect_new_items(cfg):
-    con = db()
-    picked = []
-    total_cap = cfg.get("max_items_total", 30)
-    per_feed_cap = cfg.get("max_items_per_feed", 3)
-    min_chars = cfg.get("min_chars_for_article", 500)
-    for f in cfg["feeds"]:
-        if len(picked) >= total_cap:
-            break
-        pf_count = 0
-        parsed = feedparser.parse(f["url"])
-        for e in parsed.entries:
-            if len(picked) >= total_cap or pf_count >= per_feed_cap:
-                break
-            guid = getattr(e, "id", None) or getattr(e, "link", None)
-            url = getattr(e, "link", "")
-            if not guid or not url:
-                continue
-            if already_seen(con, f["url"], guid):
-                continue
-            published = getattr(e, "published", "") or getattr(e, "updated", "")
-            title = getattr(e, "title", "") or "(untitled)"
-            # mark as seen early to avoid dupes across runs
-            mark_seen(con, f["url"], guid, url, published)
-            # fetch article content
-            try:
-                atitle, body = fetch_readable(url)
-                if atitle and not title:
-                    title = atitle
-                if len(body) < min_chars:
-                    continue
-                picked.append({
-                    "source": f.get("name") or urlparse(f["url"]).netloc,
-                    "feed_url": f["url"],
-                    "url": url,
-                    "published": published,
-                    "title": title.strip(),
-                    "excerpt": body[:3000]  # keep token costs sane
-                })
-                pf_count += 1
-                time.sleep(0.3)  # be polite
-            except Exception as ex:
-                # on failure, just skip this item
-                pass
-    return picked
-
 def call_model(items):
     client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
@@ -231,6 +185,7 @@ def call_model(items):
         TITLE: {it['title']}
         URL: {it['url']}
         PUBLISHED: {it['published']}
+        AUTHOR: {it['author']}
         EXCERPT:
         {it['excerpt']}
         """).strip())
@@ -242,7 +197,7 @@ def call_model(items):
             "role": "user",
             "content": [
                 {"type": "input_text",
-                "text": f"Date: {today}. Create one-liners for these posts. Keep each line under ~30 words. Do not include the URL in the one-liner; it will be added automatically."},
+                "text": f"Date: {today}. Create one-liners for these posts. Keep each line under ~30 words. Do not include the URL in the one-liner; it will be added automatically. If the author name is given, use that instead of the blog name when referring to the author of the blog within the one-liner."},
                 *[{"type": "input_text", "text": c} for c in chunks],
             ],
         }],
