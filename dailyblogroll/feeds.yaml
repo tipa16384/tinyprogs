@@ -90,3 +90,8 @@ feeds:
     update_frequency: daily
     category: Gaming
     blogger: Frostilyte
+  - name: Scripting News
+    url: https://scripting.com/rss.html
+    update_frequency: daily
+    category: Tech
+    blogger: Dave Winer
