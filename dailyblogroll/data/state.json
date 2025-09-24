@@ -19,7 +19,7 @@
     "last_ts": 1758640408
   },
   "https://wordsundermyname.wordpress.com/feed/": {
-    "modified": "Mon, 22 Sep 2025 00:01:47 GMT",
+    "modified": "Sun, 21 Sep 2025 23:54:41 GMT",
     "last_ts": 1758498873
   },
   "https://dragonchasers.com/feed/": {
@@ -28,8 +28,8 @@
     "last_ts": 1758650151
   },
   "https://bhagpuss.blogspot.com/feeds/posts/default?alt=rss": {
-    "etag": "W/\"12ccb50973bd9484fdf00f3b028a7ec5446504caee4f722122bfe65a857f1387\"",
-    "modified": "Tue, 23 Sep 2025 21:20:49 GMT",
+    "etag": "W/\"fed728ba05fb0633ff29e3f63b96088ac0722623240f747b0458d3a6d011b628\"",
+    "modified": "Wed, 24 Sep 2025 01:52:30 GMT",
     "last_ts": 1758642120
   },
   "https://scopique.com/feed/": {
@@ -41,5 +41,60 @@
     "etag": "W/\"e93fa12519cf163318aa614af5ace982ffd5041072c03fe794d8a3657f96257b\"",
     "modified": "Sat, 20 Sep 2025 11:31:46 GMT",
     "last_ts": 1757647980
+  },
+  "https://www.antipope.org/charlie/blog-static/atom.xml": {
+    "last_ts": 0
+  },
+  "https://tagn.wordpress.com/feed/": {
+    "modified": "Wed, 24 Sep 2025 03:38:01 GMT",
+    "last_ts": 1758640524
+  },
+  "https://lisettesmxtadventures.wordpress.com/feed/?alt=rss": {
+    "modified": "Tue, 23 Sep 2025 11:03:08 GMT",
+    "last_ts": 1758605514
+  },
+  "https://monsterladysdiary.wordpress.com/feed/": {
+    "modified": "Mon, 22 Sep 2025 20:30:02 GMT",
+    "last_ts": 1758546000
+  },
+  "https://nkantar.com/blog/feed/": {
+    "etag": "\"dczkqnj5uhme1ekt\"",
+    "modified": "Mon, 22 Sep 2025 19:26:00 GMT",
+    "last_ts": 1758412800
+  },
+  "https://www.ghastlymirror.xyz/rss.xml": {
+    "etag": "\"2fb7c9fdb1050a132261697997f37381-ssl-df\"",
+    "last_ts": 1756598400
+  },
+  "https://frostilyte.ca/feed/": {
+    "modified": "Sat, 20 Sep 2025 00:34:01 GMT",
+    "last_ts": 1758118318
+  },
+  "http://scripting.com/rss.html": {
+    "etag": "\"c39a3e45f1bb8de4eca4e203be266c3a\"",
+    "modified": "Sat, 23 Oct 2021 13:55:36 GMT",
+    "last_ts": 0
+  },
+  "https://forums.grc.com/forums/blog/index.rss": {
+    "modified": "Wed, 24 Sep 2025 04:01:24 GMT",
+    "last_ts": 1718399337
+  },
+  "http://www.folklore.org/folklore.xml": {
+    "etag": "\"0x8DC16DE27DCCE57\"",
+    "modified": "Tue, 16 Jan 2024 21:57:38 GMT",
+    "last_ts": 0
+  },
+  "https://feeds.feedburner.com/OfficialDBlog": {
+    "modified": "Sat, 20 Sep 2025 14:05:22 GMT",
+    "last_ts": 1708594891
+  },
+  "https://devblogs.microsoft.com/oldnewthing/feed/": {
+    "etag": "W/\"308f6dcf13e7f81cebeec8489f84afb7\"",
+    "modified": "Wed, 24 Sep 2025 00:22:22 GMT",
+    "last_ts": 1758636000
+  },
+  "https://blog.codinghorror.com/rss/": {
+    "etag": "W/\"45e75-xXQEzSTqje+PWvSkQ1cLuC1j8Ko\"",
+    "last_ts": 1742513593
   }
 }
