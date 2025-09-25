@@ -7,6 +7,7 @@ from slugify import slugify
 from openai import OpenAI
 from pathlib import Path
 import json, time, calendar, email.utils as eut
+import random
 
 ROOT = Path(__file__).parent
 STATE_PATH = ROOT / "data" / "state.json"
@@ -18,7 +19,9 @@ CFG_PATH = "feeds.yaml"
 
 SYSTEM = """You are compiling a 'Daily Blogroll'—a terse, link-heavy roundup.
 Style: one sentence per item (max ~30 words), credit the blog by name, add a quick take in a casual, conversational but concise manner.
-Do not invent facts or quotes; stay within provided excerpts.
+Do not invent facts or quotes; stay within provided excerpts. You are given a suggested category per blog, but can override it if you feel another fits better, as the
+author might have changed focus. Categories are: Gaming, Tech, Writing, General. Do not mention the source, title, url or category in the one-liner. You may
+refer to the author by name if given.
 Return JSON with an array 'items': [{source, title, url, one_liner, category}].
 """
 
@@ -86,6 +89,9 @@ def collect_new_items(cfg):
     per_feed_cap = cfg.get("max_items_per_feed", 3)
     min_chars = cfg.get("min_chars_for_article", 500)
     skip_backlog = cfg.get("first_run_skip_backlog", True)
+
+    # randomize the feed order a bit to avoid always picking the same ones first
+    random.shuffle(cfg["feeds"])
 
     for f in cfg["feeds"]:
         if len(picked) >= total_cap:
@@ -228,6 +234,36 @@ def call_model(items):
 
     return data["items"]
 
+def render_html(blog_title, items):
+    """Simple HTML rendering (not used by default) render
+    renders to a grid 3 across and up to 4 down, each element has the CSS class 'feed-element'
+    should be contained in a <div class="feed-grid">...</div>
+    title in heading, each cell should be a div with a the blog name/link in bold, then the one-liner
+    """
+    title = f"{blog_title}: {datetime.date.today().isoformat()}"
+    lines = []
+    lines.append(f"<html><head><meta charset='utf-8'><title>{title}</title></head><body>")
+    lines.append(f"<h1>{title}</h1>")
+    lines.append('<div class="feed-grid">')
+
+    for it in items:
+        lines.append('<div class="feed-element">')
+        lines.append(f'<strong><a href="{it["url"]}">{it["source"]}</a></strong><br/>')
+        lines.append(f'{it["one_liner"].rstrip()}')
+        lines.append('</div>')
+
+    lines.append("</div>")
+    lines.append("</body></html>")
+
+    html = "\n".join(lines) + "\n"
+    slug = slugify(title)
+    path = f"{slug}.html"
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(html)
+    with open("latest.html", "w", encoding="utf-8") as f:
+        f.write(html)
+    return path, title
+
 def render_markdown(blog_title, items):
     # Optionally group by source for a “multiple links per blog” look
     title = f"{blog_title}: {datetime.date.today().isoformat()}"
@@ -289,9 +325,12 @@ def main():
     # Keep the order stable but not biased: sort by source, then title
     items = items[:cfg.get("max_items_total", 30)]
     drafted = call_model(items)
-    md_path, title = render_markdown(cfg.get("title","Daily Blogroll"), drafted)
+    md_path, _ = render_markdown(cfg.get("title","Daily Blogroll"), drafted)
 
     print("Wrote", md_path)
+    md_path, _ = render_html(cfg.get("title","Daily Blogroll"), drafted)
+    print("Wrote", md_path)
+
     # Auto-post if env vars are present
     wp_url = os.getenv("WP_URL")
     if None and wp_url:

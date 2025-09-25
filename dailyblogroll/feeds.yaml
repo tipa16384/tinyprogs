@@ -1,5 +1,5 @@
 # feeds.yaml
-max_items_total: 10
+max_items_total: 12
 max_items_per_feed: 1
 min_chars_for_article: 500
 first_run_skip_backlog: false
@@ -7,7 +7,7 @@ title: Daily Blogroll
 feeds:
   - name: Chasing Dings!
     url: https://chasingdings.com/feed/
-    category: General
+    category: Gaming
     update_frequency: daily
     blogger: Tipa
   - name: An Archaeopteryx
@@ -38,7 +38,7 @@ feeds:
   - name: Dragonchasers
     url: https://dragonchasers.com/feed/
     update_frequency: daily
-    category: Writing
+    category: Gaming
     blogger: Nimgimli
   - name: Inventory Full
     url: https://bhagpuss.blogspot.com/feeds/posts/default?alt=rss
@@ -48,17 +48,17 @@ feeds:
   - name: Scopique
     url: https://scopique.com/feed/
     update_frequency: daily
-    category: Gaming
+    category: Tech
     blogger: Scopique
   - name: The Friendly Necromancer
     url: https://thefriendlynecromancer.blogspot.com/feeds/posts/default?alt=rss
     update_frequency: daily
-    category: Writing
+    category: Gaming
     blogger: The Friendly Necromancer
   - name: Antipope
     url: https://www.antipope.org/charlie/blog-static/atom.xml
     update_frequency: daily
-    category: General
+    category: Writing
     blogger: Charles Stross
   - name: The Ancient Gaming Noob
     url: https://tagn.wordpress.com/feed/
@@ -140,3 +140,33 @@ feeds:
     update_frequency: daily
     category: Tech
     blogger: Joel Spolsky
+  - name: Tobold's Blog
+    url: http://feeds2.feedburner.com/ToboldsBlog
+    update_frequency: daily
+    category: Gaming
+    blogger: Tobold
+  - name: Contain's Moderate Peril
+    url: http://www.containsmoderateperil.com/feed/
+    update_frequency: daily
+    category: Gaming
+    blogger: Roger
+  - name: Bio Break
+    url: http://biobreak.wordpress.com/feed/
+    update_frequency: daily
+    category: Gaming
+    blogger: Syp
+  - name: In An Age
+    url: http://inanage.com/feed/
+    update_frequency: daily
+    category: Gaming
+    blogger: Azuriel
+  - name: A Pixel Nomad
+    url: https://pixelnomad.ca/feed/
+    update_frequency: daily
+    category: Gaming
+    blogger: Stargrace
+  - name: The Daily WTF
+    url: https://feeds.feedburner.com/TheDailyWtf
+    update_frequency: daily
+    category: Tech
+    blogger: Remy Porter
