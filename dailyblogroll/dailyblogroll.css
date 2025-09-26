@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.feed-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feed-element {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #181717;
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    width: 240px;
+    font-size: 10pt;
+}
+
+.feed-element a, .feed-element a:visited {
+    color: #e5cc10;
+    text-decoration: none;
+}
+
+.feed-element-image {
+    width:240px;
+    height:160px;
+    vertical-align:middle;
+    margin-bottom:5px;
+}

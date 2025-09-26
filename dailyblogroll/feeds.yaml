@@ -55,11 +55,6 @@ feeds:
     update_frequency: daily
     category: Gaming
     blogger: The Friendly Necromancer
-  - name: Antipope
-    url: https://www.antipope.org/charlie/blog-static/atom.xml
-    update_frequency: daily
-    category: Writing
-    blogger: Charles Stross
   - name: The Ancient Gaming Noob
     url: https://tagn.wordpress.com/feed/
     update_frequency: daily
@@ -91,7 +86,7 @@ feeds:
     category: Gaming
     blogger: Frostilyte
   - name: Scripting News
-    url: http://scripting.com/rss.html
+    url: http://scripting.com/rss.xml
     update_frequency: daily
     category: Tech
     blogger: Dave Winer
@@ -170,3 +165,23 @@ feeds:
     update_frequency: daily
     category: Tech
     blogger: Remy Porter
+  - name: The Manchester Patch
+    url: http://manchester.patch.com/articles.atom
+    update_frequency: daily
+    category: General
+    blogger: Manchester Patch
+  - name: Aywren's Nook
+    url: https://aywren.com/feed.xml
+    update_frequency: daily
+    category: Writing
+    blogger: Aywren
+  - name: The Boardgames Chronicle
+    url: https://theboardgameschronicle.com/feed/
+    update_frequency: daily
+    category: Gaming
+    blogger: The Chronicler
+  - name: Mailvaltar
+    url: https://mailvaltar.wordpress.com/feed/
+    update_frequency: daily
+    category: Gaming
+    blogger: Mailvatar

@@ -8,6 +8,7 @@ from openai import OpenAI
 from pathlib import Path
 import json, time, calendar, email.utils as eut
 import random
+import hashlib
 
 ROOT = Path(__file__).parent
 STATE_PATH = ROOT / "data" / "state.json"
@@ -246,9 +247,18 @@ def render_html(blog_title, items):
     lines.append(f"<h1>{title}</h1>")
     lines.append('<div class="feed-grid">')
 
+    # sort item list by category, then source
+    items.sort(key=lambda x: (x.get("category",""), x["source"].lower()))
+
     for it in items:
         lines.append('<div class="feed-element">')
-        lines.append(f'<strong><a href="{it["url"]}">{it["source"]}</a></strong><br/>')
+        # get the hash of the source
+        source_image_ref = 'images/' + string_to_hash(it["source"]) + '.png'
+        if os.path.exists(source_image_ref):
+            lines.append(f'<a href="{it["url"]}"><img src="{source_image_ref}" alt="{it["source"]}" class="feed-element-image" /></a>')
+        else:
+            lines.append(f'<strong><a href="{it["url"]}">{it["source"]}</a></strong><br/>')
+
         lines.append(f'{it["one_liner"].rstrip()}')
         lines.append('</div>')
 
@@ -369,6 +379,9 @@ def entry_timestamp(entry) -> int | None:
             except Exception:
                 pass
     return None
+
+def string_to_hash(s):
+    return hashlib.sha256(s.encode("utf-8")).hexdigest()
 
 if __name__ == "__main__":
     main()
