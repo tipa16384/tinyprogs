@@ -243,7 +243,7 @@ def render_html(blog_title, items):
     """
     title = f"{blog_title}: {datetime.date.today().isoformat()}"
     lines = []
-    lines.append(f"<html><head><meta charset='utf-8'><title>{title}</title></head><body>")
+    lines.append(f"<html><head><meta charset='utf-8'><title>{title}</title><link rel='stylesheet' href='dailyblogroll.css'></head><body>")
     lines.append(f"<h1>{title}</h1>")
     lines.append('<div class="feed-grid">')
 
@@ -255,9 +255,9 @@ def render_html(blog_title, items):
         # get the hash of the source
         source_image_ref = 'images/' + string_to_hash(it["source"]) + '.png'
         if os.path.exists(source_image_ref):
-            lines.append(f'<a href="{it["url"]}"><img src="{source_image_ref}" alt="{it["source"]}" class="feed-element-image" /></a>')
+            lines.append(f'<a target="_blank" href="{it["url"]}"><img src="{source_image_ref}" alt="{it["source"]}" class="feed-element-image" /></a>')
         else:
-            lines.append(f'<strong><a href="{it["url"]}">{it["source"]}</a></strong><br/>')
+            lines.append(f'<strong><a target="_blank" href="{it["url"]}">{it["source"]}</a></strong><br/>')
 
         lines.append(f'{it["one_liner"].rstrip()}')
         lines.append('</div>')
