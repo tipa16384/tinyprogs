@@ -185,3 +185,8 @@ feeds:
     update_frequency: daily
     category: Gaming
     blogger: Mailvatar
+  - name: Smith Talks Tech
+    url: https://smithtalkstech.com/feed/
+    update_frequency: daily
+    category: Tech
+    blogger: Pete
