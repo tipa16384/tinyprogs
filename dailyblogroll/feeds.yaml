@@ -95,11 +95,6 @@ feeds:
     update_frequency: daily
     category: Tech
     blogger: Steve Gibson
-  - name: Stories about the Original Macintosh
-    url: http://www.folklore.org/folklore.xml
-    update_frequency: daily
-    category: Tech
-    blogger: Andy Hertzfeld
   - name: Walter Bright's D-Lang Blog
     url: https://feeds.feedburner.com/OfficialDBlog
     update_frequency: daily
@@ -165,11 +160,6 @@ feeds:
     update_frequency: daily
     category: Tech
     blogger: Remy Porter
-  - name: The Manchester Patch
-    url: http://manchester.patch.com/articles.atom
-    update_frequency: daily
-    category: General
-    blogger: Manchester Patch
   - name: Aywren's Nook
     url: https://aywren.com/feed.xml
     update_frequency: daily
@@ -184,9 +174,14 @@ feeds:
     url: https://mailvaltar.wordpress.com/feed/
     update_frequency: daily
     category: Gaming
-    blogger: Mailvatar
+    blogger: Mailvaltar
   - name: Smith Talks Tech
     url: https://smithtalkstech.com/feed/
     update_frequency: daily
     category: Tech
     blogger: Pete
+  - name: CrazyKinux's Musings
+    url: https://feeds.feedburner.com/CrazykinuxsMusing
+    update_frequency: daily
+    category: Tech
+    blogger: CrazyKinux

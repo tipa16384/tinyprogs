@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ vars.title }}</title>
+    <link rel="stylesheet" href="dailyblogroll.css">
+</head>
+<body>
+    <h1>{{ vars.title }}</h1>
+    <div class="feed-grid">
+        {% for item in vars.blogs %}
+        <div class="feed-element">
+            {% if item.image is defined %}
+            <a target="_blank" href="{{ item.url }}">
+                <img src="{{ item.image }}" alt="{{ item.source }}" class="feed-element-image" />
+            </a>
+            {% else %}
+            <strong>
+                <a target="_blank" href="{{ item.url }}">{{ item.source }}</a>
+            </strong>
+            <br/>
+            {% endif %}
+            {{ item.one_liner }}
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

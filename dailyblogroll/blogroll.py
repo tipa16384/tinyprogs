@@ -9,6 +9,12 @@ from pathlib import Path
 import json, time, calendar, email.utils as eut
 import random
 import hashlib
+from jinja2 import Environment, PackageLoader, select_autoescape
+
+env = Environment(
+    loader=PackageLoader("blogroll"),
+    autoescape=select_autoescape()
+)
 
 ROOT = Path(__file__).parent
 STATE_PATH = ROOT / "data" / "state.json"
@@ -241,37 +247,35 @@ def render_html(blog_title, items):
     should be contained in a <div class="feed-grid">...</div>
     title in heading, each cell should be a div with a the blog name/link in bold, then the one-liner
     """
+    jinja_vars = {}
     title = f"{blog_title}: {datetime.date.today().isoformat()}"
-    lines = []
-    lines.append(f"<html><head><meta charset='utf-8'><title>{title}</title><link rel='stylesheet' href='dailyblogroll.css'></head><body>")
-    lines.append(f"<h1>{title}</h1>")
-    lines.append('<div class="feed-grid">')
+    jinja_vars["title"] = title
 
     # sort item list by category, then source
     items.sort(key=lambda x: (x.get("category",""), x["source"].lower()))
 
+    jinja_item_list = []
+
     for it in items:
-        lines.append('<div class="feed-element">')
-        # get the hash of the source
+        item_dict = {}
+        item_dict["source"] = it["source"]
+        item_dict["url"] = it["url"]
+        item_dict["one_liner"] = it["one_liner"].rstrip()
         source_image_ref = 'images/' + string_to_hash(it["source"]) + '.png'
-        if os.path.exists(source_image_ref):
-            lines.append(f'<a target="_blank" href="{it["url"]}"><img src="{source_image_ref}" alt="{it["source"]}" class="feed-element-image" /></a>')
-        else:
-            lines.append(f'<strong><a target="_blank" href="{it["url"]}">{it["source"]}</a></strong><br/>')
+        if os.path.exists("blogrolls/" + source_image_ref):
+            item_dict["image"] = source_image_ref
+        jinja_item_list.append(item_dict)
 
-        lines.append(f'{it["one_liner"].rstrip()}')
-        lines.append('</div>')
+    jinja_vars["blogs"] = jinja_item_list
+    template = env.get_template("dailyblogtemplate.html")
+    output = template.render(vars=jinja_vars)
 
-    lines.append("</div>")
-    lines.append("</body></html>")
-
-    html = "\n".join(lines) + "\n"
     slug = slugify(title)
-    path = f"{slug}.html"
+    path = f"blogrolls/{slug}.html"
     with open(path, "w", encoding="utf-8") as f:
-        f.write(html)
-    with open("latest.html", "w", encoding="utf-8") as f:
-        f.write(html)
+        f.write(output)
+    with open("blogrolls/latest.html", "w", encoding="utf-8") as f:
+        f.write(output)
     return path, title
 
 def render_markdown(blog_title, items):
@@ -296,10 +300,10 @@ def render_markdown(blog_title, items):
             
     md = "\n".join(lines) + "\n"
     slug = slugify(title)
-    path = f"{slug}.md"
+    path = f"blogrolls/{slug}.md"
     with open(path, "w", encoding="utf-8") as f:
         f.write(md)
-    with open("latest.md", "w", encoding="utf-8") as f:
+    with open("blogrolls/latest.md", "w", encoding="utf-8") as f:
         f.write(md)
     return path, title
 
