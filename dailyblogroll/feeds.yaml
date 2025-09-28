@@ -185,3 +185,13 @@ feeds:
     update_frequency: daily
     category: Tech
     blogger: CrazyKinux
+  - name: Tofutush's Blog
+    url: https://tofutush.github.io/feed.xml
+    update_frequency: daily
+    category: General
+    blogger: Tofutush
+  - name: Indiecator
+    url: https://indiecator.org/feed/
+    update_frequency: daily
+    category: Gaming
+    blogger: Magi

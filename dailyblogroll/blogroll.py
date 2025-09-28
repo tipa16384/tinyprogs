@@ -241,6 +241,13 @@ def call_model(items):
 
     return data["items"]
 
+def find_previous_blogroll():
+    # find the latest blogroll before today
+    files = list((ROOT / "blogrolls").glob("daily-blogroll-*.html"))
+    files = [f for f in files if f.stem != "latest"]
+    files.sort(key=lambda x: x.stat().st_mtime, reverse=True)
+    return files[0].name if files else None
+
 def render_html(blog_title, items):
     """Simple HTML rendering (not used by default) render
     renders to a grid 3 across and up to 4 down, each element has the CSS class 'feed-element'
@@ -250,6 +257,10 @@ def render_html(blog_title, items):
     jinja_vars = {}
     title = f"{blog_title}: {datetime.date.today().isoformat()}"
     jinja_vars["title"] = title
+
+    previous_blog = find_previous_blogroll()
+    if previous_blog:
+        jinja_vars["previous"] = previous_blog
 
     # sort item list by category, then source
     items.sort(key=lambda x: (x.get("category",""), x["source"].lower()))

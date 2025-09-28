@@ -2,36 +2,29 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>{{ vars.title }}</title>
+    <title>My Blogroll</title>
     <link rel="stylesheet" href="dailyblogroll.css">
 </head>
 <body>
     <h1>
-        {% if vars.previous is defined %}
-        <a href="{{ vars.previous }}">⬅️</a>
-        {% endif %}
-        <a href="latest.html">{{ vars.title }}</a>
-        {% if vars.next is defined %}
-        <a href="{{ vars.next }}">➡️</a>
-        {% endif %}
+        
+        <a href="page1.html">⬅️</a>
+        
+        <a href="latest.html">My Blogroll</a>
+        
     </h1>
 
     <div class="feed-grid">
-        {% for item in vars.blogs %}
+        
         <div class="feed-element">
-            {% if item.image is defined %}
-            <a target="_blank" href="{{ item.url }}">
-                <img src="{{ item.image }}" alt="{{ item.source }}" class="feed-element-image" />
+            
+            <a target="_blank" href="https://chasingdings.com">
+                <img src="images/303118891c325ea66b90a1409e3c9a44a16f48d4458d738ed0cb05a1e09852bc.png" alt="" class="feed-element-image" />
             </a>
-            {% else %}
-            <strong>
-                <a target="_blank" href="{{ item.url }}">{{ item.source }}</a>
-            </strong>
-            <br/>
-            {% endif %}
-            {{ item.one_liner }}
+            
+            This is an example blog.
         </div>
-        {% endfor %}
+        
     </div>
     <div class="footer">
         <p>"Daily Blogroll" is a custom RSS feed aggregator. All links go straight to the homepages of the respective blogs. No content
