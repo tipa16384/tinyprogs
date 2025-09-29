@@ -266,12 +266,14 @@ def render_html(blog_title, items):
     items.sort(key=lambda x: (x.get("category",""), x["source"].lower()))
 
     jinja_item_list = []
+    alt_text_list = []
 
     for it in items:
         item_dict = {}
         item_dict["source"] = it["source"]
         item_dict["url"] = it["url"]
         item_dict["one_liner"] = it["one_liner"].rstrip()
+        alt_text_list.append(item_dict["one_liner"])
         source_image_ref = 'images/' + string_to_hash(it["source"]) + '.png'
         if os.path.exists("blogrolls/" + source_image_ref):
             item_dict["image"] = source_image_ref
@@ -287,6 +289,8 @@ def render_html(blog_title, items):
         f.write(output)
     with open("blogrolls/latest.html", "w", encoding="utf-8") as f:
         f.write(output)
+    with open("blogrolls/latest.txt", "w", encoding="utf-8") as f:
+        f.write("\n\n".join(alt_text_list) + "\n")
     return path, title
 
 def render_markdown(blog_title, items):
