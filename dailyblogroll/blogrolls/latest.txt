@@ -1,15 +1,23 @@
-Belghast and the crew dive deep into Diablo IV and Hades 2, with some spicy takes on ARPG mechanics.
+Syp enjoys the nostalgia of LOTRO's new expansion with their Captain character, battling through King's Gondor and looking forward to the Kingdoms of Harad.
 
-Wilhelm delves into the EQ emulator world as server shutdowns cause chaos amid legal threats.
+Tipa bids farewell to her Pokémon TCG Pocket subscription, preferring the card collecting grind without the premium cosmetics.
 
-The Chronicler shares insights on Combat Commander: Pacific, celebrating its chaotic wargame brilliance.
+Nimgimli laments North Carolina's lingering summer while recounting his gaming adventures in The Outer Worlds and Vampire Survivors.
 
-Tobold highlights the vital role of mods in enhancing game experience and offering custom challenges.
+Bhagpuss explores shifts in entertainment habits, balancing AI music creation and a backlog of streaming content.
 
-Archaeopteryx shares a mix of weather woes, reality TV musings, and a classic movie rant in this week's roundup.
+Belghast reflects on battling allergies and depression while playing Destiny Rising and Diablo 4 to distract from life's challenges.
 
-Magi breaks down why labeling Antifa as a terrorist organization is missing the point entirely.
+Wilhelm critiques Wordpress.com's broken integrations before sharing gaming highlights from the past month.
 
-Dave Winer muses on a Hall of Fame for open software that's stood the test of time despite commercial pressures.
+Emily dives into a September music recap, with a strong mix of new finds and old favorites, while navigating the AI music frontier.
 
-Tofutush revisits a middle school comic idea about mountain-top magic academies and strange student dynamics.
+Nik reflects on stepping back from organizing PyBeach 2025, celebrating its success and the vibrant community it gathered.
+
+Tofutush dives into a math puzzle about Thanos' ability to annihilate populations with a snap, concluding that it would take 34 snaps to ensure earth's extinction.
+
+Dave Winer discusses economic oddities, immigration, and the importance of journalism in uncovering truths in uncertain times.
+
+Remy Porter highlights a disastrous coding decision in TypeScript, where a property accessor unexpectedly mutates state, causing chaos in bugs.
+
+Raymond Chen explores Microsoft's unique use of 'convict' in corporate speak, presenting a more forceful term than 'convince.'

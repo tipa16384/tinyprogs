@@ -74,6 +74,10 @@ h1 > a, h1 > a:visited, h1 > a:link {
     text-decoration: none;
 }
 
+.feed-element a.oneliner {
+    color: white;
+}
+
 .feed-element-image {
     width:240px;
     height:160px;
