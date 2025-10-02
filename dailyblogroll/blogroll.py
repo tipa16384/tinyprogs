@@ -91,6 +91,8 @@ def load_cfg():
         return yaml.safe_load(f)
 
 def collect_new_items(cfg):
+    debug_log = []
+
     con = db()  # if you still use SQLite "seen" — keep it; helpful when timestamps are missing
     state = load_state()
     picked = []
@@ -104,7 +106,9 @@ def collect_new_items(cfg):
     random.shuffle(cfg["feeds"])
 
     for f in cfg["feeds"]:
+        debug_log.append(f"\nProcessing feed: {f.get('name','')} {f['url']}")
         if len(picked) >= total_cap:
+            debug_log.append("Total cap reached, stopping.")
             break
 
         feed_url = f["url"]
@@ -132,20 +136,24 @@ def collect_new_items(cfg):
 
         for e in parsed.entries:
             if len(picked) >= total_cap or pf_count >= per_feed_cap:
+                debug_log.append("Feed cap reached, stopping.")
                 break
 
             guid = getattr(e, "id", None) or getattr(e, "link", None)
             url = getattr(e, "link", "")
             if not guid or not url:
+                debug_log.append(f"Skipping entry without GUID or URL: {e}")
                 continue
 
             # Core filter: only newer than last_ts
             ts = entry_timestamp(e)
             if ts is not None and ts <= st.get("last_ts", 0):
+                debug_log.append(f"Skipping entry older than last_ts: {e}")
                 continue
 
             # (Optional) also keep your existing GUID-based de-dup:
             if already_seen(con, feed_url, guid):
+                debug_log.append(f"Skipping already seen entry: {e}")
                 continue
 
             title = getattr(e, "title", "") or "(untitled)"
@@ -176,6 +184,7 @@ def collect_new_items(cfg):
                 if ts: max_seen_ts = max(max_seen_ts, ts)
                 time.sleep(0.3)
             except Exception:
+                debug_log.append(f"Error processing entry: {e}")
                 # ignore this entry on error
                 pass
 
@@ -186,6 +195,9 @@ def collect_new_items(cfg):
         # persist after each feed to be crash-safe
         save_state(state)
 
+    # write debug log
+    with open(ROOT / "data" / "debug.log", "w", encoding="utf-8") as f:
+        f.write("\n".join(debug_log) + "\n")
     return picked
 
 def call_model(items):

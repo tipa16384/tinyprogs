@@ -195,3 +195,13 @@ feeds:
     update_frequency: daily
     category: Gaming
     blogger: Magi
+  - name: Ready Pixel One
+    url: https://feeds.feedburner.com/squarespace/AxkEtpjNxtZ
+    update_frequency: daily
+    category: Gaming
+    blogger: Pixel One
+  - name: WCRobinson
+    url: https://wcrobinson.org/feed/
+    update_frequency: daily
+    category: Gaming
+    blogger: WCRobinson
