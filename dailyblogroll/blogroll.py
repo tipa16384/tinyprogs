@@ -20,6 +20,8 @@ ROOT = Path(__file__).parent
 STATE_PATH = ROOT / "data" / "state.json"
 STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
 if not STATE_PATH.exists(): STATE_PATH.write_text("{}", encoding="utf-8")
+BLOGROLLS_DIR = ROOT / "blogrolls"
+BLOGROLLS_DIR.mkdir(parents=True, exist_ok=True)
 
 DB_PATH = "blogroll.db"
 CFG_PATH = "feeds.yaml"
@@ -243,7 +245,7 @@ def call_model(items):
 
 def find_previous_blogroll():
     # find the latest blogroll before today
-    files = list((ROOT / "blogrolls").glob("daily-blogroll-*.html"))
+    files = list(BLOGROLLS_DIR.glob("daily-blogroll-*.html"))
     files = [f for f in files if f.stem != "latest"]
     files.sort(key=lambda x: x.stat().st_mtime, reverse=True)
     return files[0].name if files else None
@@ -275,7 +277,7 @@ def render_html(blog_title, items):
         item_dict["one_liner"] = it["one_liner"].rstrip()
         alt_text_list.append(item_dict["one_liner"])
         source_image_ref = 'images/' + string_to_hash(it["source"]) + '.png'
-        if os.path.exists("blogrolls/" + source_image_ref):
+        if os.path.exists(BLOGROLLS_DIR / source_image_ref):
             item_dict["image"] = source_image_ref
         jinja_item_list.append(item_dict)
 
@@ -284,12 +286,12 @@ def render_html(blog_title, items):
     output = template.render(vars=jinja_vars)
 
     slug = slugify(title)
-    path = f"blogrolls/{slug}.html"
+    path = BLOGROLLS_DIR / f"{slug}.html"
     with open(path, "w", encoding="utf-8") as f:
         f.write(output)
-    with open("blogrolls/latest.html", "w", encoding="utf-8") as f:
+    with open(BLOGROLLS_DIR / "latest.html", "w", encoding="utf-8") as f:
         f.write(output)
-    with open("blogrolls/latest.txt", "w", encoding="utf-8") as f:
+    with open(BLOGROLLS_DIR / "latest.txt", "w", encoding="utf-8") as f:
         f.write("\n\n".join(alt_text_list) + "\n")
     return path, title
 
@@ -314,36 +316,10 @@ def render_markdown(blog_title, items):
             lines.append(f"- **[{it['source']}]({it['url']})** — {it['one_liner'].rstrip()}")
             
     md = "\n".join(lines) + "\n"
-    slug = slugify(title)
-    path = f"blogrolls/{slug}.md"
+    path = BLOGROLLS_DIR / "latest.md"
     with open(path, "w", encoding="utf-8") as f:
         f.write(md)
-    with open("blogrolls/latest.md", "w", encoding="utf-8") as f:
-        f.write(md)
     return path, title
-
-# --- (Optional) auto-post to WordPress ---
-def post_to_wordpress(md_path, wp_url, username, app_password, status="draft"):
-    with open(md_path, "r", encoding="utf-8") as f:
-        content = f.read()
-    # very basic: first line is H1 title, strip it from content
-    first_nl = content.find("\n")
-    title = content[2:first_nl].strip() if content.startswith("# ") else "Daily Blogroll"
-    body = content[first_nl:].strip() if first_nl > 0 else content
-
-    api = wp_url.rstrip("/") + "/wp-json/wp/v2/posts"
-    headers = {
-        "Content-Type": "application/json; charset=utf-8",
-        "Accept": "application/json",
-        "User-Agent": "DailyBlogrollBot/1.0 (+https://chasingdings.com)"
-    }
-    payload = {"title": title, "content": body, "status": status}
-    r = requests.post(api,
-        auth=(username, app_password),
-        headers=headers,
-        data=json.dumps(payload))
-    r.raise_for_status()
-    return r.json().get("link")
 
 def main():
     cfg = load_cfg()
@@ -360,17 +336,62 @@ def main():
     md_path, _ = render_html(cfg.get("title","Daily Blogroll"), drafted)
     print("Wrote", md_path)
 
-    # Auto-post if env vars are present
-    wp_url = os.getenv("WP_URL")
-    if None and wp_url:
-        link = post_to_wordpress(
-            md_path,
-            wp_url=wp_url,
-            username=os.getenv("WP_USER"),
-            app_password=os.getenv("WP_APP_PASSWORD"),
-            status=os.getenv("WP_STATUS","draft")
-        )
-        print("WordPress:", link)
+def get_sorted_blogrolls():
+    """
+    Find all daily blogroll HTML files and return them sorted by date (oldest first).
+    
+    Returns:
+        List of tuples where each tuple contains (date_string, full_filename)
+    """
+    import re
+    
+    # Get all HTML files in the blogrolls directory
+    files = list(BLOGROLLS_DIR.glob("daily-blogroll-*.html"))
+    
+    # Pattern to extract date components
+    pattern = r"daily-blogroll-(\d{4})-(\d\d)-(\d\d)\.html"
+    
+    # Create list of tuples (date_string, full_filename)
+    result = []
+    for file_path in files:
+        filename = file_path.name
+        match = re.match(pattern, filename)
+        if match:
+            year, month, day = match.groups()
+            date_string = f"{year}{month}{day}"
+            result.append((date_string, filename))
+    
+    # Sort by date string (which will be in YYYYMMDD format)
+    result.sort(key=lambda x: x[0])
+    
+    return result
+
+def renavigate_blogrolls():
+    """
+    Go through all blogroll HTML files and add navigation links to previous and next blogrolls.
+    """
+    blogrolls = get_sorted_blogrolls()
+    for i, (datestr, filename) in enumerate(blogrolls):
+        with open(BLOGROLLS_DIR / filename, "r+", encoding="utf-8") as f:
+            content = f.read()
+            # separate the content before the <h1> tag into a variable "prelude" and the content after the </h1> tag as the antelude
+            prelude, starttag, _ = content.partition("<h1>")
+            _, endtag, antelude = content.partition("</h1>")
+            header = ''
+            # Add navigation links
+            if i > 0:
+                _, prev_filename = blogrolls[i - 1]
+                header = header + f'<a href="{prev_filename}">⬅️</a>'
+            header = header + f'<a href="latest.html">Daily Blogroll: {datestr[0:4]}-{datestr[4:6]}-{datestr[6:8]}</a>'
+            if i < len(blogrolls) - 1:
+                _, next_filename = blogrolls[i + 1]
+                header = header + f'<a href="{next_filename}">➡️</a>'
+            new_h1 = f"<h1>{header}</h1>"
+            content = prelude + new_h1 + antelude
+            f.seek(0)
+            f.write(content)
+            f.truncate()
+    print("Renavigated blogrolls.")
 
 def load_state():
     return json.loads(STATE_PATH.read_text(encoding="utf-8"))
