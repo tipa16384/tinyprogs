@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting…</title>
+
+  <!-- 1) Don't cache the shim -->
+  <meta http-equiv="Cache-Control" content="no-store, max-age=0, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- 2) Fast client redirect: swap YYYY-MM-DD each day -->
+  <meta http-equiv="refresh" content="0; url={{ today}}">
+
+  <!-- 3) SEO: avoid duplicate indexing; canonicalize to the real page -->
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="{{ today}}">
+
+  <!-- 4) JS fallback (instant, history-friendly) -->
+  <script>
+    (function() {
+      var target = "{{ today}}";
+      if (location.pathname !== target) location.replace(target);
+    })();
+  </script>
+</head>
+<body>
+  <!-- 5) No-JS / ultra-slow fallback -->
+  <p>Redirecting to the latest news… If you are not redirected, <a href="{{ today}}">click here</a>.</p>
+</body>
+</html>

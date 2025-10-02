@@ -10,7 +10,8 @@ import json, time, calendar, email.utils as eut
 import random
 import hashlib
 from jinja2 import Environment, PackageLoader, select_autoescape
-
+import re
+    
 env = Environment(
     loader=PackageLoader("blogroll"),
     autoescape=select_autoescape()
@@ -290,7 +291,8 @@ def render_html(blog_title, items):
     with open(path, "w", encoding="utf-8") as f:
         f.write(output)
     with open(BLOGROLLS_DIR / "latest.html", "w", encoding="utf-8") as f:
-        f.write(output)
+        template = env.get_template("latesttemplate.html")
+        f.write(template.render(today=path))
     with open(BLOGROLLS_DIR / "latest.txt", "w", encoding="utf-8") as f:
         f.write("\n\n".join(alt_text_list) + "\n")
     return path, title
@@ -335,6 +337,7 @@ def main():
     print("Wrote", md_path)
     md_path, _ = render_html(cfg.get("title","Daily Blogroll"), drafted)
     print("Wrote", md_path)
+    renavigate_blogrolls()
 
 def get_sorted_blogrolls():
     """
@@ -343,8 +346,6 @@ def get_sorted_blogrolls():
     Returns:
         List of tuples where each tuple contains (date_string, full_filename)
     """
-    import re
-    
     # Get all HTML files in the blogrolls directory
     files = list(BLOGROLLS_DIR.glob("daily-blogroll-*.html"))
     
