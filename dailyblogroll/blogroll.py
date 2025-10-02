@@ -287,12 +287,13 @@ def render_html(blog_title, items):
     output = template.render(vars=jinja_vars)
 
     slug = slugify(title)
-    path = BLOGROLLS_DIR / f"{slug}.html"
+    filename = f"{slug}.html"
+    path = BLOGROLLS_DIR / filename
     with open(path, "w", encoding="utf-8") as f:
         f.write(output)
     with open(BLOGROLLS_DIR / "latest.html", "w", encoding="utf-8") as f:
         template = env.get_template("latesttemplate.html")
-        f.write(template.render(today=path))
+        f.write(template.render(today=filename))
     with open(BLOGROLLS_DIR / "latest.txt", "w", encoding="utf-8") as f:
         f.write("\n\n".join(alt_text_list) + "\n")
     return path, title
