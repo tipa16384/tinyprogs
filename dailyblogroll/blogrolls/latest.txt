@@ -1,19 +1,23 @@
-Belghast shares a Diablo IV trading triumph, snagging Ancestral gear for a hefty price—proving once more that in-game economies mirror real-world spending.
+Nimgimli breaks down the frustration with Microsoft’s Game Pass price hike and the hoops now required for subscription renewals.
 
-Wilhelm nostalgically recounts Electronic Arts' golden era and its evolving identity, hinting at significant changes in the company's future.
+Bhagpuss shares the nostalgia of jumping back into MMORPGs, specifically EverQuest II, while pondering newer adventures like a possible New World expansion.
 
-Tobold gives a pragmatic look at managing game and streaming subscriptions by intermittently pausing services to save cash during price hikes.
+Pixel One buzzes with excitement over upcoming gaming treats like Legion Remix and Guild Wars 2: Visions of Eternity fueling creativity and camaraderie.
 
-Ruth shares a bittersweet Halloween history, contrasting childhood disappointments with newfound university joy, embracing the season’s online connection.
+Belghast is pumped for Guild Wars 2 raid enhancements but jumps ship from Game Pass over new pricing woes.
 
-Tofutush humorously explores the quirky world of Chinese linguistic puns, where cultural traditions hilariously intersect with personal anecdotes.
+Wilhelm takes on Palworld wilderness with friends, discovering the game’s hidden entry points and risking a little environmental disregard.
 
-Tim Bray predicts GenAI's persistent issues, advocating for balanced centaur-mode tech over productivity mirages.
+WCRobinson dives into the delightful RPG Dave the Diver, praising its sushi twist and chilled vibes despite past controversies about its indie roots.
 
-Dave Winer reminisces about early tech days and ponders the silos of modern platforms, emphasizing the need for open web spaces.
+Ruth shares her mixed feelings about Puzzmo after they pull a fast one on users with new paywall tactics affecting her daily routine.
 
-Remy Porter unravels a candidate's bizarre attempt at coding tic-tac-toe, illustrating tech screen pitfalls and the value of conversational interviews.
+Bruce Schneier dives into Daniel Miessler’s insights on AI in cybersecurity, signaling a temporary advantage for attackers until defenders catch up.
 
-Raymond Chen explains how to effortlessly convert FILETIME to C++ clocks with built-in C++/WinRT helpers—no need for lengthy functions.
+Dave Winer reflects on the power of the open internet and how web freedom is a collective endeavor that rivals the silos of big tech.
 
-Bhagpuss reflects on repurposing old creative work with AI and the satisfaction of finally considering new projects over nostalgia.
+Remy Porter showcases a roundup of tech goofs that hilariously blur the boundaries between bug and feature, proving humor is found in the details.
+
+Raymond Chen unravels the complexities of inferring function pointers with std::invoke and laments the endless possibilities of operator() overloading.
+
+Aywren bids farewell to PC Game Pass, turned off by recent price hikes that strip away the service’s former value.

@@ -14,7 +14,7 @@ feeds:
     url: https://anarchaeopteryx.bearblog.dev/feed/
     update_frequency: daily
     category: General
-    blogger: Ruth
+    blogger: Anarchae
   - name: Musing over Pints and Coffee
     url: https://musingsoverpintsandcoffee.wordpress.com/feed/
     update_frequency: daily
