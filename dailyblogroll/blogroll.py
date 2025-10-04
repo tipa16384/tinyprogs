@@ -303,7 +303,7 @@ def render_html(blog_title, items):
     path = BLOGROLLS_DIR / filename
     with open(path, "w", encoding="utf-8") as f:
         f.write(output)
-    with open(BLOGROLLS_DIR / "latest.html", "w", encoding="utf-8") as f:
+    with open(BLOGROLLS_DIR / "index.html", "w", encoding="utf-8") as f:
         template = env.get_template("latesttemplate.html")
         f.write(template.render(today=filename))
     with open(BLOGROLLS_DIR / "latest.txt", "w", encoding="utf-8") as f:
