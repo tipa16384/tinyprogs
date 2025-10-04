@@ -1,7 +1,7 @@
 {
   "https://anarchaeopteryx.bearblog.dev/feed/": {
-    "modified": "Fri, 03 Oct 2025 10:22:01 GMT",
-    "last_ts": 1759436580
+    "modified": "Sat, 04 Oct 2025 12:05:47 GMT",
+    "last_ts": 1759510800
   },
   "https://musingsoverpintsandcoffee.wordpress.com/feed/": {
     "modified": "Sat, 27 Sep 2025 13:16:51 GMT",
@@ -12,11 +12,11 @@
     "last_ts": 1758818520
   },
   "https://aggronaut.com/feed/": {
-    "last_ts": 1759408718,
+    "last_ts": 1759496890,
     "modified": "Wed, 01 Oct 2025 13:18:16 GMT"
   },
   "https://wordsundermyname.wordpress.com/feed/": {
-    "modified": "Mon, 22 Sep 2025 00:01:47 GMT",
+    "modified": "Sun, 21 Sep 2025 23:54:41 GMT",
     "last_ts": 1758498873
   },
   "https://dragonchasers.com/feed/": {
@@ -25,9 +25,9 @@
     "last_ts": 1759413244
   },
   "https://bhagpuss.blogspot.com/feeds/posts/default?alt=rss": {
-    "etag": "W/\"0339da23bbd02b83ba891ecfab413472bcfedcb9d92cf997d67f674c1082980d\"",
-    "modified": "Fri, 03 Oct 2025 10:51:26 GMT",
-    "last_ts": 1759409880
+    "etag": "W/\"8095645b888d2a5859016bb93d6d0e167592fcb8adf5a8e9304effccf2ade383\"",
+    "modified": "Sat, 04 Oct 2025 07:03:41 GMT",
+    "last_ts": 1759494000
   },
   "https://scopique.com/feed/": {
     "etag": "\"990db812cb5a1476f0719823303a25cc\"",
@@ -43,15 +43,15 @@
     "last_ts": 0
   },
   "https://tagn.wordpress.com/feed/": {
-    "modified": "Fri, 03 Oct 2025 00:51:49 GMT",
-    "last_ts": 1759418101
+    "modified": "Sat, 04 Oct 2025 06:06:26 GMT",
+    "last_ts": 1759504504
   },
   "https://lisettesmxtadventures.wordpress.com/feed/?alt=rss": {
     "modified": "Tue, 30 Sep 2025 12:28:34 GMT",
     "last_ts": 1758790324
   },
   "https://monsterladysdiary.wordpress.com/feed/": {
-    "modified": "Tue, 30 Sep 2025 20:33:01 GMT",
+    "modified": "Sat, 04 Oct 2025 11:02:31 GMT",
     "last_ts": 1759246284
   },
   "https://nkantar.com/blog/feed/": {
@@ -64,7 +64,7 @@
     "last_ts": 1756598400
   },
   "https://frostilyte.ca/feed/": {
-    "modified": "Wed, 01 Oct 2025 18:14:11 GMT",
+    "modified": "Fri, 03 Oct 2025 23:41:57 GMT",
     "last_ts": 1759160867
   },
   "http://scripting.com/rss.html": {
@@ -86,17 +86,17 @@
     "last_ts": 1708594891
   },
   "https://devblogs.microsoft.com/oldnewthing/feed/": {
-    "etag": "W/\"b07a1800ccf0dc02ea2b392544280443\"",
-    "modified": "Fri, 03 Oct 2025 06:47:05 GMT",
-    "last_ts": 1759413600
+    "etag": "W/\"2ef0c0ad9cdfc135802f31acdc554446\"",
+    "modified": "Fri, 03 Oct 2025 21:25:27 GMT",
+    "last_ts": 1759500000
   },
   "https://blog.codinghorror.com/rss/": {
-    "etag": "W/\"45e75-0sw0RFS1SGGnt7ivgGb90KcyF9o\"",
+    "etag": "W/\"45e75-ALAiJmbm3CQi8V8DX3/k4JtvoD8\"",
     "last_ts": 1742513593
   },
   "http://biobreak.wordpress.com/feed/": {
-    "modified": "Thu, 02 Oct 2025 14:43:28 GMT",
-    "last_ts": 1759237223
+    "modified": "Fri, 03 Oct 2025 13:01:28 GMT",
+    "last_ts": 1759496446
   },
   "https://www.joelonsoftware.com/feed/": {
     "etag": "W/\"93822cf81dc6b455a0d98af5ea95f6db\"",
@@ -104,8 +104,8 @@
     "last_ts": 1671454900
   },
   "https://pixelnomad.ca/feed/": {
-    "modified": "Mon, 29 Sep 2025 11:06:25 GMT",
-    "last_ts": 1759143930
+    "modified": "Fri, 03 Oct 2025 12:00:06 GMT",
+    "last_ts": 1759489128
   },
   "https://www.schneier.com/feed/": {
     "etag": "W/\"0b9b0d869f41496f7b8bc6d92a5ff72b\"",
@@ -113,15 +113,15 @@
     "last_ts": 1759421999
   },
   "http://feeds2.feedburner.com/ToboldsBlog": {
-    "modified": "Fri, 3 Oct 2025 09:55:10 GMT",
-    "last_ts": 1759396680
+    "modified": "Sat, 4 Oct 2025 11:20:05 GMT",
+    "last_ts": 1759519680
   },
   "https://cdn.jwz.org/blog/feed/": {
-    "modified": "Fri, 26 Sep 2025 19:32:01 GMT",
-    "last_ts": 1758915121
+    "modified": "Fri, 03 Oct 2025 23:54:56 GMT",
+    "last_ts": 1759535696
   },
   "http://inanage.com/feed/": {
-    "modified": "Wed, 01 Oct 2025 16:10:48 GMT",
+    "modified": "Wed, 01 Oct 2025 16:09:30 GMT",
     "last_ts": 1758884400
   },
   "https://mailvaltar.wordpress.com/feed/": {
@@ -129,20 +129,20 @@
     "last_ts": 1758649273
   },
   "https://theboardgameschronicle.com/feed/": {
-    "modified": "Wed, 01 Oct 2025 13:01:28 GMT",
-    "last_ts": 1759064400
+    "modified": "Fri, 03 Oct 2025 13:00:07 GMT",
+    "last_ts": 1759496400
   },
   "http://scripting.com/rss.xml": {
-    "etag": "\"f9e17078032aaf3ed80a0f8106be6584\"",
-    "modified": "Thu, 02 Oct 2025 15:46:54 GMT",
-    "last_ts": 1759420001
+    "etag": "\"2ba4b0645cd3e2eee5ed0798df1e66d0\"",
+    "modified": "Sat, 04 Oct 2025 00:50:49 GMT",
+    "last_ts": 1759498371
   },
   "http://www.containsmoderateperil.com/feed/": {
-    "etag": "W/\"24806e134b30d8e43438cd3dd29aab5a\"",
+    "etag": "W/\"251cee2b6741d320abb66c7106a67f5a\"",
     "last_ts": 0
   },
   "https://aywren.com/feed.xml": {
-    "etag": "W/\"68de8647-104ad\"",
+    "etag": "\"68de8647-104ad\"",
     "modified": "Thu, 02 Oct 2025 14:03:51 GMT",
     "last_ts": 1759413820
   },
@@ -154,17 +154,17 @@
     "last_ts": 0
   },
   "https://www.tbray.org/ongoing/ongoing.atom": {
-    "etag": "\"34b13-64027d78c8074\"",
-    "modified": "Thu, 02 Oct 2025 07:22:04 GMT",
-    "last_ts": 1758913200
+    "etag": "\"31237-6404efb056986\"",
+    "modified": "Sat, 04 Oct 2025 06:03:43 GMT",
+    "last_ts": 1759345200
   },
   "https://smithtalkstech.com/feed/": {
-    "etag": "W/\"1f44faf2acd320ab5f094704f24f38b7\"",
-    "modified": "Thu, 02 Oct 2025 21:20:29 GMT",
+    "etag": "W/\"de01b8f332fd75a6cd5ccd1cba888d68\"",
+    "modified": "Fri, 03 Oct 2025 20:09:29 GMT",
     "last_ts": 1758832313
   },
   "https://feeds.feedburner.com/TheDailyWtf": {
-    "modified": "Fri, 3 Oct 2025 10:33:20 GMT",
+    "modified": "Sat, 4 Oct 2025 11:22:37 GMT",
     "last_ts": 1759473000
   },
   "https://feeds.feedburner.com/CrazykinuxsMusing": {
@@ -181,11 +181,11 @@
     "last_ts": 1735516800
   },
   "https://wcrobinson.org/feed/": {
-    "modified": "Fri, 03 Oct 2025 10:51:38 GMT",
+    "modified": "Fri, 03 Oct 2025 23:22:15 GMT",
     "last_ts": 1759399847
   },
   "https://feeds.feedburner.com/squarespace/AxkEtpjNxtZ": {
-    "modified": "Fri, 3 Oct 2025 00:46:38 GMT",
+    "modified": "Sat, 4 Oct 2025 07:19:13 GMT",
     "last_ts": 1759413600
   }
 }

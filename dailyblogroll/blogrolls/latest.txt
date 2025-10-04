@@ -1,23 +1,23 @@
-Nimgimli breaks down the frustration with Microsoft’s Game Pass price hike and the hoops now required for subscription renewals.
+Stargrace reacts to the new pet capture mechanics in WoW's Midnight, worried Blizzard is phasing out pet battles.
 
-Bhagpuss shares the nostalgia of jumping back into MMORPGs, specifically EverQuest II, while pondering newer adventures like a possible New World expansion.
+Syp wraps up Draenor with mixed feelings and prepares to dive into Shadowlands next.
 
-Pixel One buzzes with excitement over upcoming gaming treats like Legion Remix and Guild Wars 2: Visions of Eternity fueling creativity and camaraderie.
+Bhagpuss discusses blogging stats and how Blaugust doesn't always boost page views.
 
-Belghast is pumped for Guild Wars 2 raid enhancements but jumps ship from Game Pass over new pricing woes.
+Belghast shares stories of Guild Wars 2 fractals gone awry and struggles in Destiny Rising.
 
-Wilhelm takes on Palworld wilderness with friends, discovering the game’s hidden entry points and risking a little environmental disregard.
+Wilhelm wishes Daybreak would drop some exciting EverQuest 3 news already, rather than coast on nostalgia.
 
-WCRobinson dives into the delightful RPG Dave the Diver, praising its sushi twist and chilled vibes despite past controversies about its indie roots.
+The Chronicler is excited to revisit Illusions of Glory now that GMT has smoothed out its past issues.
 
-Ruth shares her mixed feelings about Puzzmo after they pull a fast one on users with new paywall tactics affecting her daily routine.
+Tobold suggests EA's sale is a smart move to escape the incoming AAA game industry crash.
 
-Bruce Schneier dives into Daniel Miessler’s insights on AI in cybersecurity, signaling a temporary advantage for attackers until defenders catch up.
+Anarchae's journey through Fantasy Life i involves plenty of crafting, shrine completion, and legendary hunting.
 
-Dave Winer reflects on the power of the open internet and how web freedom is a collective endeavor that rivals the silos of big tech.
+Jamie Zawinski is peeved at USPS's lack of Halloween-themed stamps and considers writing a complaint.
 
-Remy Porter showcases a roundup of tech goofs that hilariously blur the boundaries between bug and feature, proving humor is found in the details.
+Tim Bray highlights the importance of media provenance to fight misinformation on social media.
 
-Raymond Chen unravels the complexities of inferring function pointers with std::invoke and laments the endless possibilities of operator() overloading.
+Dave Winer talks about the challenges of building the real social web and the allure of merging programming languages.
 
-Aywren bids farewell to PC Game Pass, turned off by recent price hikes that strip away the service’s former value.
+Raymond Chen examines how Visual C++ handles 'weak functions' differently than ELF object files.
